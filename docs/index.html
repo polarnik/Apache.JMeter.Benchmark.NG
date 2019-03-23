@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Ускоряем Apache.JMeter</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="shower/themes/material/styles/styles.css">
+	<link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        .shower {
+            --slide-ratio: calc(16 / 9);
+            --slide-width: 1280px;
+            --color-key: #ffcc00;
+            --color-yellow: #ffcc00;
+        }
+    </style>	
+</head>
+<body class="shower list">
+
+	<header class="caption">
+		<h1>Ускоряем Apache.JMeter</h1>
+		<p><a href="https://polarnik.github.io">Вячеслав Смирнов</a>, <a href="https://www.raiffeisen.ru/">Райффайзенбанк</a></p>
+	</header>
+
+	<section class="clear slide" id="title"><div>
+		<h2>Ускоряем Apache.JMeter<br> в 5 раз</h2>
+		<p>Вячеслав Смирнов</p>
+		<p>Специалист по тестированию<br>производительности, Райффайзенбанк</p>
+		<img class="w cover" src="images/hb-bg.png">
+		<img class="w h cover" src="images/hb-bg.2.png">
+		<style>
+			#title h2 {
+				position: relative;
+				top: calc(var(--slide-height) / 10);
+				left: calc(var(--slide-width) / 4);
+				font-size: calc(var(--slide-height) / 12);
+			}
+			#title p {
+				position: relative;
+				top: 150px;
+				left: calc(var(--slide-width) / 4);
+				font-size: calc(var(--slide-height) / 20);
+				line-height: calc(var(--slide-height) / 15);
+			}
+			#title div div {
+				width: 250px;
+				height: 250px;
+				position: relative;
+				top: -120px;
+				left: 575px;
+				background: #A6CE38;
+				background: red;
+				border-radius: 50%;
+				white-space: nowrap;
+				text-align: center;
+			}
+			#title div div span {
+				display: inline-block;
+				height: 100%;
+				vertical-align: middle;
+			}
+			#title div div img {
+				z-index: auto;
+				vertical-align: middle;
+				position: static;
+			}
+		</style>
+	</div></section>
+	<section class="clear slide"><div>
+		<h2>Бываю в Омске</h2>
+		<figure>
+			<img class="w cover" src="images/omsk.jpg">
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/turbo.2.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://www.imdb.com/title/tt1860353">Турбо (ImDB)</a>
+			</figcaption>
+		</figure>
+	</div></section>	
+
+	<section class="clear yellow slide"><div>
+		<figure>
+			<img class="h cover" src="images/turbo.3.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://www.imdb.com/title/tt1860353">Турбо (ImDB)</a>
+			</figcaption>
+		</figure>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>JMeter удобно профилировать</h2>
+		<div class="columns two">
+			<p>Курс по профилированию JVM<br>
+				<i class="next">Что профилировать?</i><br>
+				<span class="next"><mark class="red">Замедляю</mark> <b>Apache.JMeter</b></span>
+			</p>
+
+			<p>Курс по Apache.JMeter, чаты<br>
+				<i class="next">Как его ускорить?</i><br>
+				<span class="next"><mark class="green">Ускоряю</mark> <b>Apache.JMeter</b></span>
+			</p>
+		</div>	
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Ускоряем JMeter</h2>
+		<p>«Сапожник с сапогами»</p>
+		<img src="images/tools1.png"
+			class="place bottom center"
+			style="height: 80%; margin: 0 0px 50px 0"
+			alt="Ускоряем Apache.JMeter">
+	
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Используя SJK, JFR, ...</h2>
+		<p>«Сапожник с сапогами»</p>
+		<img src="images/tools2.png"
+			class="place bottom center"
+			style="height: 80%; margin: 0 0px 50px 0"
+			alt="Используя SJK, VisualVM, JFR, TIG">		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Два следствия "тормозов"</h2>
+		<ol>
+			<li>
+				Недовес, мало нагрузки
+				<ul>
+					<li>Хотим <mark class="green">10</mark> операций в секунду</li>
+					<li>Получаем <mark class="red">6</mark</li>
+				</ul>
+			</li>
+			<li>
+				Перевес, мало ресурсов
+				<ul>
+					<li>Хотим уложиться в <mark class="green">4 ГБайт</mark> ОЗУ</li>
+					<li>Получаем <mark class="red">OutOfMemoryError</mark></li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Недовес, мало нагрузки</h2>
+		<figure>
+			<img class="w cover place bottom center" src="images/tps.6.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Перевес, мало ресурсов</h2>
+		<pre>
+<code>summary +   1454 in <mark>00:00:30</mark> =   <mark class="green">48.5/s</mark> Avg:     0 Min:     0 Max:     2 Err:     0 (0.00%) Active: 3 Started: 2580 Finished: 2577</code>
+<code>summary =   5155 in 00:03:02 =   28.3/s Avg:     0 Min:     0 Max:    19 Err:     0 (0.00%)</code>
+<span class="next"><code>summary +   1684 in <mark>00:00:30</mark> =   <mark class="green">56.1/s</mark> Avg:     0 Min:     0 Max:     2 Err:     0 (0.00%) Active: 8 Started: 3427 Finished: 3419</code>
+<code>summary =   6839 in 00:03:32 =   32.2/s Avg:     0 Min:     0 Max:    19 Err:     0 (0.00%)</code></span>
+<span class="next"><code>summary +    488 in <mark>00:00:30</mark> =   <mark class="red">16.1/s</mark> Avg:     2 Min:     0 Max:   361 Err:     0 (0.00%) Active: 155 Started: 3818 Finished: 3663</code>
+<code>summary =   7327 in 00:04:03 =   30.2/s Avg:     0 Min:     0 Max:   361 Err:     0 (0.00%)</code></span>
+<span class="next"><code><mark class="red">java.lang.OutOfMemoryError</mark>: Java heap space</code>
+<code><mark class="red">Killed</mark></code></span>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Три причины "тормозов"</h2>
+		<ol>
+			<li>Профиль нагрузки</li>
+			<li>Ограничения JVM и системы</li>
+			<li>Выбор и настройка компонент</li>
+			<li class="next"><mark class="red">Ошибки</mark></li>
+		</ol>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Профиль нагрузки<br/><span class="next">Как не делать лишнюю работу</span></h2>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Непредсказуемая и лишняя работа</h2>
+		<ul>
+			<li>Открытая модель нагрузки</li>
+			<li class="next">Шаг и потоки не рассчитан</li>
+			<li class="next">Нет защиты от зависания</li>
+			<li class="next">Нет проверки на ошибки</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Открытая модель нагрузки</h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час</p>
+
+		<p>Выделяем <span class="integer">1</span> поток в JMeter:
+		<ul>
+			<li><span class="integer">36</span> секунд на операцию</li>
+			<li><span class="integer">100</span> операций в час</li>
+			<li>одного потока <mark class="red">мало</mark></li>
+		</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Открытая модель нагрузки</h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час</p>
+
+		<p>Выделяем <span class="integer"><mark>1 000</mark></span> потоков в JMeter:
+		<ul>
+			<li><span class="integer"><mark>72</mark></span> секунды на операцию</li>
+			<li><span class="integer">50 000</span> операций в час</li>
+			<li>тысячи потоков <mark class="red">мало</mark></li>
+		</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Открытая модель <mark class="next">не для интенсивности</mark></h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час</p>
+
+		<p>Выделяем <span class="integer"><mark>10 000</mark></span> потоков в JMeter:
+		<ul>
+			<li>система <mark class="red">пятисотит</mark>, <mark class="red">не отвечает</mark></li>
+			<li>JMeter падает с <mark class="red">java.lang.OutOfMemoryError: Java heap space</mark></li>
+		</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Открытая модель <mark class="next green">для количества</mark></h2>
+		<p>Задача: <mark class="green">Сколько</mark> операций за час при <span class="integer"><mark>1 000</mark></span> потоках?</p>
+		<p class="next">CI/CD метрика</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Контоллируемая интенсивность и ступени</h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час ~ <span class="integer">28</span> операций/транзакций в секунду</p>
+		<p>Плавный разгон</p>
+		<ul>
+			<li><span class="integer">7</span>
+				<ul>
+					<li>+<span class="integer">7</span>
+						<ul>
+							<li>+<span class="integer">7</span>
+								<ul>
+									<li>+<span class="integer">7</span> (<span class="integer">28</span> tps)
+										<ul>
+											<li class="next">+<span class="integer">7</span> </li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				<ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Контоллируемая интенсивность и ступени</h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час ~ <span class="integer">28</span> операций в секунду</p>
+		<p>Большая первая ступень:</p>
+		<ul>
+			<li><span class="integer">22</span>
+				<ul>
+					<li>+<span class="integer">2</span>
+						<ul>
+							<li>+<span class="integer">2</span>
+								<ul>
+									<li>+<span class="integer">2</span> (<span class="integer">28</span> tps)
+										<ul>
+											<li class="next">+<span class="integer">2</span></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+				<ul>
+			</li>
+		</ul>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Thread Group задаёт частоту <mark>запуска</mark></h2>
+		<p>Задача: <span class="integer">100 000</span> операций за час ~ <span class="integer">28</span> операций в секунду <mark class="next">начинаются</mark></p>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Система может отвечать <mark>долго</mark></h2>
+		<p>А Thread Group продолжит создавать потоки по расписанию</p>
+		<p>Что приведёт к <mark>взрывному росту</mark> количества активных потоков</p>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2><mark class="green">Прерываем</mark> запросы, ответы и транзакции</h2>
+		<ul>
+			<li>Запросы:
+				<ul>Connect timeout</ul>
+			</li>
+			<li>Ответы:
+				<ul>Response timeout</ul>
+			</li>
+			<li>Транзакции:
+				<ul>Duration Assertion</ul>
+			</li>
+		</ul>
+		<p>Будут фиксироваться <mark class="red">ошибки</mark>, на них надо <mark class="green">реагировать</mark></p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JMeter получает <mark class="red">ошибку</mark></h2>
+		<p>По умолчанию <mark>проигнорируется</mark>:</p>
+		<ul>
+			<li>обработку ошибок не пишут — ради скорости;</li>
+			<li>Action to be taken after sampling error: <mark>Continue</mark>;</li>
+			<li>получаем <mark class="red">нарушение</mark> логики сценария и <mark class="red">ненужные</mark> запросы.</li>
+		</ul>
+		<p>На ошибки надо <mark class="green">реагировать:</mark>
+			<ul>
+				<li>Action to be taken after sampling error: <mark class="green">Stop Thread</mark>.</li>
+			</ul>
+		</p>
+
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Сколько стоит создать поток?</h2>
+		<p><mark>TODO: посчитать, профилирование SJK, JFR</mark></p>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Один поток на 10 итераций — кешируем</h2>
+		<p><mark>TODO: посчитать, профилирование SJK, JFR</mark></p>
+		<ol>
+			<li>Меняем:
+				<ul>
+					<li>Action to be taken after sampling error: <mark class="green">Start Next Thread Loop</mark>.</li>
+				</ul>
+			</li>
+			<li>Уменьшаем:
+				<ul>
+					<li>Number of Threads: <mark class="green">в 10 раз</mark>.</li>
+				</ul>
+			</li>
+			<li>Увеличиваем:
+				<ul>
+					<li>Loop count: <mark class="green">в 10 раз</mark>.</li>
+				</ul>
+			</li>
+		</ol>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Ultimate Thread Group — постоянные потоки</h2>
+		<p><mark>Шаг нагрузки</mark>: Test Action + Constant Throuthput Timer (не меньше указанного)</p>
+		<img class="place bottom center" src="images/load2.png" />
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Ultimate Thread Group — постоянные потоки</h2>
+		<p><mark>Шаг нагрузки</mark>: Test Action + Precise Throuthput Timer (равен указанному)</p>
+		<img class="place bottom center" src="images/load2.png" />
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Способы задания интенсивности</h2>
+		<p>Статья: <a href="https://loadtestweb.info/2017/08/23/pacing/">loadtestweb.info/2017/08/23/pacing/</a></p>
+		<p><mark>TODO</mark>: написать новую</p>
+		<img class="place bottom center" style="width: 100%; margin: 0 0px 50px 0" src="images/pacing-calculator-excel1.png" />
+	</div></section>	
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Не контроллируем происходящее<br/>
+			<span class="next">Делаем лишнее</span><br/>
+			<span class="next">Создаём лишние потоки</span><br/>
+			<span class="next">Копим ошибки и терпим зависания</span><br/>
+			<span class="next">Тормозим :(</span></h2>
+	</div></section>	
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Контроллируем происходящее — интенсивность<br/>
+			<span class="next">Используем timeouts, assertion</span><br/>
+			<span class="next">Не копим ошибки — Start Next Thread Loop</span><br/>
+			<span class="next">Рассчитываем количество потоков</span><br/>
+			<span class="next">Ускоряемся :)</span></h2>
+	</div></section>	
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Ограничения JVM и системы<br/><span class="next">Знай свои потребности</span></h2>
+	</div></section>	
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Выбор и настройка компонент<br/><span class="next">Инструмент под задачу</span></h2>
+	</div></section>	
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Ошибки<br/><span class="next">Нет предела совершенству</span></h2>
+	</div></section>	
+
+
+	<section class="clear slide" id="contacts"><div>
+		<h2>Вячеслав Смирнов</h2>
+		<p><a href="https://polarnik.github.io">polarnik.github.io</a>, @qa_load</p>
+		<div><span></span><h2>Спасибо!</h2></div>
+		<img class="cover w" src="images/raiff-cover.png">
+		<style>
+			#contacts h2 {
+				position: relative;
+				top: calc(var(--slide-height) / 2.7);
+				left: calc(var(--slide-width) / 12);
+				font-size: calc(var(--slide-height) / 15);
+			}
+			#contacts p {
+				position: relative;
+				top: calc(var(--slide-height) / 2.7);
+				left: calc(var(--slide-width) / 12);
+				font-size: calc(var(--slide-height) / 15);
+
+			}
+			#contacts div div {
+				width: calc(var(--slide-width) / 4);
+				height: calc(var(--slide-width) / 4);
+				position: absolute;
+				top: calc(var(--slide-height) / 4);
+				left: calc(var(--slide-width) * (8/9 - 1/4));
+				background: #ffed00;
+				border-radius: 50%;
+				white-space: nowrap;
+				text-align: center;
+				vertical-align: middle;
+			}
+			#contacts div div span {
+				display: inline-block;
+				height: 90%;
+				vertical-align: middle;
+			}
+			#contacts div div h2 {
+				z-index: auto;
+				vertical-align: middle;
+				position: static;
+				display: inline-block;
+				margin-bottom: 0;
+				color: #000;
+			}
+		</style>
+	</div></section>
+
+	<div class="progress"></div>
+
+	<script src="node_modules/shower-core/shower.min.js"></script>
+</body>
+</html>

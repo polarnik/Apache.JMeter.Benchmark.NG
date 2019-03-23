@@ -1,0 +1,15 @@
+{
+	"author": {
+		"name": "Denis Trifonov",
+		"url": "https://github.com/dentrifonov"
+	},
+	"homepage": "https://dentrifonov.github.io/codefest-perf-2gis",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/dentrifonov/codefest-perf-2gis.git"
+	},
+	"dependencies": {
+		"shower-core": "2.1.0",
+		"shower-ribbon": "2.1.0"
+	}
+}

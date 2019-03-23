@@ -1,0 +1,116 @@
+.shower {
+	font-size: calc(var(--slide-height) / 25);
+}
+
+@font-face {
+	/*font-family: 'Suisse';*/
+	font-weight: normal;
+	/*src: url(../fonts/suisseintl-cond.ttf) format("truetype");*/
+}
+@font-face {
+	/*font-family: 'Suisse Bold';*/
+	font-weight: bold;
+	/*src: url(../fonts/suisseintl-cond-bold.ttf) format("truetype");*/
+}
+
+.slide h2 {
+	/*font-family: 'Suisse', sans-serif;*/
+	font-weight: normal;
+	font-size: calc(var(--slide-height) / 15);
+}
+.slide p, .slide li {
+	/*font-family: 'Helvetica', 'Arial', sans-serif;*/
+	color: #414143;
+}
+.slide span.integer {
+	/*font-family: 'Suisse Bold', sans-serif;*/
+	font-weight: bold;
+}
+.slide h2.shout.small {
+	font-size: calc(var(--slide-height) / 15);
+	line-height: calc(var(--slide-height) / 6);
+}
+.slide .shout {
+	color: var(--color-black);
+}
+.slide a {
+	color: #009de1;
+}
+.slide a:hover {
+	color: #00c7f7;
+}
+
+.slide.blue {
+	background-color: var(--color-dark);
+	--diagonal: linear-gradient(135deg, var(--color-dark) 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
+    --color-key: var(--color-dark);
+}
+.slide.green {
+	background-color: #aacc33;
+	--diagonal: linear-gradient(135deg, #aacc33 50%,
+        rgba(0, 0, 0, 0.1) 50%
+    );
+    --color-key: #aacc33;
+}
+.slide.yellow {
+	background-color: #ffcc00;
+}
+.slide.yellow h2 , .slide.green h2{
+	color: var(--color-black);
+}
+
+.slide.blue h2  {
+	color: #fff;
+}
+
+.caption {
+	color: #fff;
+	text-shadow: 0 1px 1px #1f3f60;
+}
+.caption h1 {
+	font-family: 'Suisse', sans-serif;
+	font-weight: normal;
+}
+.caption a {
+	color: #ffcc00;
+	text-shadow: 0 1px 1px #1f3f60;
+}
+.caption a:hover {
+	color: #00c7f7;
+}
+
+mark.red {
+	background: #e77c4f;
+}
+mark.green {
+	background: #aacc33;
+}
+mark.blue {
+	background: #009de1;
+}
+
+.shower.list {
+	background: var(--color-black) url(../images/background.png);
+}
+
+.slide:after {
+	border-radius: 50px;
+	position: absolute;
+	top: 10px;
+	left: calc(var(--slide-width) - 100);
+	padding: 0;
+	line-height:50px;
+	width: 50px;
+	height: 50px;
+	background: #ffcc00;
+	counter-increment: slide;
+	content: counter(slide);
+	text-align: center;
+	color: #1f3f60;
+}
+
+div.progress  {
+	border-bottom-color: #ffcc00;
+}
