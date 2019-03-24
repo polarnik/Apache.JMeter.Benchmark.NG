@@ -1,0 +1,25 @@
+
+var varName = Parameters;
+
+var htmlContent = String.valueOf(vars.get(varName));
+
+
+var logo_bsh = "_NOT_FOUND_";
+
+var logo = "";
+var boundaryStart = "<img class=\"logo\" src=\"./images/logo.svg\" alt=\"";
+var boundaryEnd = "\"></a>";
+
+var indexStart = htmlContent.indexOf(boundaryStart) + boundaryStart.length();
+var indexEnd;
+if (indexStart != -1) {
+    logo = htmlContent.substring(indexStart);
+
+    indexEnd = logo.indexOf(boundaryEnd);
+    if(indexEnd != -1) {
+        logo = logo.substring(0, indexEnd);
+        logo_bsh = logo;
+    }
+}
+
+vars.put("logo_bsh", logo_bsh);

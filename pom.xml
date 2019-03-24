@@ -1,0 +1,590 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>info.loadtestweb</groupId>
+    <artifactId>jmeter-benchmark</artifactId>
+    <version>0.1.0</version>
+    <name>jmeter-benchmark</name>
+    <description>Apache.JMeter benchmark test</description>
+
+    <profiles>
+
+        <profile>
+            <id>Debug</id>
+            <properties>
+                <test.Threads>1</test.Threads>
+                <test.RampUp>0</test.RampUp>
+                <test.LoopCount>1</test.LoopCount>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Core</id>
+            <properties>
+                <performancetest.script>Core</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers</id>
+            <properties>
+                <performancetest.script>Samplers</performancetest.script>
+            </properties>
+
+        </profile>
+
+        <profile>
+            <id>LogicControllers</id>
+            <properties>
+                <performancetest.script>LogicControllers</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Listeners</id>
+            <properties>
+                <performancetest.script>Listeners</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>ConfigurationElements</id>
+            <properties>
+                <performancetest.script>ConfigurationElements</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Assertions</id>
+            <properties>
+                <performancetest.script>Assertions</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Timers</id>
+            <properties>
+                <performancetest.script>Timers</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PreProcessors</id>
+            <properties>
+                <performancetest.script>PreProcessors</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors</id>
+            <properties>
+                <performancetest.script>PostProcessors</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors.HTML</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors.HTML.x.BeanShell</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.BeanShell</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors.HTML.x.Boundary</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.Boundary</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>PostProcessors.HTML.x.CSS</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.CSS</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>PostProcessors.HTML.x.JSR223</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.JSR223</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>PostProcessors.HTML.x.RegExp</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.RegExp</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>PostProcessors.HTML.x.XPath</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x.XPath</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>PostProcessors.XML</id>
+            <properties>
+                <performancetest.script>PostProcessors.XML</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors.JSON</id>
+            <properties>
+                <performancetest.script>PostProcessors.JSON</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>PostProcessors.TEXT</id>
+            <properties>
+                <performancetest.script>PostProcessors.TEXT</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>MiscellaneousFeatures</id>
+            <properties>
+                <performancetest.script>MiscellaneousFeatures</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>JVMMemory</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>2.8.6</version>
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <xms>1111</xms>
+                                <xmx>2222</xmx>
+                                <arguments>
+                                    <argument>-XX:MaxMetaspaceSize=256m</argument>
+
+                                    <argument>-XX:+UseG1GC</argument>
+                                    <argument>-XX:MaxGCPauseMillis=100</argument>
+                                    <argument>-XX:G1ReservePercent=20</argument>
+
+                                    <argument>-Duser.language=en</argument>
+                                    <argument>-Duser.region=EN</argument>
+
+                                    <argument>-Dfile.encoding=UTF-8</argument>
+
+                                    <argument>-XX:-HeapDumpOnOutOfMemoryError</argument>
+                                    <argument>-server</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>smallResult</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>2.8.6</version>
+
+                        <configuration>
+                            <propertiesJMeter>
+                                <jmeter.save.saveservice.output_format>csv</jmeter.save.saveservice.output_format>
+                                <jmeter.save.saveservice.assertion_results_failure_message>false</jmeter.save.saveservice.assertion_results_failure_message>
+                                <jmeter.save.saveservice.assertion_results>none</jmeter.save.saveservice.assertion_results>
+                                <jmeter.save.saveservice.data_type>false</jmeter.save.saveservice.data_type>
+                                <jmeter.save.saveservice.label>false</jmeter.save.saveservice.label>
+                                <jmeter.save.saveservice.response_code>false</jmeter.save.saveservice.response_code>
+                                <jmeter.save.saveservice.response_data>false</jmeter.save.saveservice.response_data>
+                                <jmeter.save.saveservice.response_data.on_error>false</jmeter.save.saveservice.response_data.on_error>
+                                <jmeter.save.saveservice.response_message>false</jmeter.save.saveservice.response_message>
+                                <jmeter.save.saveservice.successful>false</jmeter.save.saveservice.successful>
+                                <jmeter.save.saveservice.thread_name>false</jmeter.save.saveservice.thread_name>
+                                <jmeter.save.saveservice.time>true</jmeter.save.saveservice.time>
+                                <jmeter.save.saveservice.subresults>false</jmeter.save.saveservice.subresults>
+                                <jmeter.save.saveservice.assertions>false</jmeter.save.saveservice.assertions>
+                                <jmeter.save.saveservice.latency>false</jmeter.save.saveservice.latency>
+                                <jmeter.save.saveservice.connect_time>false</jmeter.save.saveservice.connect_time>
+                                <jmeter.save.saveservice.samplerData>false</jmeter.save.saveservice.samplerData>
+                                <jmeter.save.saveservice.responseHeaders>false</jmeter.save.saveservice.responseHeaders>
+                                <jmeter.save.saveservice.requestHeaders>false</jmeter.save.saveservice.requestHeaders>
+                                <jmeter.save.saveservice.encoding>false</jmeter.save.saveservice.encoding>
+                                <jmeter.save.saveservice.bytes>false</jmeter.save.saveservice.bytes>
+                                <jmeter.save.saveservice.sent_bytes>false</jmeter.save.saveservice.sent_bytes>
+                                <jmeter.save.saveservice.url>false</jmeter.save.saveservice.url>
+                                <jmeter.save.saveservice.filename>false</jmeter.save.saveservice.filename>
+                                <jmeter.save.saveservice.hostname>false</jmeter.save.saveservice.hostname>
+                                <jmeter.save.saveservice.thread_counts>false</jmeter.save.saveservice.thread_counts>
+                                <jmeter.save.saveservice.sample_count>false</jmeter.save.saveservice.sample_count>
+                                <jmeter.save.saveservice.idle_time>false</jmeter.save.saveservice.idle_time>
+                                <jmeter.save.saveservice.print_field_names>false</jmeter.save.saveservice.print_field_names>
+                                <sample_variables></sample_variables>
+                            </propertiesJMeter>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>JFR</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>2.8.6</version>
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <arguments>
+                                    <argument>-XX:+UnlockCommercialFeatures</argument>
+
+                                    <argument>-XX:+FlightRecorder</argument>
+                                    <argument>-XX:+UnlockDiagnosticVMOptions</argument>
+                                    <argument>-XX:+DebugNonSafepoints</argument>
+
+                                    <argument>-XX:StartFlightRecording=delay=0s,duration=120s,name=Trace-Apache.JMeter,filename=${project.build.directory}/jmeter/results/${performancetest.script}-${maven.build.timestamp}.jfr,settings=${project.basedir}/src/test/conf/jmc/Profiling.jfc</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+
+    <!-- Properties -->
+    <properties>
+        <!-- Test name -->
+        <performancetest.script>Core</performancetest.script>
+
+        <test.Threads>50</test.Threads>
+        <test.RampUp>0</test.RampUp>
+        <test.LoopCount>100000</test.LoopCount>
+
+
+        <influxdb.host>localhost</influxdb.host>
+        <influxdb.port>8086</influxdb.port>
+        <influxdb.database>jmeter</influxdb.database>
+        <influxdb.username>none</influxdb.username>
+        <influxdb.password>none</influxdb.password>
+
+        <maven.build.timestamp.format>yyyy-MM-dd_HH-mm-ss</maven.build.timestamp.format>
+
+    </properties>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <scm>
+        <url>https://github.com/polarnik/jmeter-loadtestweb</url>
+        <connection>https://github.com/polarnik/Apache.JMeter.Benchmark.NG.git</connection>
+        <developerConnection>git@github.com:polarnik/Apache.JMeter.Benchmark.NG.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <id>polarnik</id>
+            <name>SMIRNOV Vyacheslav</name>
+            <email>owasp@yandex.ru</email>
+            <url>https://github.com/polarnik</url>
+            <organization>Райффайзенбанк</organization>
+            <roles>
+                <role>Эксперт по тестированию</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <dependencyManagement>
+        <dependencies>
+            <!-- https://mvnrepository.com/artifact/org.gridkit.jvmtool/sjk-jfr5 -->
+            <dependency>
+                <groupId>org.gridkit.jvmtool</groupId>
+                <artifactId>sjk-jfr5</artifactId>
+                <version>0.4</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.gridkit.jvmtool/sjk-hflame -->
+            <dependency>
+                <groupId>org.gridkit.jvmtool</groupId>
+                <artifactId>sjk-hflame</artifactId>
+                <version>0.11</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.gridkit.jvmtool/sjk-nps -->
+            <dependency>
+                <groupId>org.gridkit.jvmtool</groupId>
+                <artifactId>sjk-nps</artifactId>
+                <version>0.4</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.gridkit.jvmtool/sjk-plus -->
+            <dependency>
+                <groupId>org.gridkit.jvmtool</groupId>
+                <artifactId>sjk-plus</artifactId>
+                <version>0.11</version>
+            </dependency>
+
+
+        </dependencies>
+    </dependencyManagement>
+
+    <!-- Build Settings -->
+    <build>
+        <plugins>
+
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-maven-plugin</artifactId>
+                <version>2.8.6</version>
+                <executions>
+                    <!-- Run JMeter tests -->
+                    <execution>
+                        <id>jmeter-tests</id>
+                        <goals>
+                            <goal>jmeter</goal>
+                        </goals>
+                    </execution>
+
+                    <!-- Fail build on errors in test -->
+                    <execution>
+                        <id>jmeter-check-results</id>
+                        <goals>
+                            <goal>results</goal>
+                        </goals>
+                    </execution>
+
+                    <execution>
+                        <id>jmeter-report-1</id>
+                        <goals>
+                            <goal>results</goal>
+                        </goals>
+                    </execution>
+                </executions>
+
+                <configuration>
+                    <testFilesIncluded>
+                        <jMeterTestFile>${performancetest.script}.jmx</jMeterTestFile>
+                    </testFilesIncluded>
+                    <jmeterVersion>5.1.1</jmeterVersion>
+
+                    <jmeterExtensions>
+                        <!-- Custom Thread Groups
+                        https://jmeter-plugins.org/?search=jpgc-casutg
+			            http://repo.maven.apache.org/maven2/kg/apc/jmeter-plugins-casutg/
+			            -->
+                        <artifact>kg.apc:jmeter-plugins-casutg:2.6</artifact>
+
+                        <!-- Parallel Controller & Sampler
+                        https://jmeter-plugins.org/?search=parallel
+                        https://github.com/Blazemeter/jmeter-bzm-plugins/blob/master/parallel/Parallel.md
+                        https://www.blazemeter.com/blog/how-to-use-the-parallel-controller-in-jmeter
+                        -->
+                        <artifact>com.blazemeter:jmeter-parallel:0.9</artifact>
+                    </jmeterExtensions>
+
+                    <testPlanLibraries>
+                        <!-- JMeter Plugins Common Classes: Various utility classes to ease development of plugins
+			            http://repo.maven.apache.org/maven2/kg/apc/jmeter-plugins-cmn-jmeter/
+			            -->
+                        <artifact>kg.apc:jmeter-plugins-cmn-jmeter:0.6</artifact>
+
+                        <artifact>org.gridkit.jvmtool:sjk-plus:0.11</artifact>
+                    </testPlanLibraries>
+
+                    <downloadExtensionDependencies>false</downloadExtensionDependencies>
+                    <downloadLibraryDependencies>false</downloadLibraryDependencies>
+                    <downloadOptionalDependencies>false</downloadOptionalDependencies>
+                    <downloadJMeterDependencies>false</downloadJMeterDependencies>
+
+                    <!-- Configuring the jvm that the jmeter process runs in
+                    https://github.com/jmeter-maven-plugin/jmeter-maven-plugin/wiki/Configuring-the-jvm-that-the-jmeter-process-runs-in
+                    http://reins.altervista.org/java/A_Collection_of_JVM_Options_MP.html
+                    https://www.oracle.com/technetwork/java/javase/tech/vmoptions-jsp-140102.html
+                    -->
+                    <jMeterProcessJVMSettings>
+                        <xms>256</xms>
+                        <xmx>2048</xmx>
+                        <arguments>
+                            <argument>-XX:MaxMetaspaceSize=256m</argument>
+
+                            <argument>-XX:+UseG1GC</argument>
+                            <argument>-XX:MaxGCPauseMillis=100</argument>
+                            <argument>-XX:G1ReservePercent=20</argument>
+
+                            <argument>-Duser.language=en</argument>
+                            <argument>-Duser.region=EN</argument>
+
+                            <argument>-Dfile.encoding=UTF-8</argument>
+
+                            <argument>-XX:-HeapDumpOnOutOfMemoryError</argument>
+                            <argument>-server</argument>
+                        </arguments>
+                    </jMeterProcessJVMSettings>
+
+                    <testResultsTimestamp>true</testResultsTimestamp>
+                    <appendResultsTimestamp>true</appendResultsTimestamp>
+                    <resultsFileNameDateFormat>yyyy-MM-dd_HH-mm-ss</resultsFileNameDateFormat>
+                    <overrideRootLogLevel>ERROR</overrideRootLogLevel>
+                    <suppressJMeterOutput>false</suppressJMeterOutput>
+                    <ignoreResultFailures>true</ignoreResultFailures>
+                    <guiTestFile>${project.basedir}/src/test/jmeter/${performancetest.script}.jmx</guiTestFile>
+
+                    <propertiesJMeter>
+                        <jmeter.save.saveservice.thread_counts>true</jmeter.save.saveservice.thread_counts>
+                        <jmeter.save.saveservice.subresults>true</jmeter.save.saveservice.subresults>
+                        <sample_variables></sample_variables>
+                        <!-- # Disable sent statistics to https://jmeter-plugins.org/stats/ -->
+                        <jpgc.repo.sendstats>false</jpgc.repo.sendstats>
+                    </propertiesJMeter>
+
+                    <propertiesReportGenerator>
+                        <jmeter.reportgenerator.overall_granularity>5000</jmeter.reportgenerator.overall_granularity>
+                        <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>5000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                    </propertiesReportGenerator>
+
+
+
+                    <propertiesUser>
+                        <testDataFolder>${project.basedir}/src/test/jmeter/data</testDataFolder>
+                        <testScriptolder>${project.basedir}/src/test/jmeter/script</testScriptolder>
+                        <reportFolder>${project.build.directory}/jmeter/results/${performancetest.script}</reportFolder>
+
+                        <Threads>${test.Threads}</Threads>
+                        <RampUp>${test.RampUp}</RampUp>
+                        <LoopCount>${test.LoopCount}</LoopCount>
+                    </propertiesUser>
+
+                    <resultsFileFormat>csv</resultsFileFormat>
+                    <generateReports>false</generateReports>
+                    <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-${maven.build.timestamp}</reportDirectory>
+
+                </configuration>
+
+
+            </plugin>
+
+            <plugin>
+                <groupId>com.lazerycode.jmeter</groupId>
+                <artifactId>jmeter-analysis-maven-plugin</artifactId>
+                <configuration>
+                    <source>${project.build.directory}/jmeter/results/*.xml</source>
+                    <processAllFilesFound>true</processAllFilesFound>
+                    <targetDirectory>${project.build.directory}/jmeter/reports/profile</targetDirectory>
+                    <writers>
+                        <com.lazerycode.jmeter.analyzer.writer.SummaryTextToStdOutWriter/>
+                        <com.lazerycode.jmeter.analyzer.writer.SummaryTextToFileWriter/>
+                        <com.lazerycode.jmeter.analyzer.writer.HtmlWriter/>
+                        <com.lazerycode.jmeter.analyzer.writer.DetailsToCsvWriter/>
+                        <com.lazerycode.jmeter.analyzer.writer.DetailsToHtmlWriter/>
+                        <com.lazerycode.jmeter.analyzer.writer.ChartWriter/>
+                    </writers>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <!-- https://www.mojohaus.org/exec-maven-plugin/usage.html -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.6.0</version>
+                <executions>
+                    <execution>
+                        <id>sjk</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${project.basedir}/src/test/tools/</workingDirectory>
+                            <executable>${project.basedir}/src/test/tools/sjk.for.jmeter.sh</executable>
+
+                            <arguments>
+                                <argument>${project.basedir}/target/jmeter/testFiles/</argument>
+                                <argument>${project.build.directory}/jmeter/lib/</argument>
+                                <argument>${project.build.directory}/sjk/</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>csv2influx</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${project.basedir}/src/test/tools/</workingDirectory>
+                            <!-- https://github.com/jpillora/csv-to-influxdb/releases -->
+                            <executable>${project.basedir}/src/test/tools/csv-to-influxdb_linux_amd64</executable>
+
+                            <!--<executable>csv-to-influxdb_windows_amd64</executable>-->
+                            <!--<executable>csv-to-influxdb_darwin_amd64</executable>-->
+                            <arguments>
+                                <argument>--server</argument>
+                                <argument>http://${influxdb.host}:${influxdb.port}</argument>
+
+                                <argument>--database</argument>
+                                <argument>${influxdb.database}</argument>
+
+                                <argument>--username</argument>
+                                <argument>${influxdb.username}</argument>
+
+                                <argument>--password</argument>
+                                <argument>${influxdb.password}</argument>
+
+                                <argument>--measurement</argument>
+                                <argument>csv2influxdb</argument>
+
+                                <argument>--batch-size</argument>
+                                <argument>5000</argument>
+
+                                <argument>--tag-columns</argument>
+                                <argument>label,responseCode,responseMessage,threadName,dataType,success,failureMessage,URL</argument>
+
+                                <argument>--timestamp-column</argument>
+                                <argument>timeStamp</argument>
+
+                                <argument>--timestamp-format</argument>
+                                <argument>unix</argument>
+
+                                <argument>--attempts</argument>
+                                <argument>10</argument>
+
+                                <argument>${project.build.directory}/jmeter/results/${performancetest.script}.csv</argument>
+                            </arguments>
+                        </configuration>
+                    </execution>
+
+                </executions>
+            </plugin>
+
+        </plugins>
+    </build>
+</project>

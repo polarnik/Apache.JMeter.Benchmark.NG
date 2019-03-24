@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="PostProcessors.HTML" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.tearDown_on_shutdown">true</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="testDataFolder" elementType="Argument">
+            <stringProp name="Argument.name">testDataFolder</stringProp>
+            <stringProp name="Argument.value">${__P(testDataFolder)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="htmlContent" elementType="Argument">
+            <stringProp name="Argument.name">htmlContent</stringProp>
+            <stringProp name="Argument.value">${__FileToString(${__P(testDataFolder)}/htmlFile.html,UTF-8,)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="Threads" elementType="Argument">
+            <stringProp name="Argument.name">Threads</stringProp>
+            <stringProp name="Argument.value">${__P(Threads,5)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="RampUp" elementType="Argument">
+            <stringProp name="Argument.name">RampUp</stringProp>
+            <stringProp name="Argument.value">${__P(RampUp,0)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="LoopCount" elementType="Argument">
+            <stringProp name="Argument.name">LoopCount</stringProp>
+            <stringProp name="Argument.value">${__P(LoopCount,100)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="NF" elementType="Argument">
+            <stringProp name="Argument.name">NF</stringProp>
+            <stringProp name="Argument.value">_NOT_FOUND_</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="testScriptolder" elementType="Argument">
+            <stringProp name="Argument.name">testScriptolder</stringProp>
+            <stringProp name="Argument.value">${__P(testScriptolder)}</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">${LoopCount}</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">${Threads}</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">${RampUp}</stringProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler: none" enabled="true">
+          <stringProp name="cacheKey">true</stringProp>
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">// none
+/*
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
+
+String path = vars.get(&quot;testDataFolder&quot;) + &quot;/htmlFile.html&quot;;
+String text = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.UTF_8);
+*/</stringProp>
+          <stringProp name="scriptLanguage">groovy</stringProp>
+        </JSR223Sampler>
+        <hashTree>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor" enabled="true">
+            <stringProp name="HtmlExtractor.refname">logo_CSS</stringProp>
+            <stringProp name="HtmlExtractor.expr">img.logo[src=&quot;./images/logo.svg&quot;]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">alt</stringProp>
+            <stringProp name="HtmlExtractor.default">_NOT_FOUND_</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">htmlContent</stringProp>
+          </HtmlExtractor>
+          <hashTree/>
+          <RegexExtractor guiclass="RegexExtractorGui" testclass="RegexExtractor" testname="Regular Expression Extractor" enabled="true">
+            <stringProp name="RegexExtractor.useHeaders">false</stringProp>
+            <stringProp name="RegexExtractor.refname">logo_RegExp</stringProp>
+            <stringProp name="RegexExtractor.regex">&lt;img class=&quot;logo&quot; .* alt=&quot;([^&quot;]+)&quot;</stringProp>
+            <stringProp name="RegexExtractor.template">$1$</stringProp>
+            <stringProp name="RegexExtractor.default">_NOT_FOUND_</stringProp>
+            <stringProp name="RegexExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">htmlContent</stringProp>
+            <stringProp name="TestPlan.comments">\s*&lt;ul class=&quot;menu&quot;&gt;\s*&lt;li.*\s*&lt;div.*Documentation.*(\s*[&lt;ulia]+.*\s*){2,10}&lt;a href=&quot;([^&quot;]+)&quot;&gt;Best Practices&lt;\/a&gt;</stringProp>
+          </RegexExtractor>
+          <hashTree/>
+          <BoundaryExtractor guiclass="BoundaryExtractorGui" testclass="BoundaryExtractor" testname="Boundary Extractor" enabled="true">
+            <stringProp name="BoundaryExtractor.useHeaders">false</stringProp>
+            <stringProp name="BoundaryExtractor.refname">logo_Boundary</stringProp>
+            <stringProp name="BoundaryExtractor.lboundary">&lt;img class=&quot;logo&quot; src=&quot;./images/logo.svg&quot; alt=&quot;</stringProp>
+            <stringProp name="BoundaryExtractor.rboundary">&quot;&gt;&lt;/a&gt;</stringProp>
+            <stringProp name="BoundaryExtractor.default">_NOT_FOUND_</stringProp>
+            <boolProp name="BoundaryExtractor.default_empty_value">false</boolProp>
+            <stringProp name="BoundaryExtractor.match_number">1</stringProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">htmlContent</stringProp>
+          </BoundaryExtractor>
+          <hashTree/>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename">${testScriptolder}/PostProcessors.HTML.parseHtml.groovy</stringProp>
+            <stringProp name="parameters">htmlContent</stringProp>
+            <stringProp name="script"></stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor" enabled="true">
+            <stringProp name="XPathExtractor.default">_NOT_FOUND_</stringProp>
+            <stringProp name="XPathExtractor.refname">logo_XPath</stringProp>
+            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
+            <stringProp name="XPathExtractor.xpathQuery">//a/img[@class=&quot;logo&quot;]/@alt</stringProp>
+            <boolProp name="XPathExtractor.validate">false</boolProp>
+            <boolProp name="XPathExtractor.tolerant">true</boolProp>
+            <boolProp name="XPathExtractor.namespace">false</boolProp>
+            <stringProp name="Sample.scope">variable</stringProp>
+            <stringProp name="Scope.variable">htmlContent</stringProp>
+            <stringProp name="TestPlan.comments">/html/body//a/img[@alt and @class=&quot;logo&quot;]/@alt</stringProp>
+          </XPathExtractor>
+          <hashTree/>
+          <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
+            <stringProp name="filename">${testScriptolder}/PostProcessors.HTML.parseHtml.bsh</stringProp>
+            <stringProp name="parameters">htmlContent</stringProp>
+            <boolProp name="resetInterpreter">false</boolProp>
+            <stringProp name="script"></stringProp>
+          </BeanShellPostProcessor>
+          <hashTree/>
+          <JSR223Assertion guiclass="TestBeanGUI" testclass="JSR223Assertion" testname="JSR223 Assertion" enabled="false">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">Apache JMeter</stringProp>
+            <stringProp name="script">
+def expectedValue = Parameters
+
+def variableNames = [ &apos;logo_CSS&apos;, &apos;logo_RegExp&apos;, &apos;logo_Boundary&apos;, &apos;logo_jsr223&apos;, &apos;logo_XPath&apos;, &apos;logo_bsh&apos; ]
+
+for (String variableName: variableNames) {
+	
+	def checkValue = vars.get(variableName)
+	log.info(variableName + &quot; = &quot; + checkValue)
+	if(checkValue != expectedValue) {
+		log.error(variableName + &quot; = &quot; + checkValue + &quot; != &quot; + expectedValue)
+	}
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223Assertion>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>
