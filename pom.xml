@@ -273,6 +273,33 @@
                 </plugins>
             </build>
         </profile>
+
+        <profile>
+            <id>jvisualvm</id>
+            <properties>
+                <test.Threads>10</test.Threads>
+                <test.RampUp>60</test.RampUp>
+                <test.LoopCount>1000</test.LoopCount>
+            </properties>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>2.8.6</version>
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <arguments>
+                                    <argument>-agentpath:/usr/lib/jvm/java-8-oracle/lib/visualvm/profiler/lib/deployed/jdk16/linux-amd64/libprofilerinterface.so=/usr/lib/jvm/java-8-oracle/lib/visualvm/profiler/lib,5140</argument>		
+                                    <argument>-Xverify:none</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
     </profiles>
 
     <!-- Properties -->
