@@ -19,32 +19,56 @@ jmeterScript=`pgrep -af "java.*-jar ApacheJMeter" | awk -F "-t $jmeterScriptFold
 sampleTraceName="$reportFolder""$jmeterScript.$dt.sdt"
 
 echo "sjk run for $jmeterPID at $dt into $sampleTraceName"
-java -jar "$jmeterLibFolder"sjk-plus-0.11.jar stcap -p $jmeterPID -o $sampleTraceName -t 600s
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    stcap \
+    --pid $jmeterPID \
+    --timeout 600s \
+    --output "$sampleTraceName"
+
 echo "complete $sampleTraceName"
 
-java -jar "$jmeterLibFolder"sjk-plus-0.11.jar ssa \
-    --file $sampleTraceName \
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    ssa \
+    --file "$sampleTraceName" \
     --thread-name "Thread Group.*" \
     --histo \
     > "$sampleTraceName".histo.txt
 
-java -jar "$jmeterLibFolder"sjk-plus-0.11.jar ssa \
-    --file $sampleTraceName \
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    ssa \
+    --file "$sampleTraceName" \
     --thread-name "Thread Group.*" \
     --histo \
     --by-term \
     > "$sampleTraceName".histo.by-term.txt
 
-java -jar "$jmeterLibFolder"sjk-plus-0.11.jar ssa \
-    --file $sampleTraceName \
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    ssa \
+    --file "$sampleTraceName" \
     --thread-name "Thread Group.*" \
     --thread-info \
     > "$sampleTraceName".thread-info.txt
 
-java -jar "$jmeterLibFolder"sjk-plus-0.11.jar ssa \
-    --file $sampleTraceName \
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    ssa \
+    --file "$sampleTraceName" \
     --thread-name "Thread Group.*" \
     --flame \
     --title "$jmeterScript" \
     --width 3500 \
-    > "$sampleTraceName".svg
+    > "$sampleTraceName".flame.svg
+
+sampleTraceNameSmall="$reportFolder""$jmeterScript.$dt.small.sdt"
+
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    stcpy \
+    --input "$sampleTraceName" \
+    --thread-name "Thread Group.*" \
+    --subsample 0.1 \
+    --output $sampleTraceNameSmall
+
+java -jar "$jmeterLibFolder"sjk-plus-0.11.jar \
+    flame \
+    --file "$sampleTraceNameSmall" \
+    --thread-name "Thread Group.*" \
+    --output "$sampleTraceNameSmall".flame.html
