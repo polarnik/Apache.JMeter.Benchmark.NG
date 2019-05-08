@@ -61,26 +61,23 @@
         <stringProp name="ThreadGroup.delay"></stringProp>
       </ThreadGroup>
       <hashTree>
-        <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="JSR223 Sampler" enabled="true">
-          <stringProp name="cacheKey">true</stringProp>
-          <stringProp name="filename">${test.script.folder}/PostProcessors.HTML.Sampler.groovy</stringProp>
-          <stringProp name="parameters"></stringProp>
-          <stringProp name="script"></stringProp>
-          <stringProp name="scriptLanguage">groovy</stringProp>
-        </JSR223Sampler>
+        <TestAction guiclass="TestActionGui" testclass="TestAction" testname="Flow Control Action" enabled="true">
+          <intProp name="ActionProcessor.action">1</intProp>
+          <intProp name="ActionProcessor.target">0</intProp>
+          <stringProp name="ActionProcessor.duration">0</stringProp>
+        </TestAction>
         <hashTree>
-          <XPathExtractor guiclass="XPathExtractorGui" testclass="XPathExtractor" testname="XPath Extractor" enabled="true">
-            <stringProp name="XPathExtractor.default">_NOT_FOUND_</stringProp>
-            <stringProp name="XPathExtractor.refname">logo_XPath</stringProp>
-            <stringProp name="XPathExtractor.matchNumber">1</stringProp>
-            <stringProp name="XPathExtractor.xpathQuery">//a/img[@class=&quot;logo&quot;]/@alt</stringProp>
-            <boolProp name="XPathExtractor.validate">false</boolProp>
-            <boolProp name="XPathExtractor.tolerant">true</boolProp>
-            <boolProp name="XPathExtractor.namespace">false</boolProp>
+          <HtmlExtractor guiclass="HtmlExtractorGui" testclass="HtmlExtractor" testname="CSS Selector Extractor" enabled="true">
+            <stringProp name="HtmlExtractor.refname">logo_CSS</stringProp>
+            <stringProp name="HtmlExtractor.expr">img.logo[src=&quot;./images/logo.svg&quot;]</stringProp>
+            <stringProp name="HtmlExtractor.attribute">alt</stringProp>
+            <stringProp name="HtmlExtractor.default">_NOT_FOUND_</stringProp>
+            <boolProp name="HtmlExtractor.default_empty_value">false</boolProp>
+            <stringProp name="HtmlExtractor.match_number">1</stringProp>
+            <stringProp name="HtmlExtractor.extractor_impl"></stringProp>
             <stringProp name="Sample.scope">variable</stringProp>
             <stringProp name="Scope.variable">htmlContent</stringProp>
-            <stringProp name="TestPlan.comments">/html/body//a/img[@alt and @class=&quot;logo&quot;]/@alt</stringProp>
-          </XPathExtractor>
+          </HtmlExtractor>
           <hashTree/>
         </hashTree>
       </hashTree>

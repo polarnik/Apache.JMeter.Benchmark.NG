@@ -1,0 +1,1284 @@
+<?xml version="1.0" standalone="no"?>
+<svg version="1.1" width="3500" height="536" onload="init(evt)" viewBox="0 0 3500 536" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>  <linearGradient id="background" y1="0" y2="1" x1="0" x2="0">
+      <stop stop-color="#eeeeee" offset="5%"/>
+      <stop stop-color="#eeeeb0" offset="95%"/>
+  </linearGradient>
+</defs>
+<style type="text/css">
+  text { font-size:12px; font-family:Verdana }
+  .fbar:hover { stroke:black; stroke-width:0.5; cursor:pointer; }
+</style>
+<rect x="0.0" y="0" width="3500" height="536" fill="url(#background)"/>
+<text text-anchor="middle" x="1750" y="24" font-size="17" font-family="Verdana" fill="rgb(0,0,0)"  >Samplers.HTTP.Request.jmx</text>
+<g class="fbar">
+<title>java.lang.Thread.run (168980 samples, 100.00%)</title>
+<rect x="0.0" y="520.0" width="3500.0" height="16.0" fill="rgb(221,79,119)" rx="2" ry="2"/>
+<text x="10.0" y="533.0" fill="rgb(0,0,0)">java.lang.Thread.run</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.run (168980 samples, 100.00%)</title>
+<rect x="0.0" y="504.0" width="3500.0" height="16.0" fill="rgb(221,76,83)" rx="2" ry="2"/>
+<text x="10.0" y="517.0" fill="rgb(0,0,0)">org.apache.jmeter.threads.JMeterThread.run</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.AbstractThreadGroup.next (297 samples, 0.18%)</title>
+<rect x="0.0" y="488.0" width="6.2" height="16.0" fill="rgb(217,56,64)" rx="2" ry="2"/>
+<text x="10.0" y="501.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.LoopController.next (256 samples, 0.15%)</title>
+<rect x="0.0" y="472.0" width="5.3" height="16.0" fill="rgb(217,127,83)" rx="2" ry="2"/>
+<text x="10.0" y="485.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.GenericController.next (190 samples, 0.11%)</title>
+<rect x="0.0" y="456.0" width="3.9" height="16.0" fill="rgb(217,121,73)" rx="2" ry="2"/>
+<text x="10.0" y="469.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.LoopController.nextIsNull (190 samples, 0.11%)</title>
+<rect x="0.0" y="440.0" width="3.9" height="16.0" fill="rgb(206,120,78)" rx="2" ry="2"/>
+<text x="10.0" y="453.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.LoopController.next (158 samples, 0.09%)</title>
+<rect x="0.0" y="424.0" width="3.3" height="16.0" fill="rgb(217,127,83)" rx="2" ry="2"/>
+<text x="10.0" y="437.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.GenericController.next (115 samples, 0.07%)</title>
+<rect x="0.0" y="408.0" width="2.4" height="16.0" fill="rgb(217,121,73)" rx="2" ry="2"/>
+<text x="10.0" y="421.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.GenericController.fireIterEvents (115 samples, 0.07%)</title>
+<rect x="0.0" y="392.0" width="2.4" height="16.0" fill="rgb(197,109,66)" rx="2" ry="2"/>
+<text x="10.0" y="405.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.control.GenericController.fireIterationStart (115 samples, 0.07%)</title>
+<rect x="0.0" y="376.0" width="2.4" height="16.0" fill="rgb(217,121,73)" rx="2" ry="2"/>
+<text x="10.0" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread$IterationListener.iterationStart (97 samples, 0.06%)</title>
+<rect x="0.4" y="360.0" width="2.0" height="16.0" fill="rgb(227,88,95)" rx="2" ry="2"/>
+<text x="10.4" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.notifyTestListeners (97 samples, 0.06%)</title>
+<rect x="0.4" y="344.0" width="2.0" height="16.0" fill="rgb(210,72,79)" rx="2" ry="2"/>
+<text x="10.4" y="357.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.processSampler (168504 samples, 99.72%)</title>
+<rect x="7.1" y="488.0" width="3490.1" height="16.0" fill="rgb(227,78,85)" rx="2" ry="2"/>
+<text x="17.1" y="501.0" fill="rgb(0,0,0)">org.apache.jmeter.threads.JMeterThread.processSampler</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.executeSamplePackage (168503 samples, 99.72%)</title>
+<rect x="7.1" y="472.0" width="3490.1" height="16.0" fill="rgb(197,68,74)" rx="2" ry="2"/>
+<text x="17.1" y="485.0" fill="rgb(0,0,0)">org.apache.jmeter.threads.JMeterThread.executeSamplePackage</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.doSampling (167793 samples, 99.30%)</title>
+<rect x="7.4" y="456.0" width="3475.4" height="16.0" fill="rgb(228,79,86)" rx="2" ry="2"/>
+<text x="17.4" y="469.0" fill="rgb(0,0,0)">org.apache.jmeter.threads.JMeterThread.doSampling</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample (167792 samples, 99.30%)</title>
+<rect x="7.4" y="440.0" width="3475.4" height="16.0" fill="rgb(196,85,55)" rx="2" ry="2"/>
+<text x="17.4" y="453.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample (167791 samples, 99.30%)</title>
+<rect x="7.4" y="424.0" width="3475.4" height="16.0" fill="rgb(196,85,55)" rx="2" ry="2"/>
+<text x="17.4" y="437.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.sample</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.getUrl (398 samples, 0.24%)</title>
+<rect x="7.5" y="408.0" width="8.2" height="16.0" fill="rgb(191,83,54)" rx="2" ry="2"/>
+<text x="17.5" y="421.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URL.&lt;init&gt; (133 samples, 0.08%)</title>
+<rect x="7.6" y="392.0" width="2.8" height="16.0" fill="rgb(228,73,135)" rx="2" ry="2"/>
+<text x="17.6" y="405.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URL.&lt;init&gt; (131 samples, 0.08%)</title>
+<rect x="7.6" y="376.0" width="2.7" height="16.0" fill="rgb(228,73,135)" rx="2" ry="2"/>
+<text x="17.6" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>94 samples, 0.06%</title><rect x="8.3" y="368.0" width="1.9" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample (167381 samples, 99.05%)</title>
+<rect x="15.8" y="408.0" width="3466.9" height="16.0" fill="rgb(196,99,73)" rx="2" ry="2"/>
+<text x="25.8" y="421.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPSamplerProxy.sample</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample (167376 samples, 99.05%)</title>
+<rect x="15.8" y="392.0" width="3466.8" height="16.0" fill="rgb(196,90,61)" rx="2" ry="2"/>
+<text x="25.8" y="405.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.sample</text>
+</g>
+<g class="fbar">
+<title>java.net.URL.toURI (378 samples, 0.22%)</title>
+<rect x="15.8" y="376.0" width="7.8" height="16.0" fill="rgb(227,73,135)" rx="2" ry="2"/>
+<text x="25.8" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI.&lt;init&gt; (332 samples, 0.20%)</title>
+<rect x="15.8" y="360.0" width="6.9" height="16.0" fill="rgb(228,76,137)" rx="2" ry="2"/>
+<text x="25.8" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.parse (318 samples, 0.19%)</title>
+<rect x="15.8" y="344.0" width="6.6" height="16.0" fill="rgb(229,63,129)" rx="2" ry="2"/>
+<text x="25.8" y="357.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.parseHierarchical (306 samples, 0.18%)</title>
+<rect x="15.8" y="328.0" width="6.3" height="16.0" fill="rgb(198,54,112)" rx="2" ry="2"/>
+<text x="25.8" y="341.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.parseAuthority (286 samples, 0.17%)</title>
+<rect x="16.2" y="312.0" width="5.9" height="16.0" fill="rgb(198,54,112)" rx="2" ry="2"/>
+<text x="26.2" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.parseServer (103 samples, 0.06%)</title>
+<rect x="16.2" y="296.0" width="2.1" height="16.0" fill="rgb(208,57,117)" rx="2" ry="2"/>
+<text x="26.2" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.parseIPv4Address (103 samples, 0.06%)</title>
+<rect x="16.2" y="280.0" width="2.1" height="16.0" fill="rgb(198,54,112)" rx="2" ry="2"/>
+<text x="26.2" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.scanIPv4Address (102 samples, 0.06%)</title>
+<rect x="16.2" y="264.0" width="2.1" height="16.0" fill="rgb(208,57,117)" rx="2" ry="2"/>
+<text x="26.2" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>102 samples, 0.06%</title><rect x="16.2" y="256.0" width="2.1" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.URI$Parser.scan (113 samples, 0.07%)</title>
+<rect x="18.4" y="296.0" width="2.3" height="16.0" fill="rgb(211,58,119)" rx="2" ry="2"/>
+<text x="28.4" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>113 samples, 0.07%</title><rect x="18.4" y="288.0" width="2.3" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPAbstractImpl.readResponse (5035 samples, 2.98%)</title>
+<rect x="26.0" y="376.0" width="104.3" height="16.0" fill="rgb(197,92,64)" rx="2" ry="2"/>
+<text x="36.0" y="389.0" fill="rgb(0,0,0)">org.apache...</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.readResponse (5034 samples, 2.98%)</title>
+<rect x="26.0" y="360.0" width="104.3" height="16.0" fill="rgb(197,86,56)" rx="2" ry="2"/>
+<text x="36.0" y="373.0" fill="rgb(0,0,0)">org.apache...</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.conn.EofSensorInputStream.read (4748 samples, 2.81%)</title>
+<rect x="26.0" y="344.0" width="98.3" height="16.0" fill="rgb(212,68,61)" rx="2" ry="2"/>
+<text x="36.0" y="357.0" fill="rgb(0,0,0)">org.apache..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.conn.EofSensorInputStream.read (4747 samples, 2.81%)</title>
+<rect x="26.0" y="328.0" width="98.3" height="16.0" fill="rgb(212,68,61)" rx="2" ry="2"/>
+<text x="36.0" y="341.0" fill="rgb(0,0,0)">org.apache..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.conn.EofSensorInputStream.checkEOF (4220 samples, 2.50%)</title>
+<rect x="26.0" y="312.0" width="87.4" height="16.0" fill="rgb(222,71,64)" rx="2" ry="2"/>
+<text x="36.0" y="325.0" fill="rgb(0,0,0)">org.apach..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ResponseEntityProxy.eofDetected (4220 samples, 2.50%)</title>
+<rect x="26.0" y="296.0" width="87.4" height="16.0" fill="rgb(200,56,96)" rx="2" ry="2"/>
+<text x="36.0" y="309.0" fill="rgb(0,0,0)">org.apach..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ResponseEntityProxy.releaseConnection (4220 samples, 2.50%)</title>
+<rect x="26.0" y="280.0" width="87.4" height="16.0" fill="rgb(191,53,92)" rx="2" ry="2"/>
+<text x="36.0" y="293.0" fill="rgb(0,0,0)">org.apach..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ConnectionHolder.releaseConnection (4220 samples, 2.50%)</title>
+<rect x="26.0" y="264.0" width="87.4" height="16.0" fill="rgb(191,65,101)" rx="2" ry="2"/>
+<text x="36.0" y="277.0" fill="rgb(0,0,0)">org.apach..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ConnectionHolder.releaseConnection (4220 samples, 2.50%)</title>
+<rect x="26.0" y="248.0" width="87.4" height="16.0" fill="rgb(191,65,101)" rx="2" ry="2"/>
+<text x="36.0" y="261.0" fill="rgb(0,0,0)">org.apach..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPoolProxy.close (4191 samples, 2.48%)</title>
+<rect x="26.0" y="232.0" width="86.8" height="16.0" fill="rgb(214,86,122)" rx="2" ry="2"/>
+<text x="36.0" y="245.0" fill="rgb(0,0,0)">org.apac..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPoolEntry.closeConnection (4191 samples, 2.48%)</title>
+<rect x="26.0" y="216.0" width="86.8" height="16.0" fill="rgb(200,77,112)" rx="2" ry="2"/>
+<text x="36.0" y="229.0" fill="rgb(0,0,0)">org.apac..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.LoggingManagedHttpClientConnection.close (4191 samples, 2.48%)</title>
+<rect x="26.0" y="200.0" width="86.8" height="16.0" fill="rgb(214,70,111)" rx="2" ry="2"/>
+<text x="36.0" y="213.0" fill="rgb(0,0,0)">org.apac..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.close (4190 samples, 2.48%)</title>
+<rect x="26.0" y="184.0" width="86.8" height="16.0" fill="rgb(214,67,116)" rx="2" ry="2"/>
+<text x="36.0" y="197.0" fill="rgb(0,0,0)">org.apac..</text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.close (981 samples, 0.58%)</title>
+<rect x="26.0" y="168.0" width="20.3" height="16.0" fill="rgb(214,79,133)" rx="2" ry="2"/>
+<text x="36.0" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocksSocketImpl.close (981 samples, 0.58%)</title>
+<rect x="26.0" y="152.0" width="20.3" height="16.0" fill="rgb(214,73,129)" rx="2" ry="2"/>
+<text x="36.0" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.close (981 samples, 0.58%)</title>
+<rect x="26.0" y="136.0" width="20.3" height="16.0" fill="rgb(214,76,131)" rx="2" ry="2"/>
+<text x="36.0" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.socketClose (131 samples, 0.08%)</title>
+<rect x="26.0" y="120.0" width="2.7" height="16.0" fill="rgb(227,80,139)" rx="2" ry="2"/>
+<text x="36.0" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketClose0 (131 samples, 0.08%)</title>
+<rect x="26.0" y="104.0" width="2.7" height="16.0" fill="rgb(193,64,115)" rx="2" ry="2"/>
+<text x="36.0" y="117.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>131 samples, 0.08%</title><rect x="26.0" y="96.0" width="2.7" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.socketPreClose (850 samples, 0.50%)</title>
+<rect x="28.7" y="120.0" width="17.6" height="16.0" fill="rgb(210,74,128)" rx="2" ry="2"/>
+<text x="38.7" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketClose0 (850 samples, 0.50%)</title>
+<rect x="28.7" y="104.0" width="17.6" height="16.0" fill="rgb(193,64,115)" rx="2" ry="2"/>
+<text x="38.7" y="117.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>850 samples, 0.50%</title><rect x="28.7" y="96.0" width="17.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.shutdownInput (134 samples, 0.08%)</title>
+<rect x="46.4" y="168.0" width="2.8" height="16.0" fill="rgb(226,83,140)" rx="2" ry="2"/>
+<text x="56.4" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.shutdownInput (134 samples, 0.08%)</title>
+<rect x="46.4" y="152.0" width="2.8" height="16.0" fill="rgb(226,80,138)" rx="2" ry="2"/>
+<text x="56.4" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketShutdown (134 samples, 0.08%)</title>
+<rect x="46.4" y="136.0" width="2.8" height="16.0" fill="rgb(195,64,117)" rx="2" ry="2"/>
+<text x="56.4" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>134 samples, 0.08%</title><rect x="46.4" y="128.0" width="2.8" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.shutdownOutput (3073 samples, 1.82%)</title>
+<rect x="49.1" y="168.0" width="63.6" height="16.0" fill="rgb(205,76,127)" rx="2" ry="2"/>
+<text x="59.1" y="181.0" fill="rgb(0,0,0)">java...</text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.shutdownOutput (3073 samples, 1.82%)</title>
+<rect x="49.1" y="152.0" width="63.6" height="16.0" fill="rgb(205,72,125)" rx="2" ry="2"/>
+<text x="59.1" y="165.0" fill="rgb(0,0,0)">java...</text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketShutdown (3073 samples, 1.82%)</title>
+<rect x="49.1" y="136.0" width="63.6" height="16.0" fill="rgb(195,64,117)" rx="2" ry="2"/>
+<text x="59.1" y="149.0" fill="rgb(0,0,0)">java...</text>
+</g>
+<g>
+<title>3073 samples, 1.82%</title><rect x="49.1" y="128.0" width="63.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.ContentLengthInputStream.read (527 samples, 0.31%)</title>
+<rect x="113.4" y="312.0" width="10.9" height="16.0" fill="rgb(212,129,68)" rx="2" ry="2"/>
+<text x="123.4" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.read (526 samples, 0.31%)</title>
+<rect x="113.4" y="296.0" width="10.9" height="16.0" fill="rgb(212,127,64)" rx="2" ry="2"/>
+<text x="123.4" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.streamRead (525 samples, 0.31%)</title>
+<rect x="113.4" y="280.0" width="10.9" height="16.0" fill="rgb(200,120,60)" rx="2" ry="2"/>
+<text x="123.4" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.read (525 samples, 0.31%)</title>
+<rect x="113.4" y="264.0" width="10.9" height="16.0" fill="rgb(212,55,118)" rx="2" ry="2"/>
+<text x="123.4" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.read (525 samples, 0.31%)</title>
+<rect x="113.4" y="248.0" width="10.9" height="16.0" fill="rgb(212,55,118)" rx="2" ry="2"/>
+<text x="123.4" y="261.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.socketRead (525 samples, 0.31%)</title>
+<rect x="113.4" y="232.0" width="10.9" height="16.0" fill="rgb(215,56,119)" rx="2" ry="2"/>
+<text x="123.4" y="245.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.socketRead0 (525 samples, 0.31%)</title>
+<rect x="113.4" y="216.0" width="10.9" height="16.0" fill="rgb(213,55,118)" rx="2" ry="2"/>
+<text x="123.4" y="229.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>525 samples, 0.31%</title><rect x="113.4" y="208.0" width="10.9" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPSamplerBase.useMD5 (107 samples, 0.06%)</title>
+<rect x="124.4" y="344.0" width="2.2" height="16.0" fill="rgb(205,89,58)" rx="2" ry="2"/>
+<text x="134.4" y="357.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.testelement.AbstractTestElement.getPropertyAsBoolean (107 samples, 0.06%)</title>
+<rect x="124.4" y="328.0" width="2.2" height="16.0" fill="rgb(229,69,103)" rx="2" ry="2"/>
+<text x="134.4" y="341.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.testelement.AbstractTestElement.getRawProperty (107 samples, 0.06%)</title>
+<rect x="124.4" y="312.0" width="2.2" height="16.0" fill="rgb(229,69,103)" rx="2" ry="2"/>
+<text x="134.4" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.Collections$SynchronizedMap.get (96 samples, 0.06%)</title>
+<rect x="124.4" y="296.0" width="2.0" height="16.0" fill="rgb(220,74,88)" rx="2" ry="2"/>
+<text x="134.4" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.LinkedHashMap.get (96 samples, 0.06%)</title>
+<rect x="124.4" y="280.0" width="2.0" height="16.0" fill="rgb(220,79,93)" rx="2" ry="2"/>
+<text x="134.4" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap.hash (96 samples, 0.06%)</title>
+<rect x="124.4" y="264.0" width="2.0" height="16.0" fill="rgb(220,75,89)" rx="2" ry="2"/>
+<text x="134.4" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>96 samples, 0.06%</title><rect x="124.4" y="256.0" width="2.0" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g>
+<title>172 samples, 0.10%</title><rect x="126.7" y="352.0" width="3.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.createHttpRequest (132 samples, 0.08%)</title>
+<rect x="130.7" y="376.0" width="2.7" height="16.0" fill="rgb(209,96,66)" rx="2" ry="2"/>
+<text x="140.7" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.createSampleResult (82 samples, 0.05%)</title>
+<rect x="133.4" y="376.0" width="1.7" height="16.0" fill="rgb(229,105,72)" rx="2" ry="2"/>
+<text x="143.4" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest (160607 samples, 95.04%)</title>
+<rect x="135.1" y="376.0" width="3326.6" height="16.0" fill="rgb(204,94,64)" rx="2" ry="2"/>
+<text x="145.1" y="389.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.executeRequest</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.client.CloseableHttpClient.execute (160603 samples, 95.04%)</title>
+<rect x="135.1" y="360.0" width="3326.5" height="16.0" fill="rgb(203,82,73)" rx="2" ry="2"/>
+<text x="145.1" y="373.0" fill="rgb(0,0,0)">org.apache.http.impl.client.CloseableHttpClient.execute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.client.InternalHttpClient.doExecute (160553 samples, 95.01%)</title>
+<rect x="136.0" y="344.0" width="3325.5" height="16.0" fill="rgb(220,84,73)" rx="2" ry="2"/>
+<text x="146.0" y="357.0" fill="rgb(0,0,0)">org.apache.http.impl.client.InternalHttpClient.doExecute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.methods.HttpRequestWrapper.wrap (150 samples, 0.09%)</title>
+<rect x="136.0" y="328.0" width="3.1" height="16.0" fill="rgb(212,71,121)" rx="2" ry="2"/>
+<text x="146.0" y="341.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.methods.HttpRequestWrapper.&lt;init&gt; (149 samples, 0.09%)</title>
+<rect x="136.0" y="312.0" width="3.1" height="16.0" fill="rgb(228,76,130)" rx="2" ry="2"/>
+<text x="146.0" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>144 samples, 0.09%</title><rect x="136.1" y="304.0" width="3.0" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.client.InternalHttpClient.setupContext (125 samples, 0.07%)</title>
+<rect x="139.9" y="328.0" width="2.6" height="16.0" fill="rgb(204,78,68)" rx="2" ry="2"/>
+<text x="149.9" y="341.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.HttpCoreContext.setAttribute (114 samples, 0.07%)</title>
+<rect x="139.9" y="312.0" width="2.4" height="16.0" fill="rgb(228,87,133)" rx="2" ry="2"/>
+<text x="149.9" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.BasicHttpContext.setAttribute (114 samples, 0.07%)</title>
+<rect x="139.9" y="296.0" width="2.4" height="16.0" fill="rgb(228,64,118)" rx="2" ry="2"/>
+<text x="149.9" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.concurrent.ConcurrentHashMap.put (114 samples, 0.07%)</title>
+<rect x="139.9" y="280.0" width="2.4" height="16.0" fill="rgb(225,90,72)" rx="2" ry="2"/>
+<text x="149.9" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>113 samples, 0.07%</title><rect x="140.0" y="272.0" width="2.3" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.RedirectExec.execute (160230 samples, 94.82%)</title>
+<rect x="142.5" y="328.0" width="3318.8" height="16.0" fill="rgb(203,64,103)" rx="2" ry="2"/>
+<text x="152.5" y="341.0" fill="rgb(0,0,0)">org.apache.http.impl.execchain.RedirectExec.execute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.RetryExec.execute (160186 samples, 94.80%)</title>
+<rect x="143.4" y="312.0" width="3317.9" height="16.0" fill="rgb(203,57,98)" rx="2" ry="2"/>
+<text x="153.4" y="325.0" fill="rgb(0,0,0)">org.apache.http.impl.execchain.RetryExec.execute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ProtocolExec.execute (160184 samples, 94.79%)</title>
+<rect x="143.4" y="296.0" width="3317.8" height="16.0" fill="rgb(203,67,105)" rx="2" ry="2"/>
+<text x="153.4" y="309.0" fill="rgb(0,0,0)">org.apache.http.impl.execchain.ProtocolExec.execute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.MainClientExec.execute (158856 samples, 94.01%)</title>
+<rect x="144.9" y="280.0" width="3290.3" height="16.0" fill="rgb(203,67,105)" rx="2" ry="2"/>
+<text x="154.9" y="293.0" fill="rgb(0,0,0)">org.apache.http.impl.execchain.MainClientExec.execute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager.requestConnection (77 samples, 0.05%)</title>
+<rect x="146.5" y="264.0" width="1.6" height="16.0" fill="rgb(215,73,113)" rx="2" ry="2"/>
+<text x="156.5" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.lease (75 samples, 0.04%)</title>
+<rect x="146.5" y="248.0" width="1.6" height="16.0" fill="rgb(212,79,98)" rx="2" ry="2"/>
+<text x="156.5" y="261.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager$1.get (2392 samples, 1.42%)</title>
+<rect x="148.1" y="264.0" width="49.5" height="16.0" fill="rgb(220,85,123)" rx="2" ry="2"/>
+<text x="158.1" y="277.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager.leaseConnection (2392 samples, 1.42%)</title>
+<rect x="148.1" y="248.0" width="49.5" height="16.0" fill="rgb(194,66,102)" rx="2" ry="2"/>
+<text x="158.1" y="261.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool$2.get (2391 samples, 1.41%)</title>
+<rect x="148.1" y="232.0" width="49.5" height="16.0" fill="rgb(220,82,101)" rx="2" ry="2"/>
+<text x="158.1" y="245.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool$2.get (2390 samples, 1.41%)</title>
+<rect x="148.1" y="216.0" width="49.5" height="16.0" fill="rgb(220,82,101)" rx="2" ry="2"/>
+<text x="158.1" y="229.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.access$200 (2389 samples, 1.41%)</title>
+<rect x="148.1" y="200.0" width="49.5" height="16.0" fill="rgb(200,75,92)" rx="2" ry="2"/>
+<text x="158.1" y="213.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.getPoolEntryBlocking (2389 samples, 1.41%)</title>
+<rect x="148.1" y="184.0" width="49.5" height="16.0" fill="rgb(211,79,97)" rx="2" ry="2"/>
+<text x="158.1" y="197.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager$InternalConnectionFactory.create (656 samples, 0.39%)</title>
+<rect x="148.1" y="168.0" width="13.6" height="16.0" fill="rgb(202,79,114)" rx="2" ry="2"/>
+<text x="158.1" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager$InternalConnectionFactory.create (656 samples, 0.39%)</title>
+<rect x="148.1" y="152.0" width="13.6" height="16.0" fill="rgb(202,79,114)" rx="2" ry="2"/>
+<text x="158.1" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.ManagedHttpClientConnectionFactory.create (653 samples, 0.39%)</title>
+<rect x="148.1" y="136.0" width="13.5" height="16.0" fill="rgb(202,82,116)" rx="2" ry="2"/>
+<text x="158.1" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.ManagedHttpClientConnectionFactory.create (638 samples, 0.38%)</title>
+<rect x="148.1" y="120.0" width="13.2" height="16.0" fill="rgb(202,82,116)" rx="2" ry="2"/>
+<text x="158.1" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.LoggingManagedHttpClientConnection.&lt;init&gt; (546 samples, 0.32%)</title>
+<rect x="149.0" y="104.0" width="11.3" height="16.0" fill="rgb(228,75,118)" rx="2" ry="2"/>
+<text x="159.0" y="117.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.DefaultManagedHttpClientConnection.&lt;init&gt; (545 samples, 0.32%)</title>
+<rect x="149.0" y="88.0" width="11.3" height="16.0" fill="rgb(228,66,112)" rx="2" ry="2"/>
+<text x="159.0" y="101.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.DefaultBHttpClientConnection.&lt;init&gt; (343 samples, 0.20%)</title>
+<rect x="149.0" y="72.0" width="7.1" height="16.0" fill="rgb(228,81,130)" rx="2" ry="2"/>
+<text x="159.0" y="85.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.&lt;init&gt; (336 samples, 0.20%)</title>
+<rect x="149.0" y="56.0" width="7.0" height="16.0" fill="rgb(228,72,123)" rx="2" ry="2"/>
+<text x="159.0" y="69.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.&lt;init&gt; (85 samples, 0.05%)</title>
+<rect x="149.0" y="40.0" width="1.8" height="16.0" fill="rgb(228,136,69)" rx="2" ry="2"/>
+<text x="159.0" y="53.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>213 samples, 0.13%</title><rect x="151.6" y="48.0" width="4.4" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g>
+<title>202 samples, 0.12%</title><rect x="156.2" y="80.0" width="4.2" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.getPool (149 samples, 0.09%)</title>
+<rect x="162.0" y="168.0" width="3.1" height="16.0" fill="rgb(208,77,96)" rx="2" ry="2"/>
+<text x="172.0" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap.put (88 samples, 0.05%)</title>
+<rect x="163.2" y="152.0" width="1.8" height="16.0" fill="rgb(225,77,91)" rx="2" ry="2"/>
+<text x="173.2" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.RouteSpecificPool.add (1569 samples, 0.93%)</title>
+<rect x="165.1" y="168.0" width="32.5" height="16.0" fill="rgb(227,77,98)" rx="2" ry="2"/>
+<text x="175.1" y="181.0" fill="rgb(0,0,0)">o..</text>
+</g>
+<g class="fbar">
+<title>java.util.HashSet.add (1547 samples, 0.92%)</title>
+<rect x="165.1" y="152.0" width="32.0" height="16.0" fill="rgb(227,83,96)" rx="2" ry="2"/>
+<text x="175.1" y="165.0" fill="rgb(0,0,0)">j..</text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap.put (1547 samples, 0.92%)</title>
+<rect x="165.1" y="136.0" width="32.0" height="16.0" fill="rgb(225,77,91)" rx="2" ry="2"/>
+<text x="175.1" y="149.0" fill="rgb(0,0,0)">j..</text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap.hash (1541 samples, 0.91%)</title>
+<rect x="165.1" y="120.0" width="31.9" height="16.0" fill="rgb(220,75,89)" rx="2" ry="2"/>
+<text x="175.1" y="133.0" fill="rgb(0,0,0)">j..</text>
+</g>
+<g class="fbar">
+<title>java.lang.Object.hashCode (1541 samples, 0.91%)</title>
+<rect x="165.1" y="104.0" width="31.9" height="16.0" fill="rgb(217,87,124)" rx="2" ry="2"/>
+<text x="175.1" y="117.0" fill="rgb(0,0,0)">j..</text>
+</g>
+<g>
+<title>1541 samples, 0.91%</title><rect x="165.1" y="96.0" width="31.9" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.MainClientExec.establishRoute (139939 samples, 82.81%)</title>
+<rect x="197.7" y="264.0" width="2898.5" height="16.0" fill="rgb(218,72,113)" rx="2" ry="2"/>
+<text x="207.7" y="277.0" fill="rgb(0,0,0)">org.apache.http.impl.execchain.MainClientExec.establishRoute</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect (139930 samples, 82.81%)</title>
+<rect x="197.7" y="248.0" width="2898.3" height="16.0" fill="rgb(220,75,116)" rx="2" ry="2"/>
+<text x="207.7" y="261.0" fill="rgb(0,0,0)">org.apache.http.impl.conn.PoolingHttpClientConnectionManager.connect</text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect (139920 samples, 82.80%)</title>
+<rect x="197.7" y="232.0" width="2898.1" height="16.0" fill="rgb(220,95,61)" rx="2" ry="2"/>
+<text x="207.7" y="245.0" fill="rgb(0,0,0)">org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$JMeterDefaultHttpClientConnectionOperator.connect</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect (139903 samples, 82.79%)</title>
+<rect x="197.7" y="216.0" width="2897.7" height="16.0" fill="rgb(220,85,123)" rx="2" ry="2"/>
+<text x="207.7" y="229.0" fill="rgb(0,0,0)">org.apache.http.impl.conn.DefaultHttpClientConnectionOperator.connect</text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.setKeepAlive (109 samples, 0.06%)</title>
+<rect x="197.7" y="200.0" width="2.3" height="16.0" fill="rgb(204,75,127)" rx="2" ry="2"/>
+<text x="207.7" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.setOption (109 samples, 0.06%)</title>
+<rect x="197.7" y="184.0" width="2.3" height="16.0" fill="rgb(217,77,133)" rx="2" ry="2"/>
+<text x="207.7" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption (109 samples, 0.06%)</title>
+<rect x="197.7" y="168.0" width="2.3" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="207.7" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption0 (109 samples, 0.06%)</title>
+<rect x="197.7" y="152.0" width="2.3" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="207.7" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>109 samples, 0.06%</title><rect x="197.7" y="144.0" width="2.3" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.setReuseAddress (158 samples, 0.09%)</title>
+<rect x="200.0" y="200.0" width="3.3" height="16.0" fill="rgb(220,81,137)" rx="2" ry="2"/>
+<text x="210.0" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.setOption (158 samples, 0.09%)</title>
+<rect x="200.0" y="184.0" width="3.3" height="16.0" fill="rgb(217,77,133)" rx="2" ry="2"/>
+<text x="210.0" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption (158 samples, 0.09%)</title>
+<rect x="200.0" y="168.0" width="3.3" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="210.0" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption0 (158 samples, 0.09%)</title>
+<rect x="200.0" y="152.0" width="3.3" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="210.0" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>158 samples, 0.09%</title><rect x="200.0" y="144.0" width="3.3" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.setSoTimeout (1000 samples, 0.59%)</title>
+<rect x="203.3" y="200.0" width="20.7" height="16.0" fill="rgb(221,81,137)" rx="2" ry="2"/>
+<text x="213.3" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.setOption (80 samples, 0.05%)</title>
+<rect x="203.3" y="184.0" width="1.7" height="16.0" fill="rgb(217,77,133)" rx="2" ry="2"/>
+<text x="213.3" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption (80 samples, 0.05%)</title>
+<rect x="203.3" y="168.0" width="1.7" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="213.3" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption0 (80 samples, 0.05%)</title>
+<rect x="203.3" y="152.0" width="1.7" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="213.3" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>80 samples, 0.05%</title><rect x="203.3" y="144.0" width="1.7" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.getImpl (920 samples, 0.54%)</title>
+<rect x="204.9" y="184.0" width="19.1" height="16.0" fill="rgb(200,74,124)" rx="2" ry="2"/>
+<text x="214.9" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.createImpl (920 samples, 0.54%)</title>
+<rect x="204.9" y="168.0" width="19.1" height="16.0" fill="rgb(210,77,130)" rx="2" ry="2"/>
+<text x="214.9" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.create (920 samples, 0.54%)</title>
+<rect x="204.9" y="152.0" width="19.1" height="16.0" fill="rgb(202,71,124)" rx="2" ry="2"/>
+<text x="214.9" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketCreate (920 samples, 0.54%)</title>
+<rect x="204.9" y="136.0" width="19.1" height="16.0" fill="rgb(209,69,125)" rx="2" ry="2"/>
+<text x="214.9" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>920 samples, 0.54%</title><rect x="204.9" y="128.0" width="19.1" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.net.Socket.setTcpNoDelay (132 samples, 0.08%)</title>
+<rect x="224.0" y="200.0" width="2.7" height="16.0" fill="rgb(229,84,142)" rx="2" ry="2"/>
+<text x="234.0" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.setOption (132 samples, 0.08%)</title>
+<rect x="224.0" y="184.0" width="2.7" height="16.0" fill="rgb(217,77,133)" rx="2" ry="2"/>
+<text x="234.0" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption (132 samples, 0.08%)</title>
+<rect x="224.0" y="168.0" width="2.7" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="234.0" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketSetOption0 (132 samples, 0.08%)</title>
+<rect x="224.0" y="152.0" width="2.7" height="16.0" fill="rgb(194,64,116)" rx="2" ry="2"/>
+<text x="234.0" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>132 samples, 0.08%</title><rect x="224.0" y="144.0" width="2.7" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket (137963 samples, 81.64%)</title>
+<rect x="226.8" y="200.0" width="2857.6" height="16.0" fill="rgb(203,72,124)" rx="2" ry="2"/>
+<text x="236.8" y="213.0" fill="rgb(0,0,0)">org.apache.http.conn.socket.PlainConnectionSocketFactory.connectSocket</text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.connect (137963 samples, 81.64%)</title>
+<rect x="226.8" y="184.0" width="2857.6" height="16.0" fill="rgb(220,81,137)" rx="2" ry="2"/>
+<text x="236.8" y="197.0" fill="rgb(0,0,0)">java.net.Socket.connect</text>
+</g>
+<g class="fbar">
+<title>java.net.SocksSocketImpl.connect (137957 samples, 81.64%)</title>
+<rect x="226.8" y="168.0" width="2857.4" height="16.0" fill="rgb(220,75,133)" rx="2" ry="2"/>
+<text x="236.8" y="181.0" fill="rgb(0,0,0)">java.net.SocksSocketImpl.connect</text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.connect (136661 samples, 80.87%)</title>
+<rect x="226.9" y="152.0" width="2830.6" height="16.0" fill="rgb(220,78,135)" rx="2" ry="2"/>
+<text x="236.9" y="165.0" fill="rgb(0,0,0)">java.net.AbstractPlainSocketImpl.connect</text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.connectToAddress (136660 samples, 80.87%)</title>
+<rect x="226.9" y="136.0" width="2830.6" height="16.0" fill="rgb(205,72,125)" rx="2" ry="2"/>
+<text x="236.9" y="149.0" fill="rgb(0,0,0)">java.net.AbstractPlainSocketImpl.connectToAddress</text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.doConnect (136660 samples, 80.87%)</title>
+<rect x="226.9" y="120.0" width="2830.6" height="16.0" fill="rgb(201,71,123)" rx="2" ry="2"/>
+<text x="236.9" y="133.0" fill="rgb(0,0,0)">java.net.AbstractPlainSocketImpl.doConnect</text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.socketConnect (136659 samples, 80.87%)</title>
+<rect x="226.9" y="104.0" width="2830.6" height="16.0" fill="rgb(221,73,132)" rx="2" ry="2"/>
+<text x="236.9" y="117.0" fill="rgb(0,0,0)">java.net.PlainSocketImpl.socketConnect</text>
+</g>
+<g>
+<title>136659 samples, 80.87%</title><rect x="226.9" y="96.0" width="2830.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>java.security.AccessController.doPrivileged (462 samples, 0.27%)</title>
+<rect x="3057.9" y="152.0" width="9.6" height="16.0" fill="rgb(192,64,94)" rx="2" ry="2"/>
+<text x="3067.9" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>460 samples, 0.27%</title><rect x="3057.9" y="144.0" width="9.5" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>sun.net.spi.DefaultProxySelector.select (805 samples, 0.48%)</title>
+<rect x="3067.5" y="152.0" width="16.7" height="16.0" fill="rgb(194,106,59)" rx="2" ry="2"/>
+<text x="3077.5" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.security.AccessController.doPrivileged (799 samples, 0.47%)</title>
+<rect x="3067.6" y="136.0" width="16.5" height="16.0" fill="rgb(192,64,94)" rx="2" ry="2"/>
+<text x="3077.6" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>794 samples, 0.47%</title><rect x="3067.7" y="128.0" width="16.4" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.conn.socket.PlainConnectionSocketFactory.createSocket (528 samples, 0.31%)</title>
+<rect x="3084.3" y="200.0" width="10.9" height="16.0" fill="rgb(229,81,140)" rx="2" ry="2"/>
+<text x="3094.3" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.&lt;init&gt; (528 samples, 0.31%)</title>
+<rect x="3084.3" y="184.0" width="10.9" height="16.0" fill="rgb(228,84,142)" rx="2" ry="2"/>
+<text x="3094.3" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.setImpl (525 samples, 0.31%)</title>
+<rect x="3084.3" y="168.0" width="10.9" height="16.0" fill="rgb(220,81,137)" rx="2" ry="2"/>
+<text x="3094.3" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocksSocketImpl.&lt;init&gt; (524 samples, 0.31%)</title>
+<rect x="3084.3" y="152.0" width="10.9" height="16.0" fill="rgb(228,78,138)" rx="2" ry="2"/>
+<text x="3094.3" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.PlainSocketImpl.&lt;init&gt; (524 samples, 0.31%)</title>
+<rect x="3084.3" y="136.0" width="10.9" height="16.0" fill="rgb(228,75,136)" rx="2" ry="2"/>
+<text x="3094.3" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.AbstractPlainSocketImpl.&lt;init&gt; (524 samples, 0.31%)</title>
+<rect x="3084.3" y="120.0" width="10.9" height="16.0" fill="rgb(228,80,139)" rx="2" ry="2"/>
+<text x="3094.3" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.SocketImpl.&lt;init&gt; (524 samples, 0.31%)</title>
+<rect x="3084.3" y="104.0" width="10.9" height="16.0" fill="rgb(228,66,131)" rx="2" ry="2"/>
+<text x="3094.3" y="117.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.lang.Object.&lt;init&gt; (524 samples, 0.31%)</title>
+<rect x="3084.3" y="88.0" width="10.9" height="16.0" fill="rgb(228,91,130)" rx="2" ry="2"/>
+<text x="3094.3" y="101.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>523 samples, 0.31%</title><rect x="3084.3" y="80.0" width="10.8" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.HttpRequestExecutor.execute (16325 samples, 9.66%)</title>
+<rect x="3096.6" y="264.0" width="338.1" height="16.0" fill="rgb(203,82,122)" rx="2" ry="2"/>
+<text x="3106.6" y="277.0" fill="rgb(0,0,0)">org.apache.http.protocol.HttpRequestExecutor..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.HttpRequestExecutor.doReceiveResponse (12494 samples, 7.39%)</title>
+<rect x="3096.6" y="248.0" width="258.8" height="16.0" fill="rgb(199,80,119)" rx="2" ry="2"/>
+<text x="3106.6" y="261.0" fill="rgb(0,0,0)">org.apache.http.protocol.HttpRequ..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPoolProxy.receiveResponseHeader (12446 samples, 7.37%)</title>
+<rect x="3097.4" y="232.0" width="257.8" height="16.0" fill="rgb(215,86,122)" rx="2" ry="2"/>
+<text x="3107.4" y="245.0" fill="rgb(0,0,0)">org.apache.http.impl.conn.CPoolPr..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.DefaultBHttpClientConnection.receiveResponseHeader (12446 samples, 7.37%)</title>
+<rect x="3097.4" y="216.0" width="257.8" height="16.0" fill="rgb(215,77,122)" rx="2" ry="2"/>
+<text x="3107.4" y="229.0" fill="rgb(0,0,0)">org.apache.http.impl.DefaultBHttp..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.AbstractMessageParser.parse (12430 samples, 7.36%)</title>
+<rect x="3097.4" y="200.0" width="257.5" height="16.0" fill="rgb(229,143,80)" rx="2" ry="2"/>
+<text x="3107.4" y="213.0" fill="rgb(0,0,0)">org.apache.http.impl.io.AbstractM..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead (12364 samples, 7.32%)</title>
+<rect x="3097.4" y="184.0" width="256.1" height="16.0" fill="rgb(197,68,104)" rx="2" ry="2"/>
+<text x="3107.4" y="197.0" fill="rgb(0,0,0)">org.apache.http.impl.conn.Default..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.DefaultHttpResponseParser.parseHead (12364 samples, 7.32%)</title>
+<rect x="3097.4" y="168.0" width="256.1" height="16.0" fill="rgb(197,68,104)" rx="2" ry="2"/>
+<text x="3107.4" y="181.0" fill="rgb(0,0,0)">org.apache.http.impl.conn.Default..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.readLine (12325 samples, 7.29%)</title>
+<rect x="3097.6" y="152.0" width="255.3" height="16.0" fill="rgb(192,115,58)" rx="2" ry="2"/>
+<text x="3107.6" y="165.0" fill="rgb(0,0,0)">org.apache.http.impl.io.SessionIn..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.fillBuffer (12318 samples, 7.29%)</title>
+<rect x="3097.6" y="136.0" width="255.1" height="16.0" fill="rgb(197,118,59)" rx="2" ry="2"/>
+<text x="3107.6" y="149.0" fill="rgb(0,0,0)">org.apache.http.impl.io.SessionIn..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionInputBufferImpl.streamRead (12317 samples, 7.29%)</title>
+<rect x="3097.6" y="120.0" width="255.1" height="16.0" fill="rgb(200,120,60)" rx="2" ry="2"/>
+<text x="3107.6" y="133.0" fill="rgb(0,0,0)">org.apache.http.impl.io.SessionIn..</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.read (12317 samples, 7.29%)</title>
+<rect x="3097.6" y="104.0" width="255.1" height="16.0" fill="rgb(212,55,118)" rx="2" ry="2"/>
+<text x="3107.6" y="117.0" fill="rgb(0,0,0)">java.net.SocketInputStream.read</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.read (12311 samples, 7.29%)</title>
+<rect x="3097.6" y="88.0" width="255.0" height="16.0" fill="rgb(212,55,118)" rx="2" ry="2"/>
+<text x="3107.6" y="101.0" fill="rgb(0,0,0)">java.net.SocketInputStream.read</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.socketRead (12311 samples, 7.29%)</title>
+<rect x="3097.6" y="72.0" width="255.0" height="16.0" fill="rgb(215,56,119)" rx="2" ry="2"/>
+<text x="3107.6" y="85.0" fill="rgb(0,0,0)">java.net.SocketInputStream.socke..</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketInputStream.socketRead0 (12311 samples, 7.29%)</title>
+<rect x="3097.6" y="56.0" width="255.0" height="16.0" fill="rgb(213,55,118)" rx="2" ry="2"/>
+<text x="3107.6" y="69.0" fill="rgb(0,0,0)">java.net.SocketInputStream.socke..</text>
+</g>
+<g>
+<title>12311 samples, 7.29%</title><rect x="3097.6" y="48.0" width="255.0" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl$5.doSendRequest (3829 samples, 2.27%)</title>
+<rect x="3355.4" y="248.0" width="79.3" height="16.0" fill="rgb(218,98,66)" rx="2" ry="2"/>
+<text x="3365.4" y="261.0" fill="rgb(0,0,0)">org.apa..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.HttpRequestExecutor.doSendRequest (3823 samples, 2.26%)</title>
+<rect x="3355.4" y="232.0" width="79.2" height="16.0" fill="rgb(218,88,131)" rx="2" ry="2"/>
+<text x="3365.4" y="245.0" fill="rgb(0,0,0)">org.apa..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPoolProxy.flush (2427 samples, 1.44%)</title>
+<rect x="3355.4" y="216.0" width="50.3" height="16.0" fill="rgb(226,90,129)" rx="2" ry="2"/>
+<text x="3365.4" y="229.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.DefaultBHttpClientConnection.flush (2427 samples, 1.44%)</title>
+<rect x="3355.4" y="200.0" width="50.3" height="16.0" fill="rgb(226,81,129)" rx="2" ry="2"/>
+<text x="3365.4" y="213.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.doFlush (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="184.0" width="50.2" height="16.0" fill="rgb(219,69,118)" rx="2" ry="2"/>
+<text x="3365.4" y="197.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionOutputBufferImpl.flush (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="168.0" width="50.2" height="16.0" fill="rgb(226,129,58)" rx="2" ry="2"/>
+<text x="3365.4" y="181.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionOutputBufferImpl.flushBuffer (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="152.0" width="50.2" height="16.0" fill="rgb(210,120,54)" rx="2" ry="2"/>
+<text x="3365.4" y="165.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.io.SessionOutputBufferImpl.streamWrite (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="136.0" width="50.2" height="16.0" fill="rgb(217,124,56)" rx="2" ry="2"/>
+<text x="3365.4" y="149.0" fill="rgb(0,0,0)">org..</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketOutputStream.write (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="120.0" width="50.2" height="16.0" fill="rgb(225,89,143)" rx="2" ry="2"/>
+<text x="3365.4" y="133.0" fill="rgb(0,0,0)">jav..</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketOutputStream.socketWrite (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="104.0" width="50.2" height="16.0" fill="rgb(218,86,139)" rx="2" ry="2"/>
+<text x="3365.4" y="117.0" fill="rgb(0,0,0)">jav..</text>
+</g>
+<g class="fbar">
+<title>java.net.SocketOutputStream.socketWrite0 (2425 samples, 1.44%)</title>
+<rect x="3355.4" y="88.0" width="50.2" height="16.0" fill="rgb(214,85,136)" rx="2" ry="2"/>
+<text x="3365.4" y="101.0" fill="rgb(0,0,0)">jav..</text>
+</g>
+<g>
+<title>2425 samples, 1.44%</title><rect x="3355.4" y="80.0" width="50.2" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPoolProxy.sendRequestHeader (1384 samples, 0.82%)</title>
+<rect x="3405.7" y="216.0" width="28.7" height="16.0" fill="rgb(194,78,110)" rx="2" ry="2"/>
+<text x="3415.7" y="229.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.DefaultBHttpClientConnection.sendRequestHeader (1384 samples, 0.82%)</title>
+<rect x="3405.7" y="200.0" width="28.7" height="16.0" fill="rgb(194,69,110)" rx="2" ry="2"/>
+<text x="3415.7" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.ensureOpen (1346 samples, 0.80%)</title>
+<rect x="3405.7" y="184.0" width="27.9" height="16.0" fill="rgb(198,62,107)" rx="2" ry="2"/>
+<text x="3415.7" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.LoggingManagedHttpClientConnection.getSocketInputStream (1101 samples, 0.65%)</title>
+<rect x="3405.7" y="168.0" width="22.8" height="16.0" fill="rgb(227,75,118)" rx="2" ry="2"/>
+<text x="3415.7" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.getSocketInputStream (1101 samples, 0.65%)</title>
+<rect x="3405.7" y="152.0" width="22.8" height="16.0" fill="rgb(227,71,123)" rx="2" ry="2"/>
+<text x="3415.7" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.getInputStream (1101 samples, 0.65%)</title>
+<rect x="3405.7" y="136.0" width="22.8" height="16.0" fill="rgb(206,76,128)" rx="2" ry="2"/>
+<text x="3415.7" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.security.AccessController.doPrivileged (1101 samples, 0.65%)</title>
+<rect x="3405.7" y="120.0" width="22.8" height="16.0" fill="rgb(192,64,94)" rx="2" ry="2"/>
+<text x="3415.7" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>1090 samples, 0.65%</title><rect x="3405.9" y="112.0" width="22.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.LoggingManagedHttpClientConnection.getSocketOutputStream (245 samples, 0.14%)</title>
+<rect x="3428.5" y="168.0" width="5.1" height="16.0" fill="rgb(220,72,114)" rx="2" ry="2"/>
+<text x="3438.5" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.BHttpConnectionBase.getSocketOutputStream (245 samples, 0.14%)</title>
+<rect x="3428.5" y="152.0" width="5.1" height="16.0" fill="rgb(220,69,119)" rx="2" ry="2"/>
+<text x="3438.5" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.net.Socket.getOutputStream (245 samples, 0.14%)</title>
+<rect x="3428.5" y="136.0" width="5.1" height="16.0" fill="rgb(229,84,142)" rx="2" ry="2"/>
+<text x="3438.5" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.security.AccessController.doPrivileged (245 samples, 0.14%)</title>
+<rect x="3428.5" y="120.0" width="5.1" height="16.0" fill="rgb(192,64,94)" rx="2" ry="2"/>
+<text x="3438.5" y="133.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>238 samples, 0.14%</title><rect x="3428.7" y="112.0" width="4.9" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.execchain.ProtocolExec.rewriteRequestURI (297 samples, 0.18%)</title>
+<rect x="3435.2" y="280.0" width="6.2" height="16.0" fill="rgb(207,68,107)" rx="2" ry="2"/>
+<text x="3445.2" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URIUtils.rewriteURIForRoute (297 samples, 0.18%)</title>
+<rect x="3435.2" y="264.0" width="6.2" height="16.0" fill="rgb(222,77,90)" rx="2" ry="2"/>
+<text x="3445.2" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URIUtils.rewriteURI (296 samples, 0.18%)</title>
+<rect x="3435.2" y="248.0" width="6.1" height="16.0" fill="rgb(198,68,81)" rx="2" ry="2"/>
+<text x="3445.2" y="261.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URIBuilder.build (223 samples, 0.13%)</title>
+<rect x="3436.7" y="232.0" width="4.6" height="16.0" fill="rgb(228,77,91)" rx="2" ry="2"/>
+<text x="3446.7" y="245.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URIBuilder.buildString (145 samples, 0.09%)</title>
+<rect x="3437.6" y="216.0" width="3.0" height="16.0" fill="rgb(209,70,84)" rx="2" ry="2"/>
+<text x="3447.6" y="229.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URIBuilder.encodePath (142 samples, 0.08%)</title>
+<rect x="3437.7" y="200.0" width="2.9" height="16.0" fill="rgb(201,68,80)" rx="2" ry="2"/>
+<text x="3447.7" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URLEncodedUtils.encPath (142 samples, 0.08%)</title>
+<rect x="3437.7" y="184.0" width="2.9" height="16.0" fill="rgb(205,73,86)" rx="2" ry="2"/>
+<text x="3447.7" y="197.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.utils.URLEncodedUtils.urlEncode (142 samples, 0.08%)</title>
+<rect x="3437.7" y="168.0" width="2.9" height="16.0" fill="rgb(207,74,86)" rx="2" ry="2"/>
+<text x="3447.7" y="181.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.nio.charset.Charset.encode (140 samples, 0.08%)</title>
+<rect x="3437.7" y="152.0" width="2.9" height="16.0" fill="rgb(196,78,89)" rx="2" ry="2"/>
+<text x="3447.7" y="165.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.nio.charset.Charset.encode (74 samples, 0.04%)</title>
+<rect x="3439.0" y="136.0" width="1.5" height="16.0" fill="rgb(196,78,89)" rx="2" ry="2"/>
+<text x="3449.0" y="149.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.HttpCoreContext.setAttribute (251 samples, 0.15%)</title>
+<rect x="3441.4" y="280.0" width="5.2" height="16.0" fill="rgb(228,87,133)" rx="2" ry="2"/>
+<text x="3451.4" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.BasicHttpContext.setAttribute (251 samples, 0.15%)</title>
+<rect x="3441.4" y="264.0" width="5.2" height="16.0" fill="rgb(228,64,118)" rx="2" ry="2"/>
+<text x="3451.4" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.concurrent.ConcurrentHashMap.put (251 samples, 0.15%)</title>
+<rect x="3441.4" y="248.0" width="5.2" height="16.0" fill="rgb(225,90,72)" rx="2" ry="2"/>
+<text x="3451.4" y="261.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.concurrent.ConcurrentHashMap.putVal (225 samples, 0.13%)</title>
+<rect x="3441.4" y="232.0" width="4.7" height="16.0" fill="rgb(200,80,64)" rx="2" ry="2"/>
+<text x="3451.4" y="245.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.concurrent.ConcurrentHashMap.addCount (213 samples, 0.13%)</title>
+<rect x="3441.4" y="216.0" width="4.4" height="16.0" fill="rgb(200,80,64)" rx="2" ry="2"/>
+<text x="3451.4" y="229.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.concurrent.ConcurrentHashMap.transfer (180 samples, 0.11%)</title>
+<rect x="3441.4" y="200.0" width="3.7" height="16.0" fill="rgb(217,87,70)" rx="2" ry="2"/>
+<text x="3451.4" y="213.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>180 samples, 0.11%</title><rect x="3441.4" y="192.0" width="3.7" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.ImmutableHttpProcessor.process (692 samples, 0.41%)</title>
+<rect x="3446.6" y="280.0" width="14.3" height="16.0" fill="rgb(193,52,99)" rx="2" ry="2"/>
+<text x="3456.6" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.client.protocol.RequestAddCookies.process (123 samples, 0.07%)</title>
+<rect x="3446.6" y="264.0" width="2.5" height="16.0" fill="rgb(193,67,76)" rx="2" ry="2"/>
+<text x="3456.6" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.protocol.RequestTargetHost.process (82 samples, 0.05%)</title>
+<rect x="3451.5" y="264.0" width="1.7" height="16.0" fill="rgb(193,64,107)" rx="2" ry="2"/>
+<text x="3461.5" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>279 samples, 0.17%</title><rect x="3455.1" y="272.0" width="5.8" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.getAllHeadersExceptCookie (86 samples, 0.05%)</title>
+<rect x="3462.1" y="376.0" width="1.8" height="16.0" fill="rgb(226,104,71)" rx="2" ry="2"/>
+<text x="3472.1" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.getFromHeadersMatchingPredicate (76 samples, 0.04%)</title>
+<rect x="3462.1" y="360.0" width="1.6" height="16.0" fill="rgb(210,96,66)" rx="2" ry="2"/>
+<text x="3472.1" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.setupClient (372 samples, 0.22%)</title>
+<rect x="3464.9" y="376.0" width="7.7" height="16.0" fill="rgb(206,95,65)" rx="2" ry="2"/>
+<text x="3474.9" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.resetStateIfNeeded (189 samples, 0.11%)</title>
+<rect x="3468.3" y="360.0" width="3.9" height="16.0" fill="rgb(210,96,66)" rx="2" ry="2"/>
+<text x="3478.3" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.closeCurrentConnections (142 samples, 0.08%)</title>
+<rect x="3468.4" y="344.0" width="2.9" height="16.0" fill="rgb(202,93,63)" rx="2" ry="2"/>
+<text x="3478.4" y="357.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.PoolingHttpClientConnectionManager.closeExpiredConnections (121 samples, 0.07%)</title>
+<rect x="3468.4" y="328.0" width="2.5" height="16.0" fill="rgb(198,68,104)" rx="2" ry="2"/>
+<text x="3478.4" y="341.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.closeExpired (121 samples, 0.07%)</title>
+<rect x="3468.4" y="312.0" width="2.5" height="16.0" fill="rgb(215,80,99)" rx="2" ry="2"/>
+<text x="3478.4" y="325.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.impl.conn.CPool.enumAvailable (120 samples, 0.07%)</title>
+<rect x="3468.5" y="296.0" width="2.5" height="16.0" fill="rgb(210,64,105)" rx="2" ry="2"/>
+<text x="3478.5" y="309.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.enumAvailable (120 samples, 0.07%)</title>
+<rect x="3468.5" y="280.0" width="2.5" height="16.0" fill="rgb(210,78,97)" rx="2" ry="2"/>
+<text x="3478.5" y="293.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.http.pool.AbstractConnPool.purgePoolMap (118 samples, 0.07%)</title>
+<rect x="3468.5" y="264.0" width="2.4" height="16.0" fill="rgb(223,83,103)" rx="2" ry="2"/>
+<text x="3478.5" y="277.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap$HashIterator.remove (117 samples, 0.07%)</title>
+<rect x="3468.5" y="248.0" width="2.4" height="16.0" fill="rgb(198,68,80)" rx="2" ry="2"/>
+<text x="3478.5" y="261.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.util.HashMap.hash (117 samples, 0.07%)</title>
+<rect x="3468.5" y="232.0" width="2.4" height="16.0" fill="rgb(220,75,89)" rx="2" ry="2"/>
+<text x="3478.5" y="245.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>117 samples, 0.07%</title><rect x="3468.5" y="224.0" width="2.4" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.setupRequest (283 samples, 0.17%)</title>
+<rect x="3473.2" y="376.0" width="5.9" height="16.0" fill="rgb(200,92,63)" rx="2" ry="2"/>
+<text x="3483.2" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.protocol.http.sampler.HTTPHC4Impl.getOnlyCookieFromHeaders (92 samples, 0.05%)</title>
+<rect x="3476.6" y="360.0" width="1.9" height="16.0" fill="rgb(216,99,68)" rx="2" ry="2"/>
+<text x="3486.6" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>85 samples, 0.05%</title><rect x="3476.7" y="352.0" width="1.8" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g>
+<title>127 samples, 0.08%</title><rect x="3480.0" y="384.0" width="2.6" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.JMeterThread.notifyListeners (277 samples, 0.16%)</title>
+<rect x="3482.8" y="456.0" width="5.7" height="16.0" fill="rgb(196,68,74)" rx="2" ry="2"/>
+<text x="3492.8" y="469.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.ListenerNotifier.notifyListeners (275 samples, 0.16%)</title>
+<rect x="3482.9" y="440.0" width="5.7" height="16.0" fill="rgb(196,61,67)" rx="2" ry="2"/>
+<text x="3492.9" y="453.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.reporters.ResultCollector.sampleOccurred (238 samples, 0.14%)</title>
+<rect x="3482.9" y="424.0" width="4.9" height="16.0" fill="rgb(213,140,81)" rx="2" ry="2"/>
+<text x="3492.9" y="437.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.save.CSVSaveService.saveSampleResult (177 samples, 0.10%)</title>
+<rect x="3484.1" y="408.0" width="3.7" height="16.0" fill="rgb(194,94,54)" rx="2" ry="2"/>
+<text x="3494.1" y="421.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.io.PrintWriter.println (130 samples, 0.08%)</title>
+<rect x="3484.1" y="392.0" width="2.7" height="16.0" fill="rgb(201,58,112)" rx="2" ry="2"/>
+<text x="3494.1" y="405.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.io.PrintWriter.print (93 samples, 0.06%)</title>
+<rect x="3484.1" y="376.0" width="1.9" height="16.0" fill="rgb(227,65,126)" rx="2" ry="2"/>
+<text x="3494.1" y="389.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.io.PrintWriter.write (93 samples, 0.06%)</title>
+<rect x="3484.1" y="360.0" width="1.9" height="16.0" fill="rgb(225,64,125)" rx="2" ry="2"/>
+<text x="3494.1" y="373.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>java.io.PrintWriter.write (93 samples, 0.06%)</title>
+<rect x="3484.1" y="344.0" width="1.9" height="16.0" fill="rgb(225,64,125)" rx="2" ry="2"/>
+<text x="3494.1" y="357.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.TestCompiler.done (338 samples, 0.20%)</title>
+<rect x="3490.2" y="456.0" width="7.0" height="16.0" fill="rgb(212,57,64)" rx="2" ry="2"/>
+<text x="3500.2" y="469.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.SamplePackage.recoverRunningVersion (337 samples, 0.20%)</title>
+<rect x="3490.2" y="440.0" width="7.0" height="16.0" fill="rgb(203,58,65)" rx="2" ry="2"/>
+<text x="3500.2" y="453.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.testelement.AbstractTestElement.recoverRunningVersion (103 samples, 0.06%)</title>
+<rect x="3490.2" y="424.0" width="2.1" height="16.0" fill="rgb(203,61,91)" rx="2" ry="2"/>
+<text x="3500.2" y="437.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.threads.SamplePackage.recoverRunningVersion (233 samples, 0.14%)</title>
+<rect x="3492.3" y="424.0" width="4.8" height="16.0" fill="rgb(203,58,65)" rx="2" ry="2"/>
+<text x="3502.3" y="437.0" fill="rgb(0,0,0)"></text>
+</g>
+<g class="fbar">
+<title>org.apache.jmeter.testelement.AbstractTestElement.recoverRunningVersion (228 samples, 0.13%)</title>
+<rect x="3492.3" y="408.0" width="4.7" height="16.0" fill="rgb(203,61,91)" rx="2" ry="2"/>
+<text x="3502.3" y="421.0" fill="rgb(0,0,0)"></text>
+</g>
+<g>
+<title>157 samples, 0.09%</title><rect x="3493.8" y="400.0" width="3.3" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+<g>
+<title>133 samples, 0.08%</title><rect x="3497.2" y="496.0" width="2.8" height="3.0" fill="rgb(20,20,20)" rx="1" ry="1"/>
+</g>
+</svg>

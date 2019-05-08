@@ -1,0 +1,42 @@
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.BeanShell (like Boundary)
+summary = 5000000 in 00:07:05 = 11768.7/s Avg:     1 Min:     0 Max:   354 Err:     0 (0.00%)
+summary = 5000000 in 00:07:14 = 11513.7/s Avg:     1 Min:     0 Max:   447 Err:     0 (0.00%)
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.Boundary
+summary = 5000000 in 00:01:34 = 53267.4/s Avg:     0 Min:     0 Max:   328 Err:     0 (0.00%)
+summary = 5000000 in 00:01:27 = 57730.7/s Avg:     0 Min:     0 Max:   310 Err:     0 (0.00%)
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.Boundary + SJK
+summary = 5000000 in 00:01:47 = 46763.1/s Avg:     0 Min:     0 Max:   479 Err:     0 (0.00%)
+PostProcessors.HTML.x.Boundary.jmx.2019-03-25_01-35-56.sdt
+summary = 5000000 in 00:01:39 = 50475.5/s Avg:     0 Min:     0 Max:   501 Err:     0 (0.00%)
+PostProcessors.HTML.x.Boundary.jmx.2019-03-25_01-44-44.sdt
+
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.CSS
+summary = 5000000 in 00:10:24 = 8018.0/s Avg:     1 Min:     0 Max:   333 Err:     0 (0.00%)
+summary = 5000000 in 00:09:39 = 8631.9/s Avg:     1 Min:     0 Max:   329 Err:     0 (0.00%)
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.CSS + SJK
+summary = 5000000 in 00:12:06 = 6887.3/s Avg:     2 Min:     0 Max:   461 Err:     0 (0.00%)
+PostProcessors.HTML.x.CSS.jmx.2019-03-25_00-47-19.sdt
+doSampling - 166643
+notifyListeners - 71178
+runPostProcessors - 143441
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.JSR223 (like Boundary)
+summary = 5000000 in 00:02:49 = 29625.4/s Avg:     0 Min:     0 Max:   324 Err:     0 (0.00%)
+summary = 5000000 in 00:02:55 = 28623.4/s Avg:     0 Min:     0 Max:   331 Err:     0 (0.00%)
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.JSR223 (like Boundary) + SJK
+summary = 5000000 in 00:03:09 = 26482.1/s Avg:     0 Min:     0 Max:   434 Err:     0 (0.00%)
+PostProcessors.HTML.x.JSR223.jmx.2019-03-25_01-07-57.sdt
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.RegExp
+summary = 5000000 in 00:01:41 = 49271.3/s Avg:     0 Min:     0 Max:   314 Err:     0 (0.00%)
+summary = 5000000 in 00:01:41 = 49365.7/s Avg:     0 Min:     0 Max:   321 Err:     0 (0.00%)
+
+
+mvn jmeter:jmeter -P smallResult,PostProcessors.HTML.x.XPath
+summary = 5000000 in 00:40:42 = 2047.3/s Avg:     0 Min:     0 Max:   652 Err:     0 (0.00%)

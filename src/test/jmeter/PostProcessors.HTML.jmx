@@ -38,9 +38,9 @@
             <stringProp name="Argument.value">_NOT_FOUND_</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
-          <elementProp name="testScriptolder" elementType="Argument">
-            <stringProp name="Argument.name">testScriptolder</stringProp>
-            <stringProp name="Argument.value">${__P(testScriptolder)}</stringProp>
+          <elementProp name="test.script.folder" elementType="Argument">
+            <stringProp name="Argument.name">test.script.folder</stringProp>
+            <stringProp name="Argument.value">${__P(test.script.folder)}</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -115,7 +115,7 @@ String text = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.U
           <hashTree/>
           <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
             <stringProp name="cacheKey">true</stringProp>
-            <stringProp name="filename">${testScriptolder}/PostProcessors.HTML.parseHtml.groovy</stringProp>
+            <stringProp name="filename">${test.script.folder}/PostProcessors.HTML.parseHtml.groovy</stringProp>
             <stringProp name="parameters">htmlContent</stringProp>
             <stringProp name="script"></stringProp>
             <stringProp name="scriptLanguage">groovy</stringProp>
@@ -135,7 +135,7 @@ String text = new String(Files.readAllBytes(Paths.get(path)), StandardCharsets.U
           </XPathExtractor>
           <hashTree/>
           <BeanShellPostProcessor guiclass="TestBeanGUI" testclass="BeanShellPostProcessor" testname="BeanShell PostProcessor" enabled="true">
-            <stringProp name="filename">${testScriptolder}/PostProcessors.HTML.parseHtml.bsh</stringProp>
+            <stringProp name="filename">${test.script.folder}/PostProcessors.HTML.parseHtml.bsh</stringProp>
             <stringProp name="parameters">htmlContent</stringProp>
             <boolProp name="resetInterpreter">false</boolProp>
             <stringProp name="script"></stringProp>

@@ -10,12 +10,95 @@
     <profiles>
 
         <profile>
-            <id>Debug</id>
+            <id>_.jmeter.profile.debug</id>
             <properties>
                 <test.Threads>1</test.Threads>
                 <test.RampUp>0</test.RampUp>
                 <test.LoopCount>1</test.LoopCount>
             </properties>
+        </profile>
+
+        <profile>
+            <id>_.jmeter.profile.clear</id>
+            <properties>
+                <test.Threads>1</test.Threads>
+                <test.RampUp>0</test.RampUp>
+                <test.LoopCount>100000000</test.LoopCount>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>_.jmeter.profile.small</id>
+            <properties>
+                <test.Threads>10</test.Threads>
+                <test.RampUp>60</test.RampUp>
+                <test.LoopCount>2000</test.LoopCount>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>_.jmeter.http.static</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesJMeter>
+                                <!-- Enable loopback protocol -->
+                                <httpclient.loopback>true</httpclient.loopback>
+                                <httpclient.timeout>0</httpclient.timeout>
+                                <httpclient.reset_state_on_thread_group_iteration>false</httpclient.reset_state_on_thread_group_iteration>
+                            </propertiesJMeter>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>zoom</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesJMeter>
+                                <jmeter.hidpi.mode>true</jmeter.hidpi.mode>
+                                <jmeter.hidpi.scale.factor>2.0</jmeter.hidpi.scale.factor>
+                                <jmeter.toolbar.icons.size>32x32</jmeter.toolbar.icons.size>
+                                <jmeter.tree.icons.size>24x24</jmeter.tree.icons.size>
+                                <jsyntaxtextarea.font.family>Hack</jsyntaxtextarea.font.family>
+                                <jsyntaxtextarea.font.size>24</jsyntaxtextarea.font.size>
+                            </propertiesJMeter>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>zoom2</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesJMeter>
+                                <jmeter.hidpi.mode>true</jmeter.hidpi.mode>
+                                <jmeter.hidpi.scale.factor>3.0</jmeter.hidpi.scale.factor>
+                                <jmeter.toolbar.icons.size>48x48</jmeter.toolbar.icons.size>
+                                <jmeter.tree.icons.size>48x48</jmeter.tree.icons.size>
+                                <jsyntaxtextarea.font.family>Hack</jsyntaxtextarea.font.family>
+                                <jsyntaxtextarea.font.size>48</jsyntaxtextarea.font.size>
+                            </propertiesJMeter>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
         <profile>
@@ -30,7 +113,133 @@
             <properties>
                 <performancetest.script>Samplers</performancetest.script>
             </properties>
+        </profile>
 
+        <profile>
+            <id>Samplers.HTTP.Request</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.HTTP.Request.keepAlive</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.keepAlive</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.HTTP.Request.x10</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.x10</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.HTTP.Request.X</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.X</performancetest.script>
+
+                <Threads>1</Threads>
+                <RampUp>0</RampUp>
+                <LoopCount>100000</LoopCount>
+                <RequestCount>1</RequestCount>
+
+                <!--
+                    default
+                    keepalive_off
+                    sendfile
+                    sendfile_gzip
+                -->
+                <nginx.profile>keepalive_off</nginx.profile>
+
+                <!--
+                <RequestPath>/</RequestPath>
+                <RequestPath>/http/keepalive_off/</RequestPath>
+                <RequestPath>/http/sendfile/gzip/</RequestPath>
+                -->
+                <RequestPath>/</RequestPath>
+
+                <RequestHost>localhost</RequestHost>
+                <RequestPort>5555</RequestPort>
+
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesUser>
+                                <Threads>${Threads}</Threads>
+                                <RampUp>${RampUp}</RampUp>
+                                <LoopCount>${LoopCount}</LoopCount>
+                                <RequestCount>${RequestCount}</RequestCount>
+                                <RequestPath>${RequestPath}</RequestPath>
+                                <RequestHost>${RequestHost}</RequestHost>
+                                <RequestPort>${RequestPort}</RequestPort>
+                                <nginx.ConfigFile>${project.basedir}/src/test/jmeter/tools/nginx/conf/nginx.perftest.${nginx.profile}.conf</nginx.ConfigFile>
+                                <nginx.WorkingDirectory>${project.basedir}/src/test/jmeter/tools/nginx</nginx.WorkingDirectory>
+                                <nginx.LogDirectory>/tmp/nginx/logs/</nginx.LogDirectory>
+                            </propertiesUser>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+
+        <profile>
+            <id>Samplers.HTTP.Request.x10.keepAlive</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.x10.keepAlive</performancetest.script>
+            </properties>
+        </profile>
+
+
+        <profile>
+            <id>Samplers.HTTP.Request.x100.keepAlive</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.x100.keepAlive</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.Flow.Control.Action</id>
+            <properties>
+                <performancetest.script>Samplers.Flow.Control.Action</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.Flow.Control.Action.Pause.0</id>
+            <properties>
+                <performancetest.script>Samplers.Flow.Control.Action.Pause.0</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>Samplers.Flow.Control.Action.Pause.0.Function.P</id>
+            <properties>
+                <performancetest.script>Samplers.Flow.Control.Action.Pause.0.Function.P</performancetest.script>
+                <test.pause>0</test.pause>
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesUser>
+                                <pause>${test.pause}</pause>
+                            </propertiesUser>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
         </profile>
 
         <profile>
@@ -97,12 +306,25 @@
         </profile>
 
         <profile>
+            <id>PostProcessors.HTML.x2.BeanShell</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x2.BeanShell</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
             <id>PostProcessors.HTML.x.Boundary</id>
             <properties>
                 <performancetest.script>PostProcessors.HTML.x.Boundary</performancetest.script>
             </properties>
         </profile>
 
+        <profile>
+            <id>PostProcessors.HTML.x2.Boundary</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x2.Boundary</performancetest.script>
+            </properties>
+        </profile>
 
         <profile>
             <id>PostProcessors.HTML.x.CSS</id>
@@ -110,7 +332,12 @@
                 <performancetest.script>PostProcessors.HTML.x.CSS</performancetest.script>
             </properties>
         </profile>
-
+        <profile>
+            <id>PostProcessors.HTML.x2.CSS</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x2.CSS</performancetest.script>
+            </properties>
+        </profile>
 
         <profile>
             <id>PostProcessors.HTML.x.JSR223</id>
@@ -118,7 +345,12 @@
                 <performancetest.script>PostProcessors.HTML.x.JSR223</performancetest.script>
             </properties>
         </profile>
-
+        <profile>
+            <id>PostProcessors.HTML.x2.JSR223</id>
+            <properties>
+                <performancetest.script>PostProcessors.HTML.x2.JSR223</performancetest.script>
+            </properties>
+        </profile>
 
         <profile>
             <id>PostProcessors.HTML.x.RegExp</id>
@@ -165,13 +397,96 @@
         </profile>
 
         <profile>
-            <id>JVMMemory</id>
+            <id>tools.Start.Stop.nginx</id>
+            <properties>
+                <performancetest.script>tools.Start.Stop.nginx</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>tools.Start.Stop.php</id>
+            <properties>
+                <performancetest.script>tools.Start.Stop.php</performancetest.script>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>_.jvm.net.properties</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>com.lazerycode.jmeter</groupId>
                         <artifactId>jmeter-maven-plugin</artifactId>
-                        <version>2.8.6</version>
+                        <version>${jmeter.maven.plugin.version}</version>
+
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <arguments>
+                                    <argument>-Dhttp.keepalive=true</argument>
+                                    <argument>-Dhttp.maxConnections=1</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>_.jvm.ipv6</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>${jmeter.maven.plugin.version}</version>
+
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <arguments>
+                                    <argument>-Djava.net.preferIPv4Stack=false</argument>
+                                    <argument>-Djava.net.preferIPv6Addresses=true</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>_.jvm.ipv4</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>${jmeter.maven.plugin.version}</version>
+
+
+                        <configuration>
+                            <jMeterProcessJVMSettings>
+                                <arguments>
+                                    <argument>-Djava.net.preferIPv4Stack=true</argument>
+                                    <argument>-Djava.net.preferIPv6Addresses=false</argument>
+                                </arguments>
+                            </jMeterProcessJVMSettings>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>_.jvm.heap.big</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>${jmeter.maven.plugin.version}</version>
 
                         <configuration>
                             <jMeterProcessJVMSettings>
@@ -200,13 +515,40 @@
         </profile>
 
         <profile>
-            <id>smallResult</id>
+            <id>_.jmeter.report</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>com.lazerycode.jmeter</groupId>
                         <artifactId>jmeter-maven-plugin</artifactId>
-                        <version>2.8.6</version>
+                        <version>${jmeter.maven.plugin.version}</version>
+
+                        <configuration>
+                            <propertiesReportGenerator>
+                                <jmeter.reportgenerator.overall_granularity>1000</jmeter.reportgenerator.overall_granularity>
+                                <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>1000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                            </propertiesReportGenerator>
+
+                            <resultsFileFormat>csv</resultsFileFormat>
+                            <generateReports>true</generateReports>
+                            <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-${maven.build.timestamp}</reportDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>_.jmeter.smallResult</id>
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <version>${jmeter.maven.plugin.version}</version>
 
                         <configuration>
                             <propertiesJMeter>
@@ -248,13 +590,13 @@
         </profile>
 
         <profile>
-            <id>JFR</id>
+            <id>_.jvm.profiler.JFR</id>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>com.lazerycode.jmeter</groupId>
                         <artifactId>jmeter-maven-plugin</artifactId>
-                        <version>2.8.6</version>
+                        <version>${jmeter.maven.plugin.version}</version>
 
                         <configuration>
                             <jMeterProcessJVMSettings>
@@ -265,7 +607,7 @@
                                     <argument>-XX:+UnlockDiagnosticVMOptions</argument>
                                     <argument>-XX:+DebugNonSafepoints</argument>
 
-                                    <argument>-XX:StartFlightRecording=delay=0s,duration=120s,name=Trace-Apache.JMeter,filename=${project.build.directory}/jmeter/results/${performancetest.script}-${maven.build.timestamp}.jfr,settings=${project.basedir}/src/test/conf/jmc/Profiling.jfc</argument>
+                                    <argument>-XX:StartFlightRecording=delay=0s,duration=300s,name=Trace-Apache.JMeter,filename=${project.build.directory}/jmeter/results/${performancetest.script}-${maven.build.timestamp}.jfr,settings=${project.basedir}/src/test/conf/jmc/Profiling.JMeter.jfc</argument>
                                 </arguments>
                             </jMeterProcessJVMSettings>
                         </configuration>
@@ -275,18 +617,18 @@
         </profile>
 
         <profile>
-            <id>jvisualvm</id>
+            <id>_.jvm.profiler.jvisualvm</id>
             <properties>
                 <test.Threads>10</test.Threads>
                 <test.RampUp>60</test.RampUp>
-                <test.LoopCount>1000</test.LoopCount>
+                <test.LoopCount>2000</test.LoopCount>
             </properties>
             <build>
                 <plugins>
                     <plugin>
                         <groupId>com.lazerycode.jmeter</groupId>
                         <artifactId>jmeter-maven-plugin</artifactId>
-                        <version>2.8.6</version>
+                        <version>${jmeter.maven.plugin.version}</version>
 
                         <configuration>
                             <jMeterProcessJVMSettings>
@@ -304,8 +646,16 @@
 
     <!-- Properties -->
     <properties>
+
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <jmeter.maven.plugin.version>2.8.6</jmeter.maven.plugin.version>
+        <jmeter.version>5.1.1</jmeter.version>
+
         <!-- Test name -->
-        <performancetest.script>Core</performancetest.script>
+        <performancetest.script>Samplers.HTTP.Request.x100.keepAlive</performancetest.script>
 
         <test.Threads>50</test.Threads>
         <test.RampUp>0</test.RampUp>
@@ -340,12 +690,7 @@
         <developer>
             <id>polarnik</id>
             <name>SMIRNOV Vyacheslav</name>
-            <email>owasp@yandex.ru</email>
             <url>https://github.com/polarnik</url>
-            <organization>Райффайзенбанк</organization>
-            <roles>
-                <role>Эксперт по тестированию</role>
-            </roles>
         </developer>
     </developers>
 
@@ -390,7 +735,7 @@
             <plugin>
                 <groupId>com.lazerycode.jmeter</groupId>
                 <artifactId>jmeter-maven-plugin</artifactId>
-                <version>2.8.6</version>
+                <version>${jmeter.maven.plugin.version}</version>
                 <executions>
                     <!-- Run JMeter tests -->
                     <execution>
@@ -420,7 +765,7 @@
                     <testFilesIncluded>
                         <jMeterTestFile>${performancetest.script}.jmx</jMeterTestFile>
                     </testFilesIncluded>
-                    <jmeterVersion>5.1.1</jmeterVersion>
+                    <jmeterVersion>${jmeter.version}</jmeterVersion>
 
                     <jmeterExtensions>
                         <!-- Custom Thread Groups
@@ -443,7 +788,16 @@
 			            -->
                         <artifact>kg.apc:jmeter-plugins-cmn-jmeter:0.6</artifact>
 
-                        <artifact>org.gridkit.jvmtool:sjk-plus:0.11</artifact>
+                        <!-- InfluxDB java client + dependencies -->
+                        <artifact>org.influxdb:influxdb-java:2.15</artifact>
+                        <artifact>com.squareup.okhttp3:okhttp:3.13.1</artifact>
+                        <artifact>com.squareup.okhttp3:logging-interceptor:3.13.1</artifact>
+                        <artifact>com.squareup.retrofit2:retrofit:2.5.0</artifact>
+                        <artifact>com.squareup.retrofit2:converter-moshi:2.5.0</artifact>
+                        <artifact>org.msgpack:msgpack-core:0.8.16</artifact>
+                        <artifact>com.squareup.okio:okio:1.17.2</artifact>
+                        <artifact>com.squareup.moshi:moshi:1.8.0</artifact>
+
                     </testPlanLibraries>
 
                     <downloadExtensionDependencies>false</downloadExtensionDependencies>
@@ -458,7 +812,7 @@
                     -->
                     <jMeterProcessJVMSettings>
                         <xms>256</xms>
-                        <xmx>2048</xmx>
+                        <xmx>1024</xmx>
                         <arguments>
                             <argument>-XX:MaxMetaspaceSize=256m</argument>
 
@@ -490,6 +844,15 @@
                         <sample_variables></sample_variables>
                         <!-- # Disable sent statistics to https://jmeter-plugins.org/stats/ -->
                         <jpgc.repo.sendstats>false</jpgc.repo.sendstats>
+
+
+                        <backend_metrics_window_mode>fixed</backend_metrics_window_mode>
+                        <backend_metrics_window>100</backend_metrics_window>
+                        <backend_metrics_large_window>5000</backend_metrics_large_window>
+                        <backend_influxdb.send_interval>5</backend_influxdb.send_interval>
+                        <backend_influxdb.connection_timeout>1000</backend_influxdb.connection_timeout>
+                        <backend_influxdb.socket_timeout>3000</backend_influxdb.socket_timeout>
+                        <backend_influxdb.connection_request_timeout>100</backend_influxdb.connection_request_timeout>
                     </propertiesJMeter>
 
                     <propertiesReportGenerator>
@@ -501,12 +864,18 @@
 
                     <propertiesUser>
                         <testDataFolder>${project.basedir}/src/test/jmeter/data</testDataFolder>
-                        <testScriptolder>${project.basedir}/src/test/jmeter/script</testScriptolder>
+                        <test.script.folder>${project.basedir}/src/test/jmeter/script</test.script.folder>
                         <reportFolder>${project.build.directory}/jmeter/results/${performancetest.script}</reportFolder>
 
                         <Threads>${test.Threads}</Threads>
                         <RampUp>${test.RampUp}</RampUp>
                         <LoopCount>${test.LoopCount}</LoopCount>
+
+                        <influxdb.host>${influxdb.host}</influxdb.host>
+                        <influxdb.port>${influxdb.port}</influxdb.port>
+                        <influxdb.database>${influxdb.database}</influxdb.database>
+                        <influxdb.username>${influxdb.username}</influxdb.username>
+                        <influxdb.password>${influxdb.password}</influxdb.password>
                     </propertiesUser>
 
                     <resultsFileFormat>csv</resultsFileFormat>
@@ -516,24 +885,6 @@
                 </configuration>
 
 
-            </plugin>
-
-            <plugin>
-                <groupId>com.lazerycode.jmeter</groupId>
-                <artifactId>jmeter-analysis-maven-plugin</artifactId>
-                <configuration>
-                    <source>${project.build.directory}/jmeter/results/*.xml</source>
-                    <processAllFilesFound>true</processAllFilesFound>
-                    <targetDirectory>${project.build.directory}/jmeter/reports/profile</targetDirectory>
-                    <writers>
-                        <com.lazerycode.jmeter.analyzer.writer.SummaryTextToStdOutWriter/>
-                        <com.lazerycode.jmeter.analyzer.writer.SummaryTextToFileWriter/>
-                        <com.lazerycode.jmeter.analyzer.writer.HtmlWriter/>
-                        <com.lazerycode.jmeter.analyzer.writer.DetailsToCsvWriter/>
-                        <com.lazerycode.jmeter.analyzer.writer.DetailsToHtmlWriter/>
-                        <com.lazerycode.jmeter.analyzer.writer.ChartWriter/>
-                    </writers>
-                </configuration>
             </plugin>
 
             <plugin>
@@ -557,6 +908,8 @@
                                 <argument>${project.build.directory}/jmeter/lib/</argument>
                                 <argument>${project.build.directory}/sjk/</argument>
                             </arguments>
+
+
                         </configuration>
                     </execution>
 

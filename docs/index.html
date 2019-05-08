@@ -69,7 +69,7 @@
 		</style>
 	</div></section>
 	<section class="clear slide"><div>
-		<h2>Бываю в Омске</h2>
+		<h2>Бываю на конференциях</h2>
 		<figure>
 			<img class="w cover" src="images/omsk.jpg">
 		</figure>
@@ -92,6 +92,98 @@
 			</figcaption>
 		</figure>
 	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Apache.JMeter</h2>
+		<ul>
+			<li><a href="https://jmeter.apache.org/">https://jmeter.apache.org</a>, 2003 - настоящее время, активен</li>
+			<li>HTTP(S), JMS, JDBC, Java/Groovy, FTP, SMTP, ... 50+</li>
+			<li>ClickHouse, InfluxDB, Graphite, Grafana, HTML</li>
+			<li>Распределённый запуск, контейнеры, CI</li>
+			<li>Maven, IntelliJ IDEA</li>
+			<li>Сообщество</li>
+		</ul>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<figure>
+			<img class="h cover" src="images/Flammarion.old.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D1%8E%D1%80%D0%B0_%D0%A4%D0%BB%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B8%D0%BE%D0%BD%D0%B0s">Гравюра Фламмариона</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+
+
+	<section class="slide"><div>
+		<h2>Рассмотрим</h2>
+		<ul>
+			<li>HTTP Request. Максимальная интенсивность</li>
+			<li>HTTP Request. Скачивание и отправка</li>
+			<li>PostProcessor для HTML, XML, JSON</li>
+			<li>PreProcessor для XML и JSON</li>
+			<li>Статистика</li>
+			<li>Советы</li>
+		</ul>
+	</div></section>	
+
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">HTTP Request<br/><span class="next">Максимальная интенсивность</span></h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Простой тест</h2>
+		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<figure>
+			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Простой тест</h2>
+		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<figure>
+			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Простой тест</h2>
+		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<figure>
+			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Один запрос в сценарии</h2>
+		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<figure>
+			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Максимальная интенсивность</h2>
+		<p><mark class="green">❌</mark> HTTP Request: keepAlive для одного запроса в сценарии</p>
+		<p><mark class="green">🔼</mark> Loop Controller: количество запросов</p>
+		<p><mark class="green">✔️</mark> Linux: /proc/sys/net/ipv4/tcp_tw_reuse</p>
+		<p><mark class="green">❌</mark> Apache.JMeter: httpclient.reset_state_on_thread_group_iteration</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Тестовый стенд</h2>
+		<p><mark class="green">❌</mark> keepAlive для одного запроса в сценарии</p>
+		<p><mark class="green">🔼</mark> количества запросов в одном сценарии до 100</p>
+		<p><mark class="green">✔️</mark> /proc/sys/net/ipv4/tcp_tw_reuse</p>
+		<p><mark class="green">❌</mark> httpclient.reset_state_on_thread_group_iteration</p>
+		<p><mark class="red">⚙️</mark> ядра Linux (кроме net.ipv4.tcp_tw_reuse)</p>
+		<p><mark class="red">⚙️</mark> jvm: java.net.preferIPv4Stack, http.maxConnections</p>
+	</div></section>	
+
+
 
 	<section class="slide"><div>
 		<h2>JMeter удобно профилировать</h2>
@@ -401,9 +493,75 @@
 
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout">Ошибки<br/><span class="next">Нет предела совершенству</span></h2>
-	</div></section>	
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Загрузка больших файлов</h2>
+		<p><mark class="green">отключение ❌</mark> keepAlive для одного запроса в сценарии</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Скачивание больших файлов</h2>
+		<p><mark class="green">отключение ❌</mark> keepAlive для одного запроса в сценарии</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Результаты</h2>
+		<table>
+			<tr>
+				<th>Request Count</th>
+				<th>keepAlive</th>
+				<th>Threads</th>
+				<th>RPS</th>
+				<th>Error</th>
+				<th>Bottleneck/Exception</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>off</td>
+				<td>2</td>
+				<td>970</td>
+				<td>0</td>
+				<td>socketConnect 80%</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>on</td>
+				<td>2</td>
+				<td>650 (480)</td>
+				<td>26%</td>
+				<td>NoRouteToHostException</td>
+			</tr>
+			<tr>
+				<td>10</td>
+				<td>on</td>
+				<td>2</td>
+				<td>5420 (5300)</td>
+				<td>2%</td>
+				<td>NoRouteToHostException</td>
+			</tr>
+			<tr>
+				<td>100</td>
+				<td>on</td>
+				<td>2</td>
+				<td>19400</td>
+				<td>0</td>
+				<td></td>
+			</tr>				
+			<tr>
+				<td>100</td>
+				<td>on</td>
+				<td>1</td>
+				<td>7980</td>
+				<td>0</td>
+				<td>socketRead 49%<br>socketWrite 14%<br>socketSetOption 12%</td>
+			</tr>				
+		</table>
+		Переиспользование соединения внутри потока сокращает socketConnect и ускоряет тест с 500 rps до 10000 rps на один поток.
+	</div></section>
 
 
+	
 	<section class="clear slide" id="contacts"><div>
 		<h2>Вячеслав Смирнов</h2>
 		<p><a href="https://polarnik.github.io">polarnik.github.io</a>, @qa_load</p>
