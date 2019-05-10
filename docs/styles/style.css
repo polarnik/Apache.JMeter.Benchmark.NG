@@ -1,5 +1,6 @@
 .shower {
-	font-size: calc(var(--slide-height) / 25);
+	/* font-size: calc(var(--slide-height) / 25); */
+	font-size: calc(var(--slide-height) / 22);
 }
 
 @font-face {
@@ -17,10 +18,12 @@
 	/*font-family: 'Suisse', sans-serif;*/
 	font-weight: normal;
 	font-size: calc(var(--slide-height) / 15);
+	line-height: 1.2;
 }
 .slide p, .slide li {
 	/*font-family: 'Helvetica', 'Arial', sans-serif;*/
 	color: #414143;
+	line-height: 1.5;
 }
 .slide span.integer {
 	/*font-family: 'Suisse Bold', sans-serif;*/
@@ -28,7 +31,7 @@
 }
 .slide h2.shout.small {
 	font-size: calc(var(--slide-height) / 15);
-	line-height: calc(var(--slide-height) / 6);
+	line-height: 2.0;
 }
 .slide .shout {
 	color: var(--color-black);
@@ -74,11 +77,11 @@
 	font-weight: normal;
 }
 .caption a {
-	color: #ffcc00;
+	color: #fff;
 	text-shadow: 0 1px 1px #1f3f60;
 }
 .caption a:hover {
-	color: #00c7f7;
+	color: #000;
 }
 
 mark.red {
@@ -113,4 +116,8 @@ mark.blue {
 
 div.progress  {
 	border-bottom-color: #ffcc00;
+}
+
+.slide pre code {
+	line-height: 1.5;
 }

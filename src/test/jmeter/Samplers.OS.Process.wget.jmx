@@ -1,0 +1,2020 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="5.0" jmeter="5.1.1 r1855137">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Get Big Files" enabled="true">
+      <stringProp name="TestPlan.comments"></stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments"/>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <CacheManager guiclass="CacheManagerGui" testclass="CacheManager" testname="HTTP Cache Manager" enabled="false">
+        <boolProp name="clearEachIteration">false</boolProp>
+        <boolProp name="useExpires">false</boolProp>
+      </CacheManager>
+      <hashTree/>
+      <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="ServerName" elementType="Argument">
+            <stringProp name="Argument.name">ServerName</stringProp>
+            <stringProp name="Argument.value">127.0.0.1</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ServerPort" elementType="Argument">
+            <stringProp name="Argument.name">ServerPort</stringProp>
+            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="File1" elementType="Argument">
+            <stringProp name="Argument.name">File1</stringProp>
+            <stringProp name="Argument.value">/documents/document.big.rtf</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">41 МБайт</stringProp>
+          </elementProp>
+          <elementProp name="File2" elementType="Argument">
+            <stringProp name="Argument.name">File2</stringProp>
+            <stringProp name="Argument.value">/documents/document.rtf</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">20 МБайт</stringProp>
+          </elementProp>
+          <elementProp name="File3" elementType="Argument">
+            <stringProp name="Argument.name">File3</stringProp>
+            <stringProp name="Argument.value">/documents/document.pdf</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+            <stringProp name="Argument.desc">2 МБайт</stringProp>
+          </elementProp>
+        </collectionProp>
+      </Arguments>
+      <hashTree/>
+      <HeaderManager guiclass="HeaderPanel" testclass="HeaderManager" testname="HTTP Header Manager" enabled="true">
+        <collectionProp name="HeaderManager.headers">
+          <elementProp name="User-Agent" elementType="Header">
+            <stringProp name="Header.name">User-Agent</stringProp>
+            <stringProp name="Header.value">Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0</stringProp>
+          </elementProp>
+          <elementProp name="Accept" elementType="Header">
+            <stringProp name="Header.name">Accept</stringProp>
+            <stringProp name="Header.value">text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Language" elementType="Header">
+            <stringProp name="Header.name">Accept-Language</stringProp>
+            <stringProp name="Header.value">ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3</stringProp>
+          </elementProp>
+          <elementProp name="Accept-Encoding" elementType="Header">
+            <stringProp name="Header.name">Accept-Encoding</stringProp>
+            <stringProp name="Header.value">gzip, deflate</stringProp>
+          </elementProp>
+        </collectionProp>
+      </HeaderManager>
+      <hashTree/>
+      <ConfigTestElement guiclass="HttpDefaultsGui" testclass="ConfigTestElement" testname="HTTP Request Defaults" enabled="true">
+        <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+          <collectionProp name="Arguments.arguments"/>
+        </elementProp>
+        <stringProp name="HTTPSampler.domain">${ServerName}</stringProp>
+        <stringProp name="HTTPSampler.port">${ServerPort}</stringProp>
+        <stringProp name="HTTPSampler.protocol"></stringProp>
+        <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+        <stringProp name="HTTPSampler.path"></stringProp>
+        <stringProp name="HTTPSampler.concurrentPool">4</stringProp>
+        <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+        <stringProp name="HTTPSampler.response_timeout"></stringProp>
+      </ConfigTestElement>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - HTTP Request" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">false</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: file 1" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${File1}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <intProp name="HTTPSampler.ipSourceType">2</intProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: file 2" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${File2}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: file 3" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">${File3}</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">./HTTP_Request.csv</stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - jp@gc - HTTP Raw Request" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="false">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 0" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">15000</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">10000</stringProp>
+          <stringProp name="data">GET /access.with.gzip.log HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">true</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="false">
+          <boolProp name="displayJMeterProperties">true</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">true</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="TCP Sampler1" enabled="false">
+          <stringProp name="TCPSampler.server">${ServerName}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">false</boolProp>
+          <stringProp name="TCPSampler.port">${ServerPort}</stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout">10000</stringProp>
+          <stringProp name="TCPSampler.ctimeout">1000</stringProp>
+          <stringProp name="TCPSampler.request">GET ${File1} HTTP/1.1
+Host: ${ServerName}:5001
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)
+Accept: text/html, application/xhtml+xml, application/xml
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+
+</stringProp>
+          <boolProp name="TCPSampler.closeConnection">true</boolProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="false">
+            <stringProp name="FileSaver.filename">tcp</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="TCP Sampler2" enabled="false">
+          <stringProp name="TCPSampler.server">${ServerName}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">false</boolProp>
+          <stringProp name="TCPSampler.port">${ServerPort}</stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout">10000</stringProp>
+          <stringProp name="TCPSampler.ctimeout">1000</stringProp>
+          <stringProp name="TCPSampler.request">GET ${File1} HTTP/1.1
+Host: ${ServerName}:5001
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+Accept: text/html, application/xhtml+xml, application/xml
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+
+</stringProp>
+          <boolProp name="TCPSampler.closeConnection">true</boolProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">tcp</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <TCPSampler guiclass="TCPSamplerGui" testclass="TCPSampler" testname="TCP Sampler2" enabled="false">
+          <stringProp name="TCPSampler.server">${ServerName}</stringProp>
+          <boolProp name="TCPSampler.reUseConnection">false</boolProp>
+          <stringProp name="TCPSampler.port">${ServerPort}</stringProp>
+          <boolProp name="TCPSampler.nodelay">false</boolProp>
+          <stringProp name="TCPSampler.timeout">10000</stringProp>
+          <stringProp name="TCPSampler.ctimeout">1000</stringProp>
+          <stringProp name="TCPSampler.request">GET ${File1} HTTP/1.1
+Host: ${ServerName}:5001
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0
+Accept: text/html, application/xhtml+xml, application/xml
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3
+Accept-Encoding: gzip, deflate
+
+</stringProp>
+          <boolProp name="TCPSampler.closeConnection">true</boolProp>
+          <stringProp name="ConfigTestElement.username"></stringProp>
+          <stringProp name="ConfigTestElement.password"></stringProp>
+        </TCPSampler>
+        <hashTree>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">tcp</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="Transaction Controller: Запрос большого но сжатого файла с разными настройками keep-alive без Fiddler" enabled="true">
+          <boolProp name="TransactionController.includeTimers">false</boolProp>
+          <boolProp name="TransactionController.parent">false</boolProp>
+        </TransactionController>
+        <hashTree>
+          <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="Hostname" elementType="Argument">
+                <stringProp name="Argument.name">Hostname</stringProp>
+                <stringProp name="Argument.value">localhost</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="TCP Port" elementType="Argument">
+                <stringProp name="Argument.name">TCP Port</stringProp>
+                <stringProp name="Argument.value">5000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="File URL" elementType="Argument">
+                <stringProp name="Argument.name">File URL</stringProp>
+                <stringProp name="Argument.value">${File1}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ServerName" elementType="Argument">
+                <stringProp name="Argument.name">ServerName</stringProp>
+                <stringProp name="Argument.value">localhost</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="ServerPort" elementType="Argument">
+                <stringProp name="Argument.name">ServerPort</stringProp>
+                <stringProp name="Argument.value">5000</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </Arguments>
+          <hashTree/>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller: HTTP 1.0" enabled="true"/>
+          <hashTree>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (1: over Fiddler4; HTTP 1.0; Connection Keep-alive; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?1 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: Keep-alive&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (2: over Fiddler4; HTTP 1.0; Connection Keep-alive)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?2 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: Keep-alive&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (3: over Fiddler4; HTTP 1.0; Connection close; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?3 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: close&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (4: over Fiddler4; HTTP 1.0; Connection close)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?4 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: close&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (5: over Fiddler4; HTTP 1.0; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?5 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (6: over Fiddler4; HTTP 1.0)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?6 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+          </hashTree>
+          <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="Simple Controller: HTTP 1.1" enabled="true"/>
+          <hashTree>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (7: over Fiddler4; HTTP 1.1; Connection Keep-alive; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?7 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: Keep-alive&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (8: over Fiddler4; HTTP 1.1; Connection Keep-alive)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?8 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: Keep-alive&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (9: over Fiddler4; HTTP 1.1; Connection close; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?9 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: close&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (10: over Fiddler4; HTTP 1.1; Connection close)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?10 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: close&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (11: over Fiddler4; HTTP 1.1; Keep connection open)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">true</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?11 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+            <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (12: over Fiddler4; HTTP 1.1)" enabled="true">
+              <stringProp name="hostname">${Hostname}</stringProp>
+              <stringProp name="port">${TCP Port}</stringProp>
+              <boolProp name="keepalive">false</boolProp>
+              <stringProp name="timeout">0</stringProp>
+              <stringProp name="data">GET ${File URL}?12 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+              <stringProp name="fileName"></stringProp>
+              <boolProp name="parse">false</boolProp>
+            </kg.apc.jmeter.samplers.HTTPRawSampler>
+            <hashTree/>
+          </hashTree>
+        </hashTree>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (1: over Fiddler4; HTTP 1.0; Keep-alive)" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">8888</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET http://${ServerName}:${ServerPort}/${File1}?1 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: Keep-alive&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (over Fiddler4; HTTP 1.0)" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">8888</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET http://${ServerName}:${ServerPort}/${File1}?2 HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (over Fiddler4; HTTP 1.1; Keep-alive)" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">8888</stringProp>
+          <boolProp name="keepalive">true</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET http://${ServerName}:${ServerPort}/${File1}?3 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (over Fiddler4; HTTP 1.1; Close)" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">8888</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET http://${ServerName}:${ServerPort}/${File1}?4 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+Connection: close&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1 (over Fiddler4; HTTP 1.1; Close)" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">8888</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET http://${ServerName}:${ServerPort}/${File1}?5 HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1" enabled="false">
+          <stringProp name="hostname">127.0.0.1</stringProp>
+          <stringProp name="port">15000</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET ${File1} HTTP/1.0&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/4.01 (compatible; MSIE 6.0; Windows NT 5.1)&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 1" enabled="false">
+          <stringProp name="hostname">${ServerName}</stringProp>
+          <stringProp name="port">${ServerPort}</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">0</stringProp>
+          <stringProp name="data">GET ${File1} HTTP/1.1&#xd;
+Host: ${ServerName}:5001&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+&#xd;
+&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 2" enabled="false">
+          <stringProp name="hostname">${ServerName}</stringProp>
+          <stringProp name="port">${ServerPort}</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">20</stringProp>
+          <stringProp name="data">GET ${File2} HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <kg.apc.jmeter.samplers.HTTPRawSampler guiclass="kg.apc.jmeter.samplers.HTTPRawSamplerGui" testclass="kg.apc.jmeter.samplers.HTTPRawSampler" testname="jp@gc - HTTP Raw Request: file 3" enabled="false">
+          <stringProp name="hostname">${ServerName}</stringProp>
+          <stringProp name="port">${ServerPort}</stringProp>
+          <boolProp name="keepalive">false</boolProp>
+          <stringProp name="timeout">30</stringProp>
+          <stringProp name="data">GET ${File3} HTTP/1.1&#xd;
+Host: ${ServerName}:${ServerPort}&#xd;
+User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0&#xd;
+Accept: text/html, application/xhtml+xml, application/xml&#xd;
+Accept-Language: ru-RU,ru;q=0.8,en-US;q=0.5,en;q=0.3&#xd;
+Accept-Encoding: gzip, deflate&#xd;
+</stringProp>
+          <stringProp name="fileName"></stringProp>
+          <boolProp name="parse">false</boolProp>
+        </kg.apc.jmeter.samplers.HTTPRawSampler>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="SimpleDataWriter" testclass="ResultCollector" testname="Simple Data Writer" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>true</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>true</samplerData>
+              <xml>true</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>true</responseHeaders>
+              <requestHeaders>true</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <url>true</url>
+              <fileName>true</fileName>
+              <hostname>true</hostname>
+              <threadCounts>true</threadCounts>
+              <sampleCount>true</sampleCount>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename">./HTTP Raw Request.3.xml</stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+        <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - OS Process Sampler" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">3</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout"></stringProp>
+          <stringProp name="HTTPSampler.response_timeout"></stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <DebugSampler guiclass="TestBeanGUI" testclass="DebugSampler" testname="Debug Sampler" enabled="true">
+          <boolProp name="displayJMeterProperties">false</boolProp>
+          <boolProp name="displayJMeterVariables">true</boolProp>
+          <boolProp name="displaySystemProperties">false</boolProp>
+        </DebugSampler>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 1" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget/bin/wget.exe</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">-S</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File1}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget/bin/wget.exe</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">-S</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">--output-document=-</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">--spider</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">1&gt;NUL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">2&gt;NUL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+          <stringProp name="SystemSampler.stdout">NUL</stringProp>
+          <stringProp name="SystemSampler.stderr">NUL</stringProp>
+        </SystemSampler>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget/bin/wget.exe</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">-S</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">--output-document=-</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">--spider</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">true</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget/bin/wget.exe</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">-S</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory">downloadResults</stringProp>
+        </SystemSampler>
+        <hashTree>
+          <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+          </ResultCollector>
+          <hashTree/>
+          <ResultCollector guiclass="RespTimeGraphVisualizer" testclass="ResultCollector" testname="Response Time Graph" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>false</responseData>
+                <samplerData>false</samplerData>
+                <xml>false</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+                <threadCounts>true</threadCounts>
+              </value>
+            </objProp>
+            <stringProp name="filename">./log.csv</stringProp>
+            <stringProp name="RespTimeGraph.interval">1000</stringProp>
+          </ResultCollector>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 3" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget/bin/wget.exe</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">-S</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">--output-document=3.txt</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File3}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">1&gt;NUL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">2&gt;NUL</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="true">
+            <stringProp name="FileSaver.filename">FIle3.output</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <kg.apc.jmeter.threads.UltimateThreadGroup guiclass="kg.apc.jmeter.threads.UltimateThreadGroupGui" testclass="kg.apc.jmeter.threads.UltimateThreadGroup" testname="jp@gc - Ultimate Thread Group" enabled="false">
+        <collectionProp name="ultimatethreadgroupdata">
+          <collectionProp name="-1756754520">
+            <stringProp name="1507423">1000</stringProp>
+            <stringProp name="48">0</stringProp>
+            <stringProp name="56313">900</stringProp>
+            <stringProp name="50547">300</stringProp>
+            <stringProp name="10">10</stringProp>
+          </collectionProp>
+        </collectionProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+      </kg.apc.jmeter.threads.UltimateThreadGroup>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - OS Process Sampler (wget - http/1.0 - bat)" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">10</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <RandomOrderController guiclass="RandomOrderControllerGui" testclass="RandomOrderController" testname="Random Order Controller" enabled="true"/>
+        <hashTree>
+          <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="false">
+            <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="HTTPSampler.domain"></stringProp>
+            <stringProp name="HTTPSampler.port"></stringProp>
+            <stringProp name="HTTPSampler.protocol"></stringProp>
+            <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+            <stringProp name="HTTPSampler.path">/</stringProp>
+            <stringProp name="HTTPSampler.method">GET</stringProp>
+            <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+            <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+            <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+            <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+            <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+            <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+            <stringProp name="HTTPSampler.response_timeout">10000</stringProp>
+          </HTTPSamplerProxy>
+          <hashTree/>
+          <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 1 (wget http/1.0)" enabled="true">
+            <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+            <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+            <stringProp name="SystemSampler.command">wget-download.bat</stringProp>
+            <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File1}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="SystemSampler.directory"></stringProp>
+          </SystemSampler>
+          <hashTree/>
+          <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2 (wget http/1.0)" enabled="true">
+            <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+            <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+            <stringProp name="SystemSampler.command">wget-download.bat</stringProp>
+            <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="SystemSampler.directory"></stringProp>
+          </SystemSampler>
+          <hashTree/>
+          <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 3 (wget http/1.0)" enabled="false">
+            <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+            <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+            <stringProp name="SystemSampler.command">wget-download.bat</stringProp>
+            <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments">
+                <elementProp name="" elementType="Argument">
+                  <stringProp name="Argument.name"></stringProp>
+                  <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File3}</stringProp>
+                  <stringProp name="Argument.metadata">=</stringProp>
+                </elementProp>
+              </collectionProp>
+            </elementProp>
+            <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+              <collectionProp name="Arguments.arguments"/>
+            </elementProp>
+            <stringProp name="SystemSampler.directory"></stringProp>
+          </SystemSampler>
+          <hashTree/>
+        </hashTree>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - OS Process Sampler (wget - http/1.1 - bat)" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">10000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 1 (wget http/1.1)" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File1}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// prev - http://jmeter.apache.org/api/org/apache/jmeter/samplers/SampleResult.html
+//
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//Length: 1718181 (1.6M) [text/html]
+Pattern pLength = Pattern.compile(&quot;(?im)^Length[:] ([0-9]+) &quot;);
+Matcher mLength = pLength.matcher(prev.getResponseDataAsString());
+if(mLength.find())
+{
+	int Length = Integer.parseInt(mLength.group(1));
+	prev.setBodySize(Length);
+}
+
+Pattern pContentType = Pattern.compile(&quot;(?im)^[ ]{2}Content[-]Type[:] (.*)&quot;);
+Matcher mContentType = pContentType.matcher(prev.getResponseDataAsString());
+if(mContentType.find())
+{
+	String ContentType = mContentType.group(1);
+	prev.setContentType(ContentType);
+}
+
+Pattern pHeaders = Pattern.compile(&quot;(?im)^[ ]{2}([a-zA-Z].*[:].*)&quot;);
+Matcher mHeaders = pHeaders.matcher(prev.getResponseDataAsString());
+String headers = &quot;&quot;;
+while(mHeaders.find())
+{
+	headers = headers + mHeaders.group(1) + &quot;\n&quot;;
+}
+prev.setResponseHeaders(headers);
+
+//  HTTP/1.1 200 OK
+Pattern pCodeMessage = Pattern.compile(&quot;(?im)^[ ]{2}HTTP[/]1[.][0-9] ([0-9]+) (.*)&quot;);
+Matcher mCodeMessage = pCodeMessage.matcher(prev.getResponseDataAsString());
+if(mCodeMessage.find())
+{
+	String Code = mCodeMessage.group(1);
+	String Message = mCodeMessage.group(2);
+
+	if(Code==&quot;200&quot;)
+	{
+		prev.setSuccessful(true);
+	}
+	else
+	{
+		prev.setSuccessful(false);
+	}
+
+	prev.setResponseCode(Code);
+	prev.setResponseMessage(Message);
+
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2 (wget http/1.1)" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 3 (wget http/1.1)" enabled="false">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File3}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <ResultSaver guiclass="ResultSaverGui" testclass="ResultSaver" testname="Save Responses to a file" enabled="false">
+            <stringProp name="FileSaver.filename">FIle3.output</stringProp>
+            <boolProp name="FileSaver.errorsonly">false</boolProp>
+            <boolProp name="FileSaver.skipautonumber">false</boolProp>
+            <boolProp name="FileSaver.skipsuffix">false</boolProp>
+            <boolProp name="FileSaver.successonly">false</boolProp>
+          </ResultSaver>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Thread Group - OS Process Sampler (wget+head - http/1.1 - bat)" enabled="false">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1455626080000</longProp>
+        <longProp name="ThreadGroup.end_time">1455626080000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+        <boolProp name="ThreadGroup.delayedStart">true</boolProp>
+      </ThreadGroup>
+      <hashTree>
+        <HTTPSamplerProxy guiclass="HttpTestSampleGui" testclass="HTTPSamplerProxy" testname="HTTP Request: Main page" enabled="true">
+          <elementProp name="HTTPsampler.Arguments" elementType="Arguments" guiclass="HTTPArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="HTTPSampler.domain"></stringProp>
+          <stringProp name="HTTPSampler.port"></stringProp>
+          <stringProp name="HTTPSampler.protocol"></stringProp>
+          <stringProp name="HTTPSampler.contentEncoding"></stringProp>
+          <stringProp name="HTTPSampler.path">/</stringProp>
+          <stringProp name="HTTPSampler.method">GET</stringProp>
+          <boolProp name="HTTPSampler.follow_redirects">true</boolProp>
+          <boolProp name="HTTPSampler.auto_redirects">false</boolProp>
+          <boolProp name="HTTPSampler.use_keepalive">true</boolProp>
+          <boolProp name="HTTPSampler.DO_MULTIPART_POST">false</boolProp>
+          <stringProp name="HTTPSampler.embedded_url_re"></stringProp>
+          <stringProp name="HTTPSampler.connect_timeout">10000</stringProp>
+          <stringProp name="HTTPSampler.response_timeout">10000</stringProp>
+        </HTTPSamplerProxy>
+        <hashTree/>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 1 (wget http/1.1)" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.head.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File1}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// prev - http://jmeter.apache.org/api/org/apache/jmeter/samplers/SampleResult.html
+//
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//Length: 1718181 (1.6M) [text/html]
+Pattern pLength = Pattern.compile(&quot;(?im)^Length[:] ([0-9]+) &quot;);
+Matcher mLength = pLength.matcher(prev.getResponseDataAsString());
+if(mLength.find())
+{
+	int Length = Integer.parseInt(mLength.group(1));
+	prev.setBodySize(Length);
+}
+
+Pattern pContentType = Pattern.compile(&quot;(?im)^[ ]{2}Content[-]Type[:] (.*)&quot;);
+Matcher mContentType = pContentType.matcher(prev.getResponseDataAsString());
+if(mContentType.find())
+{
+	String ContentType = mContentType.group(1);
+	prev.setContentType(ContentType);
+}
+
+Pattern pHeaders = Pattern.compile(&quot;(?im)^[ ]{2}([a-zA-Z].*[:].*)&quot;);
+Matcher mHeaders = pHeaders.matcher(prev.getResponseDataAsString());
+String headers = &quot;&quot;;
+while(mHeaders.find())
+{
+	headers = headers + mHeaders.group(1) + &quot;\n&quot;;
+}
+prev.setResponseHeaders(headers);
+
+//  HTTP/1.1 200 OK
+Pattern pCodeMessage = Pattern.compile(&quot;(?im)^[ ]{2}HTTP[/]1[.][0-9] ([0-9]+) (.*)&quot;);
+Matcher mCodeMessage = pCodeMessage.matcher(prev.getResponseDataAsString());
+while(mCodeMessage.find())
+{
+	String Code = mCodeMessage.group(1);
+	int code = Integer.parseInt(Code);
+	String Message = mCodeMessage.group(2);
+
+	if(code &lt; &quot;400&quot;)
+	{
+		prev.setSuccessful(true);
+	}
+	else
+	{
+		prev.setSuccessful(false);
+	}
+
+	prev.setResponseCode(Code);
+	prev.setResponseMessage(Message);
+
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 2 (wget http/1.1)" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.head.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File2}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// prev - http://jmeter.apache.org/api/org/apache/jmeter/samplers/SampleResult.html
+//
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//Length: 1718181 (1.6M) [text/html]
+Pattern pLength = Pattern.compile(&quot;(?im)^Length[:] ([0-9]+) &quot;);
+Matcher mLength = pLength.matcher(prev.getResponseDataAsString());
+if(mLength.find())
+{
+	int Length = Integer.parseInt(mLength.group(1));
+	prev.setBodySize(Length);
+}
+
+Pattern pContentType = Pattern.compile(&quot;(?im)^[ ]{2}Content[-]Type[:] (.*)&quot;);
+Matcher mContentType = pContentType.matcher(prev.getResponseDataAsString());
+if(mContentType.find())
+{
+	String ContentType = mContentType.group(1);
+	prev.setContentType(ContentType);
+}
+
+Pattern pHeaders = Pattern.compile(&quot;(?im)^[ ]{2}([a-zA-Z].*[:].*)&quot;);
+Matcher mHeaders = pHeaders.matcher(prev.getResponseDataAsString());
+String headers = &quot;&quot;;
+while(mHeaders.find())
+{
+	headers = headers + mHeaders.group(1) + &quot;\n&quot;;
+}
+prev.setResponseHeaders(headers);
+
+//  HTTP/1.1 200 OK
+Pattern pCodeMessage = Pattern.compile(&quot;(?im)^[ ]{2}HTTP[/]1[.][0-9] ([0-9]+) (.*)&quot;);
+Matcher mCodeMessage = pCodeMessage.matcher(prev.getResponseDataAsString());
+while(mCodeMessage.find())
+{
+	String Code = mCodeMessage.group(1);
+	int code = Integer.parseInt(Code);
+	String Message = mCodeMessage.group(2);
+
+	if(code &lt; &quot;400&quot;)
+	{
+		prev.setSuccessful(true);
+	}
+	else
+	{
+		prev.setSuccessful(false);
+	}
+
+	prev.setResponseCode(Code);
+	prev.setResponseMessage(Message);
+
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <SystemSampler guiclass="SystemSamplerGui" testclass="SystemSampler" testname="OS Process Sampler: file 3 (wget http/1.1)" enabled="true">
+          <boolProp name="SystemSampler.checkReturnCode">false</boolProp>
+          <stringProp name="SystemSampler.expectedReturnCode">0</stringProp>
+          <stringProp name="SystemSampler.command">wget-download.gzip.head.bat</stringProp>
+          <elementProp name="SystemSampler.arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments">
+              <elementProp name="" elementType="Argument">
+                <stringProp name="Argument.name"></stringProp>
+                <stringProp name="Argument.value">http://${ServerName}:${ServerPort}${File3}</stringProp>
+                <stringProp name="Argument.metadata">=</stringProp>
+              </elementProp>
+            </collectionProp>
+          </elementProp>
+          <elementProp name="SystemSampler.environment" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+            <collectionProp name="Arguments.arguments"/>
+          </elementProp>
+          <stringProp name="SystemSampler.directory"></stringProp>
+        </SystemSampler>
+        <hashTree>
+          <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="JSR223 PostProcessor" enabled="true">
+            <stringProp name="cacheKey">true</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters"></stringProp>
+            <stringProp name="script">// prev - http://jmeter.apache.org/api/org/apache/jmeter/samplers/SampleResult.html
+//
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+//Length: 1718181 (1.6M) [text/html]
+Pattern pLength = Pattern.compile(&quot;(?im)^Length[:] ([0-9]+) &quot;);
+Matcher mLength = pLength.matcher(prev.getResponseDataAsString());
+if(mLength.find())
+{
+	int Length = Integer.parseInt(mLength.group(1));
+	prev.setBodySize(Length);
+}
+
+Pattern pContentType = Pattern.compile(&quot;(?im)^[ ]{2}Content[-]Type[:] (.*)&quot;);
+Matcher mContentType = pContentType.matcher(prev.getResponseDataAsString());
+if(mContentType.find())
+{
+	String ContentType = mContentType.group(1);
+	prev.setContentType(ContentType);
+}
+
+Pattern pHeaders = Pattern.compile(&quot;(?im)^[ ]{2}([a-zA-Z].*[:].*)&quot;);
+Matcher mHeaders = pHeaders.matcher(prev.getResponseDataAsString());
+String headers = &quot;&quot;;
+while(mHeaders.find())
+{
+	headers = headers + mHeaders.group(1) + &quot;\n&quot;;
+}
+prev.setResponseHeaders(headers);
+
+//  HTTP/1.1 200 OK
+Pattern pCodeMessage = Pattern.compile(&quot;(?im)^[ ]{2}HTTP[/]1[.][0-9] ([0-9]+) (.*)&quot;);
+Matcher mCodeMessage = pCodeMessage.matcher(prev.getResponseDataAsString());
+while(mCodeMessage.find())
+{
+	String Code = mCodeMessage.group(1);
+	int code = Integer.parseInt(Code);
+	String Message = mCodeMessage.group(2);
+
+	if(code &lt; &quot;400&quot;)
+	{
+		prev.setSuccessful(true);
+	}
+	else
+	{
+		prev.setSuccessful(false);
+	}
+
+	prev.setResponseCode(Code);
+	prev.setResponseMessage(Message);
+
+}
+</stringProp>
+            <stringProp name="scriptLanguage">groovy</stringProp>
+          </JSR223PostProcessor>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="TableVisualizer" testclass="ResultCollector" testname="View Results in Table" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>false</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+      <ResultCollector guiclass="StatVisualizer" testclass="ResultCollector" testname="Aggregate Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

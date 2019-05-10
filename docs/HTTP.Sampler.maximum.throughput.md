@@ -238,6 +238,8 @@ sysctl -a | grep net.ipv4.tcp_max_syn_backlog
 
 ##### net.ipv4.tcp_max_syn_backlog (40000, 131072)
 
+`cat /proc/sys/net/ipv4/tcp_max_syn_backlog`
+
 ##### net.core.wmem_default (8388608, default)
 
 ##### net.core.rmem_default (8388608, default)
@@ -247,6 +249,11 @@ sysctl -a | grep net.ipv4.tcp_max_syn_backlog
 ##### net.ipv4.tcp_window_scaling (1, default)
 
 ##### net.core.somaxconn
+
+```
+cat /proc/sys/net/core/somaxconn
+```
+
 было 128 стало 40000
 Не влияет на количество ошибок
 

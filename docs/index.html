@@ -134,56 +134,1051 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HTTP Request. Простой тест</h2>
-		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<h2>Samplers.HTTP.Request.X. Простой тест</h2>
+		<p>Несколько GET-запросов на локальный HTTP-сервер</p>
 		<figure>
 			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HTTP Request. Простой тест</h2>
-		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<h2>Запуск и основка NGinx в тесте</h2>
+		<p>Параметры запуска настраиваются</p>
 		<figure>
-			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.png">
+			<img class="w cover place bottom center" 
+			src="images/Samplers.HTTP.Request.X.mark.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HTTP Request. Простой тест</h2>
-		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<h2>Настраиваются параметры HTTP-запроса</h2>
+		<p>хост, порт, путь</p>
 		<figure>
-			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.2.png">
+			<img class="w cover place bottom center" 
+				src="images/Samplers.HTTP.Request.X.mark.2.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HTTP Request. Один запрос в сценарии</h2>
-		<p>Цикл: 1...X GET-запросов на локальный HTTP-сервер</p>
+		<h2>Количество последовательных запросов</h2>
+		<p>с помощью Loop Controller (RequestCount)</p>
 		<figure>
-			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.mark.2.png">
+			<img class="w cover place bottom center" 
+			src="images/Samplers.HTTP.Request.X.mark.3.png">
 		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Количество потоков и итераций</h2>
+		<p>также настраивается</p>
+		<figure>
+			<img class="w cover place bottom center" 
+			src="images/Samplers.HTTP.Request.X.mark.4.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Параметры легко переопределяются</h2>
+		<p>через опции <b>maven</b> и профили <b>maven</b></p>
+		<figure>
+			<img class="w cover place bottom center" 
+			src="images/Samplers.HTTP.Request.X.maven.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Серия экспериментов</h2>
+		<p>
+			<ul>HTTP Request Keep-Alive:
+				<li><mark class="green">✔️</mark> включить (по умолчанию)</li>
+				<li><mark class="red">❌</mark> отключить</li>
+			</ul>
+		</p>
+		<p>
+			<ul>Количество последовательных запросов в сценарии:
+				<li><mark class="green">🔼</mark> 1, 10, 50, 100</li>
+			</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Результаты серии экспериментов</h2>
+		<figure>
+			<img 
+				class="place bottom center"
+				style="height:70%; margin: 20px 0px 20px 0"
+				src="images/http.request.X.result.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>				
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Тест со 100 последовательными запросами</h2>
+		<h2>в 35 раз интенсивнее теста с 1 запросом</h2>
+		<figure>
+			<img class="w cover place bottom center" 
+			src="images/http.request.X.result.zoom.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Лучший результат с Keep-Alive, 50+ запросами и несколькими потоками</h2>
+		<figure>
+			<img class="w cover place bottom center" src="images/http.request.X.result.3.threads.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+
+
+	<section class="slide"><div>
+		<h2>Результаты серии экспериментов</h2>
+		<figure>
+			<img class="place bottom center" 
+			style="height:70%; margin: 20px 0px 20px 0"
+			src="images/http.request.X.result.diagram.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Как ускорить тест?<br/>
+			<span class="next">Открывать меньше соединений.</span><br/>
+			<span class="next">Keep-Alive полезен, не отключать его.</span>
+		</h2>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Не делать benchmark на Apache.JMeter<br/>
+			из одного HTTP Request в сценарии<br/>
+			при настройках по умолчанию.
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Сценарий на 10 запросов самый частый</h2>
+		<figure>
+			<img class="place bottom center" 
+			style="height:70%; margin: 20px 0px 20px 0"
+			src="images/http.request.X.result.diagram.10.png">
+		</figure>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Ускорим тест c 10 запросами в сценарии<br/>
+							   на 3 потока/пользователя в катушке<br/>
+			<span class="next">c 4000 req/s до 16 000 req/s</span><br/>
+			<span class="next">и больше.</span>
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Понадобится</h2>
+		<p>
+			<ul>
+				<li>📈 telegraf, influxdb, grafana</li>
+				<li>🛠️ netstat, bash</li>
+				<li>⚙️ /proc/sys/net/*</li>
+				<li>📚 документация на ядро Linux</li>
+				<li>🛠️ SJK, Java Fligth Recorder</li>
+				<li>📃 настройки Apache.JMeter</li>
+			</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 4855/s,</h2>
+		<h3>но нестабильная: 500/s ... 16000/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.1.jmeter.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default-100000-2019-05-09_23-35-10/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>					
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>И было 5.24% ошибок</h2>
+		<p>Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Невозможно назначить запрошенный адрес (Address not available)</p>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.1.jmeter.2.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подключения к NGinx также идут волнами</h2>
+		<h3>от 0/s до 1200/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.1.nginx.accept.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>CPU: преимущественно системное время</h2>
+		<h3>%System в 3,5 раза выше, чем %User</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.1.CPU.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>netstat: tcp_time_wait (28 231)</h2>
+		<h3>Открывается слишком много соединений, лимит портов</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.1.netstat.tcp_tw.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Закрытые соединения с nginx (localhost:5555)</h2>
+		<h3>Одно <mark class="green">ESTABLISHED</mark> и 27500 <mark>TIME_WAIT</mark></h3>
+		<pre>
+			<code>netstat | grep -oP \</code>
+			<code>"^\w+\s+\d+\s+\d+\s+(\w+:\w+)\s+(localhost:5555)\s.*"</code>
+		</pre>
+		<pre>
+			<code>tcp  0  0 localhost:*****  localhost:5555  <mark class="green">ESTABLISHED</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.ip_local_port_range (32768 60999)</h2>
+		<h3>Больше диапазон — больше соединений</h3>
+		<p>Изначально диапазон на <mark>28231</mark> портов:</p>
+		<pre>
+			<code>cat /proc/sys/net/ipv4/ip_local_port_range</code>
+			<code><mark>32768 60999</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.ip_local_port_range (1024 60999)</h2>
+		<h3>Больше диапазон — больше соединений</h3>
+		<p>Расширим c <mark>28231</mark> до <mark class="green">59975</mark> (x 2,1):</p>		
+		<pre>
+			<code>echo <mark class="green">1024 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
+		</pre>
+		<a href="https://blog.kireev.pro/2017/07/%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%D1%8E-time_wait/">Проблемы с очередью TIME_WAIT (@blog.kireev.pro)</a>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 7772/s (<mark class="green">x 1,6</mark>)</h2>
+		<h3>нестабильная: 3500/s ... 19000/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.2.jmeter.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default-100000-2019-05-10_07-58-36/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>					
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Теперь без ошибок</h2>
+		<h3>ошибки ушли</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.2.jmeter.2.png">	
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Ускорение в 1,6 раза — c 4800/s до 7700/s<br/>
+							   и избавление от ошибок java.net.NoRouteToHostException<br/>
+							   при расширения диапазона портов<br/>
+			net.ipv4.ip_local_port_range (1024 60999)<br/>
+			</span>
+		</h2>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>netstat: tcp_time_wait (<mark>32 768</mark>, не <mark class="green">59 975</mark>)</h2>
+		<h3>новый лимит — симптомы полечены, проблема осталась</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.2.netstat.tcp_tw.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.tcp_max_tw_buckets (32768)</h2>
+		<h3>Расширим размер очереди TIME_WAIT (временно)</h3>
+		<p>Со значения <mark>32768</mark>:</p>
+		<pre>
+			<code>cat /proc/sys/net/ipv4/tcp_max_tw_buckets</code>
+			<code><mark>32768</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.tcp_max_tw_buckets (65536)</h2>
+		<h3>Расширим размер очереди TIME_WAIT (временно)</h3>
+		<p>Со значения <mark>32768</mark> до значения <mark class="green">65536</mark> (x 2):</p>
+		<pre>
+			<code>echo <mark class="green">65536</mark> > /proc/sys/net/ipv4/tcp_max_tw_buckets</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 7700/s (<mark>та же</mark>)</h2>
+		<h3>нестабильная: 3500/s ... 19000/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.3.jmeter.png">
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default-100000-2019-05-10_08-52-40/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>					
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>netstat: tcp_time_wait (<mark>40 000 - 46 000</mark>)</h2>
+		<h3>лимита в 32768 больше нет — но не помогло</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.3.netstat.tcp_tw.png">	
+		</figure>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Увеличение размера очереди TIME_WAIT<br/>
+							   net.ipv4.tcp_max_tw_buckets (65536)<br/>
+							   не дало положительного эффекта для скорости,<br/>
+							   но нет больше полки для netstat: tcp_time_wait<br/>
+			</span>
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SJK: socketConnect (<mark>54,85%</mark>)</h2>
+		<h3>Apache.JMeter ждёт соединения</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.3.sjk.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_12-19-40.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.tcp_tw_reuse (1)</h2>
+		<h3>Разрешим переиспользовать TIME_WAIT</h3>
+		<p>По умолчанию для исходящих подключений нельзя использовать TIME_WAIT-соединения.</p>
+		<p>Разрешим:</p>
+		<pre>
+			<code>echo <mark class="green">1</mark> > /proc/sys/net/ipv4/tcp_tw_reuse</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 17300/s (<mark class="green">x 3,6</mark>)</h2>
+		<h3>более стабильная: 16500/s ... 19000/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.4.jmeter.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default-100000-2019-05-10_09-49-17/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>CPU: больше не упираемся в систему</h2>
+		<h3>%User в 2 раза выше, чем %System</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.4.CPU.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>ProcStat: NGinx использует 100% CPU — предел</h2>
+		<h3>Apache.JMeter использует только 220% из 300% (3 потока)</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.4.procstat.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>netstat: tcp_time_wait (<mark>30 000</mark>, <mark class="green">снижение</mark>)</h2>
+		<h3>подозрительно ровная полка</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.4.netstat.tcp_tw.png">	
+		</figure>
+	</div></section>
+
+	<!--
+	<section class="slide"><div>
+		<h2>29951 соединение (localhost:5555)</h2>
+		<h3>Одно <mark class="green">ESTABLISHED</mark> и 27500 <mark>TIME_WAIT</mark></h3>
+		<pre>
+			<code>netstat | grep -oP \</code>
+			<code>"^\w+\s+\d+\s+\d+\s+(\w+:\w+)\s+(localhost:5555)\s.*" | \</code>
+			<code>| awk '{print $6}' | sort | uniq -c</code>
+		</pre>
+		<pre>
+			<code><mark class="green">3  ESTABLISHED</mark></code>
+			<code><mark>29948  TIME_WAIT</mark></code>
+		</pre>
+	</div></section>
+	-->
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Ускорение в 3,6 раза — c 4800/s до 17300/s<br/>
+							   при разрешении переиспользовать TIME_WAIT<br/>
+			net.ipv4.tcp_tw_reuse (1)<br/>
+			</span>
+		</h2>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>NGinx c конфигурацией по умолчанию <mark>x 2</mark></h2>
+		<h2>добавим потоков, чтобы не упираться в CPU</h2>
+		<pre>
+			<code><mark>worker_processes  2</mark>; # default 1</code>
+			<code>worker_connections  512;</code>
+			<code>sendfile off;</code>
+			<code>tcp_nodelay on; </code>
+			<code>tcp_nopush off; </code>
+			<code>keepalive_timeout  75s;</code>
+			<code>keepalive_requests 100;</code>
+			<code>keepalive_disable msie6;</code>
+			<code>gzip off;</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 18600/s (<mark class="green">x 3,9</mark>)</h2>
+		<h3>более стабильная: 17800/s ... 19200/s</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.5.jmeter.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default.x2-200000-2019-05-10_10-42-48/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Можно ли сделать так,<br/>
+							   чтобы 3 потока Apache.JMeter использовали<br/>
+								постоянные соединения,<br/>
+								а не создавали новые по 2000/s?<br/>
+			</span>
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Apache.JMeter: jmeter.properties</h2>
+		<h3>httpclient.reset_state_on_thread_group_iteration</h3>
+		<pre><code># Reset HTTP State when starting a new Thread Group iteration which means:</code>
+<code>#   true means next iteration is associated to a new user</code>
+<code>#   false means next iteration is associated to same user</code>
+<code># true involves: </code>
+<code>#   - <mark>Closing opened connection</mark></code>
+<code>#   - resetting SSL State </code>
+<code>#httpclient.reset_state_on_thread_group_iteration=<mark>true</mark></code>		</pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Apache.JMeter: jmeter.properties</h2>
+		<h3>httpclient.reset_state_on_thread_group_iteration (<mark class="green">false</mark>)</h3>
+		<pre>
+			<code>#---------------------------------------------------------------------------</code>
+			<code># SSL configuration</code>
+			<code>#---------------------------------------------------------------------------</code>	
+			<code>httpclient.reset_state_on_thread_group_iteration=<mark class="green">false</mark></code>
+		</pre>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Средняя интенсивность 19900/s (<mark class="green">x 4,1</mark>)</h2>
+		<h3>лучше, чем было при 100 запросах</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.6.jmeter.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default.x2-200000-2019-05-10_11-27-45/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Ускорение в 4,1 раза — c 4800/s до 19900/s<br/>
+							   при отключении настройки Apache.JMeter<br/>
+								httpclient.reset_state_on_thread_group_iteration
+			</span>
+		</h2>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Ускорители Apache.JMeter</h2>
+		<table>
+			<tr>
+				<th>Опция</th>
+				<th>Значение</th>
+				<th>Ускорение</th>
+			</tr>
+			<tr>
+				<td>httpclient.reset_state_on_thread_group_iteration</td>
+				<td>false</td>
+				<td><mark class="green">x4.1</mark></td>
+			</tr>
+			<tr>
+				<td>Linux: net.ipv4.tcp_tw_reuse</td>
+				<td>1</td>
+				<td><mark class="green">x3.6</mark></td>
+			</tr>	
+			<tr>
+				<td>Linux: net.ipv4.tcp_max_tw_buckets</td>
+				<td>65536</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>Linux: net.ipv4.ip_local_port_range</td>
+				<td>1024 60999</td>
+				<td><mark>x1.6</mark></td>
+			</tr>
+			<tr>
+				<td>NGinx: worker_processes</td>
+				<td>2 (+1)</td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>NGinx: keepalive_requests</td>
+				<td>1000 (+900)</td>
+				<td></td>
+			</tr>						
+		</table>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
+		<h3>Читает, пишет, собирает статистику</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.7.SJK.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_15-24-38.small.sdt.flame.html">SJK Apache.JMeter flame graphs</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
+		<h3>Читает, пишет, собирает статистику</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.7.SJK.2.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_15-24-38.small.sdt.flame.html">SJK Apache.JMeter flame graphs</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">HTTP Request<br/><span class="next">Скачивание файлов</span></h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скачаем 1 ГБайт</h2>
+		<h3>сначала с настройкамо по умолчанию</h3>
+		<pre>
+			<code>mvn jmeter:jmeter -P Samplers.HTTP.Request.File \</code>
+			<code>    -DThreads=1 -DLoopCount=1 -DRequestCount=10 \ </code>
+			<code>    -DRequestPath=/tmp/data/1GByte.tmp</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скачаем 1 ГБайт имея 4 ГБайт ОЗУ</h2>
+		<h3>сначала с настройками по умолчанию</h3>
+		<pre>
+			<code>dd  if=/dev/urandom of=/tmp/data/1g.img \</code>
+			<code>    bs=1 count=0 seek=1G</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File \ </code>
+			<code>    -DThreads=1 -DLoopCount=<mark>200</mark> -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=<mark>/tmp/data/1g.img</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>200 ГБайт скачались достаточно быстро</h2>
+		<table>
+			<tr>
+				<th>Параметр</th>
+				<th>Значение</th>
+			</tr>
+			<tr>
+				<td>Среднее время</td>
+				<td>1460 ms</td>
+			</tr>
+			<tr>
+				<td>Длительность</td>
+				<td><mark>5 минут</mark></td>
+			</tr>					
+			<tr>
+				<td>Необходимая память</td>
+				<td>4096 МБайт</td>
+			</tr>	
+		</table>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmeter.report.1.gb.x.200.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.File-Thread-1-RequestCount-1-file-200-2019-05-10_17-14-45/Samplers.HTTP.Request.File/index.html">Apache JMeter Dashboard</a>
+			</figcaption>
+		</figure>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Трафик памяти огромный 1,81 ГБайт/сек</h2>
+		<h3>Память используется постоянно. 1 минута на GC</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmc.http.1.gb.x.200.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jrf/Samplers.HTTP.Request.File-2019-05-10_17-14-45.jfr">Java Fligth Recorder file</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Больше 1 ГБайт не скачать для Heap 4 ГБайт</h2>
+		<h3>Ошибка <mark class="red">OutOfMemoryError</mark> уже для файла в 1100 МБайт</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/read.file.out.of.memory.png">	
+		</figure>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">HTTP Sampler с настройками по умолчанию,<br/>
+							   расходует очень много памяти<br/>
+							   4-х кратный буфер от размера файла<br/>
+								генерируя объекты по 1,8 ГБайт/с,<br/>
+								но качает 200 ГБайт за 5 минут<br/>
+			</span>
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>☑️ Save response as MD5 Hash</h2>
+		<h3>экономит память при скачивании больших файлов</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmeter.http.md5.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>200 ГБайт с MD5 скачивались дольше</h2>
+		<table>
+			<tr>
+				<th>Параметр</th>
+				<th>Значение</th>
+			</tr>
+			<tr>
+				<td>Среднее время</td>
+				<td>5475 ms</td>
+			</tr>
+			<tr>
+				<td>Длительность</td>
+				<td><mark>18 минут 17 сек</mark></td>
+			</tr>					
+			<tr>
+				<td>Необходимая память</td>
+				<td>0 МБайт (минимум)</td>
+			</tr>	
+		</table>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmeter.report.1.gb.x.200.md5.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.File-Thread-1-RequestCount-1-file-200-2019-05-10_18-17-32/Samplers.HTTP.Request.File/index.html">Apache JMeter Dashboard</a>
+			</figcaption>
+		</figure>		
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Трафик памяти при включенном MD5 нулевой</h2>
+		<h3>Память не использовалась вообще, CPU тоже меньше</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmc.http.1.gb.x.200.md5.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jrf/Samplers.HTTP.Request.File-2019-05-10_18-17-32.jfr">Java Fligth Recorder file</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">☑️ Save response as MD5 Hash<br/>
+			экономит память до 0,<br>
+			экономит процессорное время,<br/>
+			не имеет ограничений на размер файла<span class="next">,<br>
+			но замедляет скачивание до 3-x раз</span>
+			</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">Как скачивать быстро<br/>
+			с минимальными расходами памяти<br>
+			из Apache.JMeter?<br/>
+			<span class="next">Может быть curl/wget и bash помогут?</span>
+			</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>wget есть в Linux</h2>
+		<h3>wget-download.sh <mark>url</mark></h3>
+		<pre>
+			<code>wget -S \</code>
+			<code>    --progress=dot:mega \ </code>
+			<code>    --output-document=/dev/null \ </code>
+			<code>    <mark>$1</mark> </code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>wget есть и в Microsoft Windows (MinGW)</h2>
+		<h3>wget-download.bat <mark>url</mark></h3>
+		<pre>
+			<code>wget -S ^</code>
+			<code>    --progress=dot:mega ^ </code>
+			<code>    --output-document=- ^ </code>
+			<code>    <mark>%1</mark> ^</code>
+			<code>    1>NUL</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Можно ограничить максимальную скорость</h2>
+		<h3>wget-download.bat <mark>url</mark></h3>
+		<pre>
+			<code>wget -S ^</code>
+			<code>    <mark class="green">--limit-rate=20m</mark> ^ </code>
+			<code>    --progress=dot:mega ^ </code>
+			<code>    --output-document=- ^ </code>
+			<code>    <mark>%1</mark> ^</code>
+			<code>    1>NUL</code>
+		</pre>
+	</div></section>
+
+
+
+	<section class="slide"><div>
+		<h2>Прикинуться браузером с поддержкой gzip</h2>
+		<h3>wget-download.gzip.bat <mark>url</mark></h3>
+		<pre>
+			<code>wget -S --progress=dot:mega ^ </code>
+			<code>    --header "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0" ^ </code>
+			<code>    --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" ^ </code>
+			<code>    --header "<mark class="green">Accept-Encoding: gzip, deflate</mark>" ^ </code>
+			<code>    --output-document=- <mark>%1</mark> 1>NUL</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Передать первые 1000 байт в PostProcessor</h2>
+		<h3>wget-download.gzip.head.bat <mark>url</mark></h3>
+		<pre>
+			<code>wget -S --progress=dot:mega ^ </code>
+			<code>    --header "User-Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:44.0) Gecko/20100101 Firefox/44.0" ^ </code>
+			<code>    --header "Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8" ^ </code>
+			<code>    --header "Accept-Encoding: gzip, deflate" ^ </code>
+			<code>    --output-document=- <mark>%1</mark> | ^</code>
+			<code>    <mark class="green">head -c 1000 | gzip -d -c -</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JSR-223 PostProcessor встраивает wget</h2>
+		<h3>Программное заполнение параметров <mark>SampleResult</mark></h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/wget.postProcessor.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Запустим тест с wget на 200 ГБайт</h2>
+		<pre>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.OS.Process.wget.new \</code>
+			<code>    -D<mark>LoopCount=200</mark> </code>
+			<code>    -DRequestPath=/tmp/data/1g.img</code>
+		</pre>	
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>200 ГБайт с wget скачивались очень быстро</h2>
+		<table>
+			<tr>
+				<th>Параметр</th>
+				<th>Значение</th>
+			</tr>
+			<tr>
+				<td>Среднее время</td>
+				<td>727 ms</td>
+			</tr>
+			<tr>
+				<td>Длительность</td>
+				<td><mark>2 минуты 27 сек</mark></td>
+			</tr>					
+			<tr>
+				<td>Необходимая память</td>
+				<td>0 МБайт (минимум)</td>
+			</tr>	
+		</table>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmeter.report.1.gb.x.200.wget.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.OS.Process.wget.new-Thread-1-RequestCount-1-file-200-2019-05-10_22-34-45/Samplers.OS.Process.wget.new/index.html">Apache JMeter Dashboard</a>
+			</figcaption>
+		</figure>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скачать 200 ГБайт</h2>
+		<table>
+			<tr>
+				<th>Способ</th>
+				<th>Длительность</th>
+			</tr>
+			<tr>
+				<td>HTTP Request</td>
+				<td>5 минут</td>
+			</tr>
+			<tr>
+				<td>☑️ Save response as MD5 Hash</td>
+				<td><mark>18 минут 17 сек</mark></td>
+			</tr>	
+			<tr>
+				<td>OS Process Sampler и wget</td>
+				<td><mark class="green">2 минуты 27 сек</mark></td>
+			</tr>					
+		</table>	
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">OS Process Sampler + JSR-223 PostProcessor<br/>
+			позволяют вызывать консольные инструменты,<br>
+			которые хорошо работают с большими файлами.<br/>
+			Так wget даёт ускорение в 2 раза,<br/>
+			и в 7 раз по сравнению с MD5.<br/>
+			</h2>
+	</div></section>
+
+
+
+
+
+
+
+
+	<section class="slide"><div>
+		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
+		<h3>Читает, пишет, собирает статистику</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/Monitoring.Sampler.HTTP.X.7.SJK.2.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_15-24-38.small.sdt.flame.html">SJK Apache.JMeter flame graphs</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Группировка соединений средствами bash</h2>
+		<div>Исходящие от nginx соединения:</div>
+		<pre>
+			<code>netstat | grep -oP \</code>
+			<code>"^\w+\s+\d+\s+\d+\s+(\w+:\w+)\s+(localhost:5555)\s.*"</code>
+		</pre>
+		<div>Входящие соединения (:</div>		
+		<pre>
+			<code>netstat | grep -oP \</code>
+			<code>"^\w+\s+\d+\s+\d+\s+(localhost:5555)\s.*"</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP keepAlive включен. Результаты</h2>
+		<p>
+			<ul>
+				<li><mark class="green">✔️</mark> Соединения переиспользуются, размер сценария ускоряет в 16-60 раз</li>
+				<li><mark class="green">✔️</mark> При 1-10 запросах ошибки</li>
+				<li><mark class="green">✔️</mark> Потоки не ускоряют JMeter, при 1-10 запросах</li>
+				<li><mark class="green">✔️</mark> Потоки ускоряют JMeter, при 50-100 запросах</li>
+				<li><mark class="green">✔️</mark> Предел стенда - 4600 запросов в сек</li>
+			</ul>
+		</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>HTTP Request. Результаты</h2>
+		<p>
+			<ul>HTTP Request: keepAlive
+				<li><mark class="green">✔️</mark> включить (по умолчанию)
+				</li>
+				<li><mark class="red">❌</mark> отключить
+					<ul>
+						<li>Соединения не переиспользуются как при 1 так и при 100 запросах</li>
+						<li>Соединения не переиспользуются как при 1 так и при 100 запросах</li>
+					</ul>
+				</li>
+			</ul>
+		</p>
+		<p>
+			<ul>Loop Controller: количество запросов в сценарии
+				<li><mark class="green">🔼</mark> 1, 10, 50, 100</li>
+			</ul>
+		</p>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout">Что предпринять?<br/>
+			<span class="next">Открывать меньше соединений</span><br/>
+			<span class="next">Keep-Alive полезен, не отключать его</span>
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Keep-Alive полезен, не отключать его</h2>
+		<h3>Полезен, когда количество запросов больше 1</h3>
+		<p><mark class="green">x5</mark> отключить Keep-Alive для бенчмарков на 1 запрос</p>
+		<p><mark class="green">x35</mark> использовать 50+ запросов в сценарии</p>
+
+		<table>
+			<tr>
+				<th>Keep-Alive</th>
+				<th>1 Request</th>
+				<th>10 Requests</th>
+				<th>50 Requests</th>
+				<th>100 Requests</th>
+			</tr>
+			<tr>
+				<td>On</td>
+				<td>450 req/s</td>
+				<td>4600 req/s</td>
+				<td>14000 req/s</td>
+				<td>16000 req/s</td>
+			</tr>
+			<tr>
+				<td>Off</td>
+				<td>4600 req/s</td>
+				<td>4500 req/s</td>
+				<td>4500 req/s</td>
+				<td>4700 req/s</td>
+			</tr>
+		</table>
+	</div></section>
+
+
+
+
+
+	<section class="slide"><div>
+		<h2>Мониторинг. CPU system (80% - 90%)</h2>
+		<h3></h3>
+		<figure>
+			<img class="w cover place bottom center" src="images/cpu.system.80.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Мониторинг. netstat tcp_time_wait (28000)</h2>
+		<h3>Открывается слишком много соединений, лимит портов</h3>
+		<figure>
+			<img class="w cover place bottom center" src="images/netstat.tcp_time_wait.28000.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Linux: net.ipv4.ip_local_port_range (32768	60999)</h2>
+		<h3>Больше диапазон — больше доступных соединений</h3>
+		<div>Изначально <mark>28231</mark> портов, сделаем <mark class="green">59975</mark> портов:</div>
+		<pre>
+			<code>echo <mark>32768 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
+			<code>echo  <mark class="green">1024 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
+		</pre>
+		
+		<a href="https://blog.kireev.pro/2017/07/%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%D1%8E-time_wait/">Проблемы с очередью TIME_WAIT (@blog.kireev.pro)</a>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>HTTP Request. Максимальная интенсивность</h2>
-		<p><mark class="green">❌</mark> HTTP Request: keepAlive для одного запроса в сценарии</p>
-		<p><mark class="green">🔼</mark> Loop Controller: количество запросов</p>
-		<p><mark class="green">✔️</mark> Linux: /proc/sys/net/ipv4/tcp_tw_reuse</p>
-		<p><mark class="green">❌</mark> Apache.JMeter: httpclient.reset_state_on_thread_group_iteration</p>
+		<p><mark class="green">x5</mark> HTTP Request: отключить keepAlive для бенчмарков на 1 запрос</p>
+		<p><mark class="green">x35</mark> HTTP Request: не отключать keepAlive для тестов из множества запросов</p>
+		<p class="next"><mark class="green">✔️</mark> Linux: /proc/sys/net/ipv4/tcp_tw_reuse</p>
+		<p class="next"><mark class="green">❌</mark> Apache.JMeter: httpclient.reset_state_on_thread_group_iteration</p>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Тестовый стенд</h2>
-		<p><mark class="green">❌</mark> keepAlive для одного запроса в сценарии</p>
-		<p><mark class="green">🔼</mark> количества запросов в одном сценарии до 100</p>
-		<p><mark class="green">✔️</mark> /proc/sys/net/ipv4/tcp_tw_reuse</p>
-		<p><mark class="green">❌</mark> httpclient.reset_state_on_thread_group_iteration</p>
-		<p><mark class="red">⚙️</mark> ядра Linux (кроме net.ipv4.tcp_tw_reuse)</p>
-		<p><mark class="red">⚙️</mark> jvm: java.net.preferIPv4Stack, http.maxConnections</p>
-	</div></section>	
+		<h2>NGinx c конфигурацией по умолчанию</h2>
+		<pre>
+			<code>worker_processes  1;</code>
+			<code>worker_connections  512;</code>
+			<code>sendfile off;</code>
+			<code>tcp_nodelay on; </code>
+			<code>tcp_nopush off; </code>
+			<code>keepalive_timeout  75s;</code>
+			<code>keepalive_requests 100;</code>
+			<code>keepalive_disable msie6;</code>
+			<code>gzip off;</code>
+		</pre>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>Параметры теста</h2>
+		<pre>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.X \</code>
+			<code>    -D<mark>Threads=1</mark> -D<mark>LoopCount=100000</mark> -D<mark>RequestCount=1</mark></code>
+		</pre>
 
+		<pre>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.X,<mark>_.jvm.profiler.JFR</mark> \</code>
+			<code>    -DThreads=1 -DLoopCount=100000 -DRequestCount=1</code>
+		</pre>		
+	</div></section>
 
 	<section class="slide"><div>
 		<h2>JMeter удобно профилировать</h2>

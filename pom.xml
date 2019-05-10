@@ -137,6 +137,158 @@
         </profile>
 
         <profile>
+            <id>Samplers.OS.Process.wget</id>
+            <properties>
+                <performancetest.script>Samplers.OS.Process.wget</performancetest.script>
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <jmeterExtensions>
+                                <!-- HTTP Raw Request
+                                https://jmeter-plugins.org/wiki/RawRequest/
+                                -->
+                                <artifact>kg.apc:jmeter-plugins-httpraw:0.1</artifact>
+                            </jmeterExtensions>
+
+                            <testPlanLibraries>
+                                <artifact>kg.apc:jmeter-plugins-common-io:0.2</artifact>
+                            </testPlanLibraries>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>Samplers.OS.Process.wget.new</id>
+            <properties>
+                <performancetest.script>Samplers.OS.Process.wget.new</performancetest.script>
+
+                <Threads>1</Threads>
+                <RampUp>0</RampUp>
+                <LoopCount>100</LoopCount>
+                <RequestCount>1</RequestCount>
+                <nginx.profile>file</nginx.profile>
+
+                <!--
+                <RequestPath>/</RequestPath>
+                <RequestPath>${project.basedir}/docs/index.html</RequestPath>
+                -->
+                <RequestPath>/tmp/data/1g.img</RequestPath>
+
+                <RequestHost>localhost</RequestHost>
+                <RequestPort>5555</RequestPort>
+
+                <nginx.dir>${project.basedir}</nginx.dir>
+
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesUser>
+                                <Threads>${Threads}</Threads>
+                                <RampUp>${RampUp}</RampUp>
+                                <LoopCount>${LoopCount}</LoopCount>
+                                <RequestCount>${RequestCount}</RequestCount>
+                                <RequestPath>${RequestPath}</RequestPath>
+                                <RequestHost>${RequestHost}</RequestHost>
+                                <RequestPort>${RequestPort}</RequestPort>
+                                <nginx.ConfigFile>${project.basedir}/src/test/jmeter/tools/nginx/conf/nginx.perftest.${nginx.profile}.conf</nginx.ConfigFile>
+                                <nginx.WorkingDirectory>${project.basedir}/src/test/jmeter/tools/nginx</nginx.WorkingDirectory>
+                                <nginx.LogDirectory>/tmp/nginx/logs/</nginx.LogDirectory>
+                                <nginx.profile>${nginx.profile}</nginx.profile>
+                                <nginx.dir>${nginx.dir}</nginx.dir>
+                            </propertiesUser>
+                            <propertiesReportGenerator>
+                                <jmeter.reportgenerator.overall_granularity>1000</jmeter.reportgenerator.overall_granularity>
+                                <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>1000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                            </propertiesReportGenerator>
+                            <overrideRootLogLevel>WARN</overrideRootLogLevel>
+                            <resultsFileFormat>csv</resultsFileFormat>
+                            <generateReports>true</generateReports>
+                            <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-Thread-${Threads}-RequestCount-${RequestCount}-${nginx.profile}-${LoopCount}-${maven.build.timestamp}</reportDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
+            <id>Samplers.HTTP.Request.File</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.File</performancetest.script>
+
+                <Threads>1</Threads>
+                <RampUp>0</RampUp>
+                <LoopCount>100</LoopCount>
+                <RequestCount>1</RequestCount>
+
+                <!--
+                    default
+                    keepalive_off
+                    sendfile
+                    sendfile_gzip
+                -->
+                <nginx.profile>file</nginx.profile>
+
+                <!--
+                <RequestPath>/</RequestPath>
+                <RequestPath>/http/keepalive_off/</RequestPath>
+                <RequestPath>/http/sendfile/gzip/</RequestPath>
+                -->
+                <RequestPath>${project.basedir}/docs/index.html</RequestPath>
+
+                <RequestHost>localhost</RequestHost>
+                <RequestPort>5555</RequestPort>
+
+                <nginx.dir>${project.basedir}</nginx.dir>
+
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesUser>
+                                <Threads>${Threads}</Threads>
+                                <RampUp>${RampUp}</RampUp>
+                                <LoopCount>${LoopCount}</LoopCount>
+                                <RequestCount>${RequestCount}</RequestCount>
+                                <RequestPath>${RequestPath}</RequestPath>
+                                <RequestHost>${RequestHost}</RequestHost>
+                                <RequestPort>${RequestPort}</RequestPort>
+                                <nginx.ConfigFile>${project.basedir}/src/test/jmeter/tools/nginx/conf/nginx.perftest.${nginx.profile}.conf</nginx.ConfigFile>
+                                <nginx.WorkingDirectory>${project.basedir}/src/test/jmeter/tools/nginx</nginx.WorkingDirectory>
+                                <nginx.LogDirectory>/tmp/nginx/logs/</nginx.LogDirectory>
+                                <nginx.profile>${nginx.profile}</nginx.profile>
+                                <nginx.dir>${nginx.dir}</nginx.dir>
+                            </propertiesUser>
+                            <propertiesReportGenerator>
+                                <jmeter.reportgenerator.overall_granularity>1000</jmeter.reportgenerator.overall_granularity>
+                                <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>1000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                            </propertiesReportGenerator>
+                            <overrideRootLogLevel>WARN</overrideRootLogLevel>
+                            <resultsFileFormat>csv</resultsFileFormat>
+                            <generateReports>true</generateReports>
+                            <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-Thread-${Threads}-RequestCount-${RequestCount}-${nginx.profile}-${LoopCount}-${maven.build.timestamp}</reportDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
             <id>Samplers.HTTP.Request.X</id>
             <properties>
                 <performancetest.script>Samplers.HTTP.Request.X</performancetest.script>
@@ -183,7 +335,15 @@
                                 <nginx.ConfigFile>${project.basedir}/src/test/jmeter/tools/nginx/conf/nginx.perftest.${nginx.profile}.conf</nginx.ConfigFile>
                                 <nginx.WorkingDirectory>${project.basedir}/src/test/jmeter/tools/nginx</nginx.WorkingDirectory>
                                 <nginx.LogDirectory>/tmp/nginx/logs/</nginx.LogDirectory>
+                                <nginx.profile>${nginx.profile}</nginx.profile>
                             </propertiesUser>
+                            <propertiesReportGenerator>
+                                <jmeter.reportgenerator.overall_granularity>1000</jmeter.reportgenerator.overall_granularity>
+                                <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>1000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                            </propertiesReportGenerator>
+                            <resultsFileFormat>csv</resultsFileFormat>
+                            <generateReports>true</generateReports>
+                            <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-Thread-${Threads}-RequestCount-${RequestCount}-${nginx.profile}-${LoopCount}-${maven.build.timestamp}</reportDirectory>
                         </configuration>
                     </plugin>
                 </plugins>
@@ -490,8 +650,8 @@
 
                         <configuration>
                             <jMeterProcessJVMSettings>
-                                <xms>1111</xms>
-                                <xmx>2222</xmx>
+                                <xms>4096</xms>
+                                <xmx>4096</xmx>
                                 <arguments>
                                     <argument>-XX:MaxMetaspaceSize=256m</argument>
 
