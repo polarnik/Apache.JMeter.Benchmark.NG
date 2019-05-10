@@ -1,0 +1,2328 @@
+Активные соединения с интернетом (w/o servers)
+Proto Recv-Q Send-Q Local Address Foreign Address State      
+tcp        0      0 localhost:8086          localhost:37094         ESTABLISHED
+tcp        0      0 localhost:8086          localhost:54526         TIME_WAIT  
+tcp        0      0 localhost:8086          localhost:54530         TIME_WAIT  
+tcp        0      0 localhost:8086          localhost:54528         TIME_WAIT  
+tcp        0      0 localhost:49510         localhost:3000          TIME_WAIT  
+tcp        0      0 localhost:49850         localhost:3000          ESTABLISHED
+tcp        0      0 localhost:46330         localhost:3000          TIME_WAIT  
+tcp        0      0 localhost:46136         localhost:3000          ESTABLISHED
+tcp        0      0 localhost:8086          localhost:54538         TIME_WAIT  
+tcp        0      0 macbook-pro:42590       le-in-f95.1e100.n:https ESTABLISHED
+tcp        0      0 macbook-pro:50396       45.55.41.223:http       CLOSE_WAIT 
+tcp        0      0 localhost:37094         localhost:8086          ESTABLISHED
+tcp        0      0 localhost:45928         localhost:3000          ESTABLISHED
+tcp        0      0 localhost:8086          localhost:54534         TIME_WAIT  
+tcp        0      0 macbook-pro:58374       lt-in-f94.1e100.ne:http TIME_WAIT  
+tcp        0      0 macbook-pro:45110       ec2-52-24-164-106:https ESTABLISHED
+tcp        0      0 localhost:45978         localhost:3000          ESTABLISHED
+tcp        0      0 localhost:8086          localhost:54536         TIME_WAIT  
+tcp        0      0 macbook-pro:59436       ec2-52-35-250-5.u:https ESTABLISHED
+tcp        0      0 localhost:5555          localhost:43301         TIME_WAIT  
+tcp6       0      0 localhost:53614         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52980         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53164         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52658         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53894         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53574         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53278         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52610         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51824         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51884         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52158         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52020         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53728         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53928         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51918         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53250         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51892         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52558         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53974         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52772         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52006         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52988         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52042         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51814         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52418         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53172         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51606         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51810         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52050         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52060         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53942         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51776         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52556         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51960         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52746         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53636         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52348         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52530         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53214         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53758         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52212         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51624         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52068         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53482         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53640         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53950         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53846         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52272         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51778         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53956         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53990         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52052         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52008         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52320         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51816         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52022         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53398         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51678         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51888         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53202         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52656         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51966         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52054         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52216         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52360         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51876         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53376         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51972         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52180         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54022         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52830         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53346         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52694         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53962         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53182         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52908         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52282         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52726         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53158         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52342         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52094         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52710         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53674         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51728         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52588         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52574         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51922         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52858         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52848         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52886         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53602         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51656         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54080         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51654         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53458         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53414         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53544         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53074         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52218         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53224         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53136         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52604         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52606         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52978         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51618         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52412         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52472         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52672         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53790         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52132         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52622         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53198         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53478         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52920         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53496         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52150         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52928         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51700         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52082         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52086         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53550         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53228         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53128         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53064         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53190         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52598         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53466         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52176         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52452         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54026         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53920         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53362         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52704         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52730         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52032         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52796         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52196         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51682         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52532         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51738         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51874         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53844         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53982         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51642         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52986         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53280         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53516         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52226         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53336         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52788         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52792         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51628         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53888         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53760         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53306         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52624         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51896         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53768         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53140         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51746         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53748         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52698         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54030         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52880         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52354         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52570         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52680         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52910         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53012         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52236         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52706         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51704         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53258         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52918         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53704         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53916         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51992         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52476         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53354         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52336         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52520         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53394         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52640         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51942         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53806         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52628         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53546         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53698         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52870         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53690         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53268         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52448         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54016         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53724         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53138         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51692         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51742         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53024         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53120         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52780         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52308         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51842         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51968         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53246         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52820         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51862         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52546         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52414         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53866         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52490         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53716         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52426         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53008         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53998         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53056         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52106         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51846         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52934         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51748         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53492         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52600         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51970         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53464         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52474         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53514         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51828         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51852         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52154         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52578         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52328         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53854         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53452         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53834         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52130         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51944         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53776         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52038         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51714         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53450         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53396         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54106         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53296         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52620         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51880         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53032         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53000         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53954         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52800         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52466         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52416         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52356         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53384         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52742         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54036         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51902         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52762         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53180         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52708         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51766         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53910         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52512         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52956         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53274         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53146         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51928         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53958         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53570         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53778         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52540         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52728         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53512         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53400         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53044         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52366         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52966         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54076         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52566         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52616         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51952         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53750         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53460         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51940         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52528         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52580         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51644         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52844         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53926         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53582         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51756         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53102         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51636         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53616         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53996         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52430         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51804         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53842         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52554         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52012         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53594         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52420         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53584         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52182         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51832         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53670         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52582         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51620         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53530         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52450         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53548         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52884         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53498         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51910         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53168         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52552         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52650         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53080         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53316         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53884         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52306         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51914         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52716         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52388         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52940         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52316         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52000         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53438         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52204         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53308         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52852         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51780         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52368         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52034         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53098         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51836         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52630         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52950         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51646         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53628         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53010         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53066         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51696         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51950         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51724         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52284         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51602         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:3000          localhost:49850         ESTABLISHED
+tcp6       0      0 localhost:52840         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52210         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52744         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52544         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54088         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53526         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53960         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53810         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53304         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52332         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52968         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54090         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53500         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51988         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53590         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51712         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51594         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53666         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52712         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53634         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53968         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53082         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53490         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53364         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53898         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52214         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53658         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52136         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51802         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52246         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53462         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52364         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53746         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54066         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52294         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53052         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52406         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52444         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53826         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51974         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53598         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54110         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52442         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53350         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53720         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53818         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53992         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53938         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51840         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51998         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52784         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54032         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51782         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53902         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53470         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53638         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53622         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52386         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52856         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52812         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52948         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52146         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52502         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52594         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53624         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53568         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53856         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52692         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52162         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52074         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53132         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53832         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53764         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52326         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53922         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53028         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51664         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53684         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54084         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52464         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53508         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53632         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53934         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53338         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51858         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51822         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53208         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51758         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52836         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52290         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53932         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53242         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52564         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53966         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51762         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53318         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51982         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52076         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52646         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53390         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53554         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52090         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52166         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53312         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51806         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52488         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52016         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53022         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52134         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53886         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52638         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53320         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53002         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52462         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54028         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53858         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54060         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52198         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53016         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53520         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52666         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52056         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53116         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53646         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52798         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54002         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54046         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53294         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54038         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52984         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52864         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53562         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53564         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:3000          localhost:45928         ESTABLISHED
+tcp6       0      0 localhost:52190         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51882         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53606         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53004         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53070         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52238         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53900         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52634         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51666         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53430         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51812         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51622         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54082         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52642         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53378         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53732         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51610         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53254         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53840         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53972         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51936         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53326         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51708         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52676         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54098         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53804         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53984         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53244         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51688         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53220         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53236         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52906         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53238         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51734         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53248         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53586         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53124         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54000         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51740         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53110         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52382         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52614         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53528         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53352         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52206         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51798         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52362         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52818         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52232         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53752         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53946         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53428         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51694         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53290         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52816         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51794         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52904         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51702         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54058         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53860         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53480         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51844         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52932         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53736         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53412         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51834         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53726         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51958         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53030         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51668         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53042         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52770         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52434         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53556         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53494         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53100         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52834         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52970         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52040         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53642         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52346         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54018         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52898         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52944         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51856         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52302         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53062         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52036         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53782         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52636         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52018         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53468         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53436         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53476         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52548         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53232         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53156         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53048         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54096         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53108         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52424         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52912         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51754         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51984         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53944         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53772         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53456         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52896         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52684         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51744         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53334         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52964         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51772         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53366         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53572         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51638         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53890         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52298         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53226         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51904         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53802         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52274         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52470         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52652         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53734         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52590         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54052         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53240         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52872         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53282         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51736         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52148         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53848         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53142         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51978         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52330         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53068         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52750         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53552         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52288         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52922         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54092         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53218         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53664         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53980         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53096         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52224         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52270         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53654         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54100         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52778         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53536         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:3000          localhost:46136         ESTABLISHED
+tcp6       0      0 localhost:51868         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52732         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52116         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53262         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53036         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52806         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53838         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52122         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52626         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53986         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51808         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53754         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54024         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52720         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53386         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51732         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53652         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52516         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52344         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53270         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52258         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52976         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52644         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53678         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52156         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53940         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52178         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53356         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51752         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53708         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53510         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52322         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53744         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52936         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52982         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53090         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52754         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53144         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51670         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52822         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52352         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53358         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53692         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51938         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52526         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52764         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52046         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52292         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53078         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54086         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51946         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53154         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53812         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53876         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52690         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52900         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53404         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51600         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52164         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53578         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53370         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51684         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52562         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53850         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51800         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53796         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52140         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51706         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53580         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52608         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52632         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53718         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52096         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53722         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54048         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52256         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53682         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52192         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53206         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51774         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52596         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52498         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53596         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52776         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52120         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53332         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51826         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53194         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52126         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53976         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51976         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53166         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53212         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53784         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53542         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53018         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52734         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52926         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52508         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53310         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54010         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51784         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52868         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52960         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54056         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53424         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53808         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52396         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52790         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52070         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53454         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52496         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53816         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53020         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51598         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52876         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52510         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53314         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54112         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53092         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53284         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51674         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53506         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53402         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51954         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51878         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53114         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53656         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53648         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52992         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52484         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53446         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51590         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54074         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53126         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53088         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51838         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53472         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54108         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52334         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54034         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53694         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53118         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52550         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52078         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52142         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51932         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53474         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52958         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52514         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53330         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51616         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51890         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53342         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54068         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52230         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51764         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:3000          localhost:45978         ESTABLISHED
+tcp6       0      0 localhost:52808         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53148         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53234         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52942         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52014         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54064         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52486         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53442         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52286         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52028         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52998         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53276         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52838         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52804         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52240         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53730         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51980         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53824         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53592         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51676         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53836         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53714         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53484         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52892         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52878         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54054         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52064         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53788         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51658         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53006         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52888         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52914         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53710         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53050         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53104         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52924         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53828         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53440         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53896         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53170         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52714         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52458         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52410         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53184         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54004         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51686         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53416         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51912         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53864         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53904         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53420         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53688         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53038         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53908         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53344         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51860         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53176         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53060         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53256         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52460         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52024         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53524         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51660         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52172         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53822         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51894         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53964         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52118         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52952         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52280         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52938         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53706         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52260         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52662         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51788         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53196         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52296         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52446         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52408         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53432         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53830         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53188         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53918         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51710         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52660         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51768         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52026         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52432         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51956         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54094         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53418         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52504         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52492         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51650         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53970         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52862         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52494         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52436         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52072         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52384         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53872         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53742         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51900         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51652         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53820         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52832         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53540         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52104         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53192         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53204         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52194         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53300         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52592         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51690         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53814         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52276         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52312         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52524         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52010         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52268         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53392         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53620         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52724         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53630         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52170         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53084         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53380         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52994         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53534         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52664         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52124         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51872         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51614         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52854         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52228         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53792         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53160         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53130         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52374         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53286         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53046         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51630         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52518         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53538         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53786         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53696         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52846         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54042         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53878         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52248         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52860         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53600         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53522         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53712         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51848         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52098         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54104         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52310         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52996         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53994         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52174         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53868         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52866         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53434         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52506         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52584         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52500         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53106         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52696         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52428         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52572         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52930         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52066         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52168         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51698         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53200         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52828         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52400         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52700         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52826         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53700         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54050         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51672         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52152         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52654         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53914         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52244         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53766         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51962         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51916         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52534         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53680         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52440         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51608         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52438         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53566         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53406         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52080         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51996         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51790         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52044         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51634         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52398         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53948         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53058         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52748         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53504         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52084         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53260         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53178         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51870         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51934         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52538         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53408         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52184         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53152         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53094         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52160         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53626         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53040         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52300         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52114         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52648         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51818         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53870         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53862         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52394         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52522         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52372         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52200         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53134         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51716         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52824         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53798         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52760         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53794         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52758         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53486         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51986         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52874         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52686         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51730         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52902         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52842         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53410         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52304         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53756         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53650         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51722         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53448         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53558         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53288         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51604         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53924         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53382         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51786         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53800         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53874         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53422         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53774         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52618         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52670         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52264         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53150         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52542         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53604         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53026         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52088         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52814         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53322         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52802         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52266         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52404         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53912         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51964         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52946         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53988         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51640         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52668         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52602         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52756         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54014         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53348         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52718         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52738         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53444         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52916         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52962         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53612         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51898         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52768         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52380         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53532         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51854         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53216         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52752         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53072         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52782         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53086         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52250         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52252         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51850         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53880         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52422         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53662         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53324         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53076         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53702         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52702         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52482         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53770         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53302         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53222         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54102         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51662         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52810         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53360         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52186         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52058         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51796         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52774         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53644         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51726         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52128         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53162         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51908         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53978         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53740         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53054         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52220         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52112         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51792         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53252         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53610         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53576         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52612         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51770         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52972         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52030         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53930         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53298         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53112         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52850         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52794         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53852         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51612         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51626         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52894         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52736         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52340         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51820         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51926         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52202         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52674         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51990         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53502         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52390         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54072         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52314         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:50222         localhost:8086          TIME_WAIT  
+tcp6       0      0 localhost:52392         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53738         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51680         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52048         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53936         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53266         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52234         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54070         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52722         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52740         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53618         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51924         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53426         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52138         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53340         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54006         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51886         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53952         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53660         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54008         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54078         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51750         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51648         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53686         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53368         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52480         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52108         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52954         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54044         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52110         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52324         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52766         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53882         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52144         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52092         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52536         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53762         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53328         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51632         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53488         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52990         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52338         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52786         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53372         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51720         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51718         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52678         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52974         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52454         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52278         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52478         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53676         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53292         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51592         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51866         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52468         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52378         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53608         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54020         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52102         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53174         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52688         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51760         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52682         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51920         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53906         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53672         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53122         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53892         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52456         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51906         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52376         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53780         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51948         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53668         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52242         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53264         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52586         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51596         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52568         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52882         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52062         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53588         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53388         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54062         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52188         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52002         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52100         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53518         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51830         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51994         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:54012         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51930         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53186         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53272         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52576         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:51864         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52358         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:52560         localhost:5555          TIME_WAIT  
+tcp6       0      0 localhost:53374         localhost:5555          TIME_WAIT  
+Активные сокеты домена UNIX (w/o servers)
+Proto RefCnt Flags       Type       State         I-Node   Путь
+unix  2      [ ]         DGRAM                    44433    /run/user/1000/systemd/notify
+unix  2      [ ]         DGRAM                    35676    /run/user/120/systemd/notify
+unix  2      [ ]         DGRAM                    35153    /var/spool/postfix/dev/log
+unix  9      [ ]         DGRAM                    2976     /run/systemd/journal/socket
+unix  2      [ ]         DGRAM                    2991     /run/systemd/journal/syslog
+unix  25     [ ]         DGRAM                    3001     /run/systemd/journal/dev-log
+unix  2      [ ]         DGRAM                    35729    /run/wpa_supplicant/wlp3s0
+unix  2      [ ]         DGRAM                    39606    /run/wpa_supplicant/p2p-dev-wlp3s0
+unix  3      [ ]         DGRAM                    2959     /run/systemd/notify
+unix  3      [ ]         STREAM     CONNECTED     63657    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     62821    
+unix  3      [ ]         STREAM     CONNECTED     45990    
+unix  3      [ ]         STREAM     CONNECTED     47898    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     49390    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42727    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49718    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41529    
+unix  3      [ ]         STREAM     CONNECTED     49872    
+unix  3      [ ]         STREAM     CONNECTED     44516    
+unix  3      [ ]         STREAM     CONNECTED     45537    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40737    
+unix  3      [ ]         STREAM     CONNECTED     43037    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     36508    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    34941    
+unix  3      [ ]         STREAM     CONNECTED     35501    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     3773989  
+unix  3      [ ]         STREAM     CONNECTED     3432908  
+unix  3      [ ]         STREAM     CONNECTED     53374    
+unix  3      [ ]         STREAM     CONNECTED     47871    
+unix  3      [ ]         STREAM     CONNECTED     43114    
+unix  3      [ ]         STREAM     CONNECTED     8610289  
+unix  3      [ ]         STREAM     CONNECTED     7140193  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     55327    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48005    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     51595    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50654    
+unix  3      [ ]         STREAM     CONNECTED     45288    
+unix  3      [ ]         STREAM     CONNECTED     51694    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42806    
+unix  3      [ ]         STREAM     CONNECTED     43050    /run/user/120/bus
+unix  2      [ ]         DGRAM                    34936    
+unix  3      [ ]         STREAM     CONNECTED     7863713  
+unix  3      [ ]         STREAM     CONNECTED     1347318  
+unix  3      [ ]         STREAM     CONNECTED     54020    
+unix  3      [ ]         STREAM     CONNECTED     45992    
+unix  3      [ ]         STREAM     CONNECTED     44636    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44624    
+unix  3      [ ]         STREAM     CONNECTED     51368    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41531    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     91798    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     54297    
+unix  3      [ ]         STREAM     CONNECTED     43708    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     39823    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46371    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     3431914  
+unix  3      [ ]         STREAM     CONNECTED     48020    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47883    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40714    
+unix  3      [ ]         STREAM     CONNECTED     35713    
+unix  3      [ ]         STREAM     CONNECTED     35529    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTED     7860765  
+unix  3      [ ]         STREAM     CONNECTED     51526    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     35778    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47990    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50907    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50789    
+unix  3      [ ]         STREAM     CONNECTED     48103    
+unix  3      [ ]         STREAM     CONNECTED     39879    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     41523    
+unix  3      [ ]         STREAM     CONNECTED     46369    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     40615    
+unix  3      [ ]         STREAM     CONNECTED     7501505  /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     3432911  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     52336    
+unix  3      [ ]         STREAM     CONNECTED     41524    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     34942    
+unix  3      [ ]         STREAM     CONNECTED     35020    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     42190    
+unix  3      [ ]         STREAM     CONNECTED     8612078  
+unix  3      [ ]         STREAM     CONNECTED     46078    
+unix  3      [ ]         STREAM     CONNECTED     51367    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    41425    
+unix  3      [ ]         STREAM     CONNECTED     35530    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35516    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    91792    
+unix  3      [ ]         STREAM     CONNECTED     55644    
+unix  3      [ ]         STREAM     CONNECTED     47904    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42221    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     1311230  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     43413    
+unix  3      [ ]         STREAM     CONNECTED     32344    
+unix  3      [ ]         STREAM     CONNECTED     54626    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     47852    
+unix  3      [ ]         STREAM     CONNECTED     8507955  
+unix  3      [ ]         STREAM     CONNECTED     7503046  
+unix  3      [ ]         STREAM     CONNECTED     59818    
+unix  3      [ ]         STREAM     CONNECTED     44776    
+unix  3      [ ]         STREAM     CONNECTED     46037    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     46008    
+unix  3      [ ]         STREAM     CONNECTED     50627    
+unix  3      [ ]         STREAM     CONNECTED     42728    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35515    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     96858    
+unix  3      [ ]         STREAM     CONNECTED     51657    
+unix  3      [ ]         STREAM     CONNECTED     51598    
+unix  3      [ ]         STREAM     CONNECTED     8610281  
+unix  3      [ ]         STREAM     CONNECTED     61779    
+unix  3      [ ]         DGRAM                    35677    
+unix  3      [ ]         STREAM     CONNECTED     7863702  
+unix  3      [ ]         STREAM     CONNECTED     7853966  
+unix  3      [ ]         STREAM     CONNECTED     7860758  
+unix  3      [ ]         STREAM     CONNECTED     44410    
+unix  3      [ ]         STREAM     CONNECTED     54014    
+unix  3      [ ]         STREAM     CONNECTED     46079    
+unix  3      [ ]         STREAM     CONNECTED     50695    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     42668    
+unix  3      [ ]         STREAM     CONNECTED     35546    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35507    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48105    
+unix  2      [ ]         DGRAM                    51637    
+unix  3      [ ]         STREAM     CONNECTED     41489    
+unix  3      [ ]         STREAM     CONNECTED     40656    
+unix  3      [ ]         STREAM     CONNECTED     44064    
+unix  3      [ ]         STREAM     CONNECTED     33608    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     35025    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     49810    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    44435    
+unix  3      [ ]         STREAM     CONNECTED     34922    
+unix  3      [ ]         STREAM     CONNECTED     17507    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7863699  
+unix  3      [ ]         STREAM     CONNECTED     53284    
+unix  3      [ ]         STREAM     CONNECTED     49391    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     44157    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     33288    
+unix  2      [ ]         DGRAM                    35007    
+unix  3      [ ]         STREAM     CONNECTED     3426882  
+unix  3      [ ]         STREAM     CONNECTED     55330    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     48848    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47900    @/tmp/.ICE-unix/5293
+unix  3      [ ]         STREAM     CONNECTED     39830    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     67291    
+unix  3      [ ]         STREAM     CONNECTED     64720    
+unix  3      [ ]         STREAM     CONNECTED     50937    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48750    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42817    
+unix  3      [ ]         STREAM     CONNECTED     41488    
+unix  3      [ ]         STREAM     CONNECTED     46382    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7853973  
+unix  3      [ ]         STREAM     CONNECTED     65351    
+unix  3      [ ]         STREAM     CONNECTED     50700    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     40734    
+unix  3      [ ]         STREAM     CONNECTED     15237    
+unix  3      [ ]         STREAM     CONNECTED     51092    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35610    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     52638    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     44648    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50743    
+unix  3      [ ]         STREAM     CONNECTED     8614007  
+unix  3      [ ]         STREAM     CONNECTED     67292    
+unix  3      [ ]         STREAM     CONNECTED     50882    
+unix  3      [ ]         STREAM     CONNECTED     40775    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42807    
+unix  3      [ ]         STREAM     CONNECTED     8610277  
+unix  3      [ ]         STREAM     CONNECTED     52337    
+unix  3      [ ]         STREAM     CONNECTED     51578    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     45773    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     40736    
+unix  3      [ ]         STREAM     CONNECTED     41467    
+unix  3      [ ]         STREAM     CONNECTED     1353893  /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     67232    @/dbus-vfs-daemon/socket-ro4nHjmk
+unix  3      [ ]         STREAM     CONNECTED     54013    
+unix  3      [ ]         STREAM     CONNECTED     60800    
+unix  2      [ ]         DGRAM                    39882    
+unix  3      [ ]         STREAM     CONNECTED     42692    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49719    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41526    
+unix  3      [ ]         STREAM     CONNECTED     44069    
+unix  3      [ ]         STREAM     CONNECTED     8610279  
+unix  3      [ ]         STREAM     CONNECTED     7142229  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     44658    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     44599    
+unix  3      [ ]         STREAM     CONNECTED     40687    
+unix  3      [ ]         STREAM     CONNECTED     7860759  
+unix  3      [ ]         STREAM     CONNECTED     8589567  
+unix  3      [ ]         STREAM     CONNECTED     44774    
+unix  3      [ ]         STREAM     CONNECTED     44651    
+unix  3      [ ]         STREAM     CONNECTED     51573    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50694    
+unix  3      [ ]         STREAM     CONNECTED     42703    
+unix  3      [ ]         STREAM     CONNECTED     33740    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     68132    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     44672    
+unix  3      [ ]         STREAM     CONNECTED     45745    
+unix  3      [ ]         STREAM     CONNECTED     41494    
+unix  3      [ ]         STREAM     CONNECTED     42617    
+unix  3      [ ]         STREAM     CONNECTED     7853884  
+unix  3      [ ]         STREAM     CONNECTED     44610    
+unix  3      [ ]         STREAM     CONNECTED     42730    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44088    
+unix  3      [ ]         STREAM     CONNECTED     40144    
+unix  3      [ ]         STREAM     CONNECTED     35021    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     7863712  
+unix  3      [ ]         STREAM     CONNECTED     7853967  
+unix  3      [ ]         STREAM     CONNECTED     52342    
+unix  2      [ ]         DGRAM                    35016    
+unix  3      [ ]         STREAM     CONNECTED     44780    
+unix  3      [ ]         STREAM     CONNECTED     51686    @/dbus-vfs-daemon/socket-aX4vPpLh
+unix  3      [ ]         STREAM     CONNECTED     50655    
+unix  3      [ ]         STREAM     CONNECTED     43117    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     44140    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51658    
+unix  3      [ ]         STREAM     CONNECTED     50903    
+unix  3      [ ]         STREAM     CONNECTED     7853956  
+unix  3      [ ]         STREAM     CONNECTED     1313387  
+unix  3      [ ]         STREAM     CONNECTED     44612    
+unix  3      [ ]         STREAM     CONNECTED     7860755  
+unix  3      [ ]         STREAM     CONNECTED     3771384  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     53220    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     51768    
+unix  3      [ ]         STREAM     CONNECTED     8507954  
+unix  3      [ ]         STREAM     CONNECTED     43827    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     46039    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50905    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50693    
+unix  3      [ ]         STREAM     CONNECTED     45289    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     39793    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8584082  
+unix  3      [ ]         STREAM     CONNECTED     47903    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49873    
+unix  3      [ ]         STREAM     CONNECTED     50986    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50908    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     43400    
+unix  3      [ ]         STREAM     CONNECTED     47850    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    44434    
+unix  3      [ ]         STREAM     CONNECTED     35634    
+unix  3      [ ]         STREAM     CONNECTED     7863701  
+unix  3      [ ]         STREAM     CONNECTED     54296    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     63656    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44661    
+unix  3      [ ]         STREAM     CONNECTED     48893    
+unix  3      [ ]         STREAM     CONNECTED     45991    
+unix  3      [ ]         STREAM     CONNECTED     50569    
+unix  3      [ ]         STREAM     CONNECTED     45269    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     42669    
+unix  3      [ ]         STREAM     CONNECTED     37904    
+unix  3      [ ]         STREAM     CONNECTED     39822    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40655    
+unix  3      [ ]         STREAM     CONNECTED     44063    
+unix  3      [ ]         STREAM     CONNECTED     7145204  
+unix  3      [ ]         STREAM     CONNECTED     59801    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     44723    
+unix  3      [ ]         STREAM     CONNECTED     43412    
+unix  3      [ ]         STREAM     CONNECTED     34947    
+unix  3      [ ]         SEQPACKET  CONNECTED     7860764  
+unix  3      [ ]         STREAM     CONNECTED     54295    @/tmp/.ICE-unix/5293
+unix  3      [ ]         STREAM     CONNECTED     44156    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8587976  
+unix  3      [ ]         STREAM     CONNECTED     48892    
+unix  3      [ ]         STREAM     CONNECTED     50576    
+unix  3      [ ]         STREAM     CONNECTED     42704    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     55643    
+unix  3      [ ]         STREAM     CONNECTED     44674    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     40634    
+unix  3      [ ]         STREAM     CONNECTED     40257    
+unix  3      [ ]         STREAM     CONNECTED     8610278  
+unix  3      [ ]         STREAM     CONNECTED     7500276  /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     36646    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8505144  
+unix  3      [ ]         STREAM     CONNECTED     7860757  
+unix  3      [ ]         STREAM     CONNECTED     43020    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8610282  
+unix  3      [ ]         STREAM     CONNECTED     62828    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     43354    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     42726    
+unix  3      [ ]         STREAM     CONNECTED     35024    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8508912  
+unix  3      [ ]         STREAM     CONNECTED     68667    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     64721    
+unix  3      [ ]         STREAM     CONNECTED     45296    @/tmp/dbus-KOVjPoPF
+unix  3      [ ]         STREAM     CONNECTED     39827    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     43048    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    40724    
+unix  3      [ ]         STREAM     CONNECTED     35777    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     52343    
+unix  3      [ ]         STREAM     CONNECTED     36734    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     54017    
+unix  3      [ ]         STREAM     CONNECTED     63630    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     44654    
+unix  3      [ ]         STREAM     CONNECTED     51594    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     45943    
+unix  3      [ ]         STREAM     CONNECTED     50575    
+unix  3      [ ]         STREAM     CONNECTED     8584083  
+unix  3      [ ]         STREAM     CONNECTED     8508911  
+unix  3      [ ]         STREAM     CONNECTED     51013    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     48809    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     45746    
+unix  3      [ ]         STREAM     CONNECTED     42811    
+unix  2      [ ]         DGRAM                    33733    
+unix  3      [ ]         STREAM     CONNECTED     7853955  
+unix  3      [ ]         STREAM     CONNECTED     62829    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     51529    
+unix  3      [ ]         STREAM     CONNECTED     40713    
+unix  3      [ ]         STREAM     CONNECTED     7853968  
+unix  3      [ ]         STREAM     CONNECTED     7142227  
+unix  3      [ ]         STREAM     CONNECTED     3686540  
+unix  3      [ ]         STREAM     CONNECTED     51040    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     8610292  
+unix  3      [ ]         SEQPACKET  CONNECTED     8587972  
+unix  3      [ ]         STREAM     CONNECTED     44777    
+unix  3      [ ]         STREAM     CONNECTED     50998    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50702    
+unix  2      [ ]         DGRAM                    48526    
+unix  3      [ ]         STREAM     CONNECTED     42670    
+unix  3      [ ]         STREAM     CONNECTED     39761    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     8614006  
+unix  3      [ ]         STREAM     CONNECTED     40635    
+unix  3      [ ]         STREAM     CONNECTED     51611    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     49715    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44614    
+unix  3      [ ]         STREAM     CONNECTED     43140    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     7863698  
+unix  2      [ ]         DGRAM                    54635    
+unix  3      [ ]         STREAM     CONNECTED     49354    @/tmp/dbus-fh79YenN
+unix  3      [ ]         STREAM     CONNECTED     8610291  
+unix  3      [ ]         STREAM     CONNECTED     64037    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     59800    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44784    
+unix  3      [ ]         STREAM     CONNECTED     53282    
+unix  3      [ ]         STREAM     CONNECTED     44611    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42647    
+unix  3      [ ]         STREAM     CONNECTED     42050    
+unix  3      [ ]         STREAM     CONNECTED     7504064  
+unix  3      [ ]         STREAM     CONNECTED     44631    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41724    
+unix  3      [ ]         STREAM     CONNECTED     48108    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    49911    
+unix  3      [ ]         STREAM     CONNECTED     54018    
+unix  3      [ ]         STREAM     CONNECTED     48849    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44633    
+unix  3      [ ]         STREAM     CONNECTED     50750    
+unix  3      [ ]         STREAM     CONNECTED     42049    
+unix  3      [ ]         STREAM     CONNECTED     43890    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43763    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48010    @/tmp/.ICE-unix/5293
+unix  3      [ ]         STREAM     CONNECTED     50904    
+unix  3      [ ]         STREAM     CONNECTED     50825    
+unix  3      [ ]         STREAM     CONNECTED     41527    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     43145    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     44220    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     34948    
+unix  2      [ ]         DGRAM                    15241    
+unix  3      [ ]         STREAM     CONNECTED     7863711  
+unix  3      [ ]         STREAM     CONNECTED     7499300  
+unix  3      [ ]         STREAM     CONNECTED     3682917  @/dbus-vfs-daemon/socket-9rKVO2Fc
+unix  3      [ ]         STREAM     CONNECTED     48338    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     38694    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8587975  
+unix  3      [ ]         STREAM     CONNECTED     3426223  /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     62826    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     51608    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     48871    
+unix  3      [ ]         STREAM     CONNECTED     50740    
+unix  3      [ ]         STREAM     CONNECTED     45294    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     42648    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     29554    
+unix  3      [ ]         STREAM     CONNECTED     54294    
+unix  3      [ ]         STREAM     CONNECTED     51614    
+unix  3      [ ]         STREAM     CONNECTED     42618    
+unix  3      [ ]         STREAM     CONNECTED     7498363  
+unix  3      [ ]         STREAM     CONNECTED     1348280  @/dbus-vfs-daemon/socket-bxXZ1Jwf
+unix  3      [ ]         STREAM     CONNECTED     51691    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     43414    
+unix  3      [ ]         STREAM     CONNECTED     39826    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7504077  /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     3684474  
+unix  3      [ ]         STREAM     CONNECTED     43892    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     44711    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     8612079  
+unix  3      [ ]         STREAM     CONNECTED     61780    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     52637    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     50906    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42702    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43891    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51641    
+unix  3      [ ]         STREAM     CONNECTED     49393    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     46408    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     7861479  
+unix  3      [ ]         STREAM     CONNECTED     1345019  
+unix  3      [ ]         STREAM     CONNECTED     49814    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     43399    
+unix  3      [ ]         STREAM     CONNECTED     39130    /var/run/dbus/system_bus_socket
+unix  3      [ ]         SEQPACKET  CONNECTED     7863709  
+unix  3      [ ]         STREAM     CONNECTED     42078    
+unix  3      [ ]         STREAM     CONNECTED     35028    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8610290  
+unix  3      [ ]         STREAM     CONNECTED     8587973  
+unix  3      [ ]         STREAM     CONNECTED     60803    @/dbus-vfs-daemon/socket-g43oV0V0
+unix  3      [ ]         STREAM     CONNECTED     48018    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48845    
+unix  3      [ ]         STREAM     CONNECTED     49689    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     45293    
+unix  3      [ ]         STREAM     CONNECTED     44212    
+unix  3      [ ]         STREAM     CONNECTED     42689    
+unix  3      [ ]         STREAM     CONNECTED     7498358  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     58894    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     49815    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     48844    
+unix  3      [ ]         STREAM     CONNECTED     46372    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35670    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     34977    
+unix  3      [ ]         STREAM     CONNECTED     63163    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     43746    @/tmp/dbus-uDTwxIxt
+unix  2      [ ]         DGRAM                    47882    
+unix  3      [ ]         STREAM     CONNECTED     47874    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     39825    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7863703  
+unix  3      [ ]         STREAM     CONNECTED     53373    
+unix  3      [ ]         STREAM     CONNECTED     51698    
+unix  2      [ ]         DGRAM                    47866    
+unix  3      [ ]         STREAM     CONNECTED     44411    
+unix  3      [ ]         STREAM     CONNECTED     8577416  
+unix  3      [ ]         STREAM     CONNECTED     8515189  /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     7498357  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51098    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     44653    
+unix  3      [ ]         STREAM     CONNECTED     45942    
+unix  3      [ ]         STREAM     CONNECTED     45876    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     42691    
+unix  3      [ ]         STREAM     CONNECTED     46002    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     50938    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41490    
+unix  3      [ ]         STREAM     CONNECTED     42615    
+unix  3      [ ]         STREAM     CONNECTED     7853954  
+unix  3      [ ]         STREAM     CONNECTED     64718    
+unix  3      [ ]         STREAM     CONNECTED     44200    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     8589566  
+unix  3      [ ]         SEQPACKET  CONNECTED     8587971  
+unix  3      [ ]         STREAM     CONNECTED     68133    
+unix  3      [ ]         STREAM     CONNECTED     63655    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46040    
+unix  3      [ ]         STREAM     CONNECTED     51596    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44464    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41444    
+unix  3      [ ]         STREAM     CONNECTED     39600    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     7859139  @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     53289    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     44673    
+unix  3      [ ]         STREAM     CONNECTED     51607    
+unix  3      [ ]         STREAM     CONNECTED     46383    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44101    /run/user/120/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     7853974  
+unix  3      [ ]         STREAM     CONNECTED     48729    @/tmp/dbus-uDTwxIxt
+unix  2      [ ]         DGRAM                    44425    
+unix  3      [ ]         STREAM     CONNECTED     42731    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7863710  
+unix  3      [ ]         STREAM     CONNECTED     54704    
+unix  3      [ ]         STREAM     CONNECTED     53288    
+unix  2      [ ]         DGRAM                    35155    
+unix  3      [ ]         SEQPACKET  CONNECTED     8610288  
+unix  3      [ ]         STREAM     CONNECTED     44778    
+unix  3      [ ]         STREAM     CONNECTED     48894    /run/user/1000/bus
+unix  2      [ ]         DGRAM                    44622    
+unix  3      [ ]         STREAM     CONNECTED     44465    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42690    
+unix  3      [ ]         STREAM     CONNECTED     8573617  
+unix  3      [ ]         STREAM     CONNECTED     51014    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     50881    
+unix  3      [ ]         STREAM     CONNECTED     43147    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     43018    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     49917    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     43404    
+unix  3      [ ]         STREAM     CONNECTED     34943    
+unix  3      [ ]         STREAM     CONNECTED     8508913  
+unix  3      [ ]         STREAM     CONNECTED     51093    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41466    
+unix  3      [ ]         STREAM     CONNECTED     42360    
+unix  3      [ ]         STREAM     CONNECTED     36611    
+unix  3      [ ]         STREAM     CONNECTED     35018    
+unix  3      [ ]         STREAM     CONNECTED     38200    
+unix  3      [ ]         STREAM     CONNECTED     8577417  
+unix  2      [ ]         DGRAM                    54032    
+unix  3      [ ]         STREAM     CONNECTED     43118    /run/user/120/bus
+unix  2      [ ]         DGRAM                    29557    
+unix  3      [ ]         STREAM     CONNECTED     48664    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     46389    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     45074    @/tmp/dbus-KOVjPoPF
+unix  3      [ ]         STREAM     CONNECTED     7861478  
+unix  2      [ ]         STREAM     CONNECTED     7498361  
+unix  3      [ ]         STREAM     CONNECTED     49716    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40688    
+unix  3      [ ]         DGRAM                    35678    
+unix  3      [ ]         STREAM     CONNECTED     40181    
+unix  3      [ ]         STREAM     CONNECTED     35022    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8508914  
+unix  3      [ ]         STREAM     CONNECTED     53559    
+unix  3      [ ]         STREAM     CONNECTED     51095    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     48001    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     46009    
+unix  3      [ ]         STREAM     CONNECTED     44637    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50753    
+unix  3      [ ]         STREAM     CONNECTED     44139    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51689    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    51650    
+unix  3      [ ]         STREAM     CONNECTED     50883    
+unix  3      [ ]         STREAM     CONNECTED     42818    /run/user/120/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     43123    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     40659    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     33727    
+unix  3      [ ]         STREAM     CONNECTED     51572    
+unix  3      [ ]         STREAM     CONNECTED     49687    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     7863700  
+unix  3      [ ]         STREAM     CONNECTED     53290    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     35017    
+unix  3      [ ]         STREAM     CONNECTED     8587974  
+unix  2      [ ]         DGRAM                    44644    
+unix  3      [ ]         STREAM     CONNECTED     45944    
+unix  3      [ ]         STREAM     CONNECTED     45791    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     41445    
+unix  3      [ ]         STREAM     CONNECTED     7863551  
+unix  3      [ ]         STREAM     CONNECTED     54291    
+unix  3      [ ]         STREAM     CONNECTED     48759    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43130    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     43049    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8610280  
+unix  3      [ ]         STREAM     CONNECTED     52341    
+unix  3      [ ]         STREAM     CONNECTED     35757    
+unix  2      [ ]         DGRAM                    34838    
+unix  3      [ ]         STREAM     CONNECTED     7860760  
+unix  3      [ ]         STREAM     CONNECTED     3436758  /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     49928    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     35531    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46004    
+unix  3      [ ]         STREAM     CONNECTED     42725    
+unix  3      [ ]         STREAM     CONNECTED     41404    
+unix  3      [ ]         STREAM     CONNECTED     36061    
+unix  3      [ ]         STREAM     CONNECTED     8573618  
+unix  3      [ ]         STREAM     CONNECTED     68664    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     63629    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     41491    
+unix  3      [ ]         STREAM     CONNECTED     42616    
+unix  3      [ ]         STREAM     CONNECTED     43401    
+unix  3      [ ]         STREAM     CONNECTED     44223    
+unix  3      [ ]         STREAM     CONNECTED     42054    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8505145  
+unix  3      [ ]         SEQPACKET  CONNECTED     7863708  
+unix  3      [ ]         STREAM     CONNECTED     3673880  @/dbus-vfs-daemon/socket-SoTBmOrJ
+unix  3      [ ]         STREAM     CONNECTED     59814    
+unix  3      [ ]         STREAM     CONNECTED     44782    
+unix  2      [ ]         DGRAM                    45998    
+unix  3      [ ]         STREAM     CONNECTED     44621    
+unix  3      [ ]         STREAM     CONNECTED     45837    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     42734    
+unix  3      [ ]         STREAM     CONNECTED     31651    
+unix  3      [ ]         STREAM     CONNECTED     51690    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     40658    
+unix  3      [ ]         STREAM     CONNECTED     52334    
+unix  3      [ ]         STREAM     CONNECTED     48019    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46410    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     23530    
+unix  3      [ ]         STREAM     CONNECTED     39587    
+unix  3      [ ]         SEQPACKET  CONNECTED     8610287  
+unix  3      [ ]         STREAM     CONNECTED     8516854  
+unix  3      [ ]         STREAM     CONNECTED     54022    
+unix  3      [ ]         STREAM     CONNECTED     48017    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48870    
+unix  3      [ ]         STREAM     CONNECTED     48751    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50570    
+unix  3      [ ]         STREAM     CONNECTED     39794    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38916    
+unix  3      [ ]         STREAM     CONNECTED     38129    
+unix  3      [ ]         STREAM     CONNECTED     67289    
+unix  3      [ ]         STREAM     CONNECTED     48843    
+unix  3      [ ]         STREAM     CONNECTED     50861    
+unix  3      [ ]         STREAM     CONNECTED     7853969  
+unix  3      [ ]         STREAM     CONNECTED     7860756  
+unix  3      [ ]         STREAM     CONNECTED     53307    
+unix  3      [ ]         STREAM     CONNECTED     43115    
+unix  3      [ ]         STREAM     CONNECTED     48786    
+unix  3      [ ]         STREAM     CONNECTED     45785    
+unix  3      [ ]         STREAM     CONNECTED     44134    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     36673    @/tmp/dbus-059KkfFv
+unix  3      [ ]         STREAM     CONNECTED     35544    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49706    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48721    
+unix  3      [ ]         STREAM     CONNECTED     45759    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     46367    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44155    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    35587    
+unix  3      [ ]         STREAM     CONNECTED     7853811  
+unix  3      [ ]         STREAM     CONNECTED     43363    
+unix  3      [ ]         STREAM     CONNECTED     49905    @/tmp/dbus-uDTwxIxt
+unix  3      [ ]         STREAM     CONNECTED     48787    
+unix  3      [ ]         STREAM     CONNECTED     48727    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     7865626  
+unix  3      [ ]         STREAM     CONNECTED     48846    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44589    
+unix  3      [ ]         STREAM     CONNECTED     45527    
+unix  3      [ ]         STREAM     CONNECTED     45267    
+unix  2      [ ]         STREAM     CONNECTED     49799    
+unix  3      [ ]         STREAM     CONNECTED     44131    
+unix  3      [ ]         STREAM     CONNECTED     44224    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8587963  
+unix  3      [ ]         STREAM     CONNECTED     44704    
+unix  3      [ ]         STREAM     CONNECTED     47885    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50691    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46364    
+unix  3      [ ]         STREAM     CONNECTED     30286    
+unix  3      [ ]         STREAM     CONNECTED     43331    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     40592    
+unix  3      [ ]         STREAM     CONNECTED     33744    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     35509    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49747    
+unix  3      [ ]         STREAM     CONNECTED     8508902  
+unix  3      [ ]         STREAM     CONNECTED     7853882  
+unix  3      [ ]         SEQPACKET  CONNECTED     7853835  
+unix  3      [ ]         STREAM     CONNECTED     51648    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     43131    
+unix  3      [ ]         STREAM     CONNECTED     44714    
+unix  3      [ ]         STREAM     CONNECTED     49452    
+unix  3      [ ]         STREAM     CONNECTED     38591    
+unix  3      [ ]         STREAM     CONNECTED     40053    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    33110    
+unix  3      [ ]         STREAM     CONNECTED     3436757  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51591    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     39716    
+unix  3      [ ]         STREAM     CONNECTED     35818    
+unix  3      [ ]         STREAM     CONNECTED     43403    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     43754    
+unix  3      [ ]         STREAM     CONNECTED     43359    
+unix  3      [ ]         STREAM     CONNECTED     43330    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     8575388  
+unix  3      [ ]         STREAM     CONNECTED     52883    
+unix  3      [ ]         STREAM     CONNECTED     45897    
+unix  3      [ ]         STREAM     CONNECTED     48746    
+unix  3      [ ]         STREAM     CONNECTED     48728    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     39599    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     42004    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     8574571  
+unix  3      [ ]         STREAM     CONNECTED     47931    
+unix  3      [ ]         STREAM     CONNECTED     35776    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8508900  
+unix  3      [ ]         STREAM     CONNECTED     7861356  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     53285    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     48760    
+unix  3      [ ]         STREAM     CONNECTED     41893    
+unix  3      [ ]         STREAM     CONNECTED     38590    
+unix  3      [ ]         STREAM     CONNECTED     39079    
+unix  3      [ ]         DGRAM                    34853    
+unix  2      [ ]         DGRAM                    44794    
+unix  3      [ ]         STREAM     CONNECTED     49713    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51468    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    39821    
+unix  3      [ ]         STREAM     CONNECTED     44154    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46023    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     44178    
+unix  3      [ ]         STREAM     CONNECTED     7853840  
+unix  3      [ ]         STREAM     CONNECTED     3673865  @/dbus-vfs-daemon/socket-Xv9ah4zL
+unix  3      [ ]         STREAM     CONNECTED     51567    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     44427    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTED     7853965  
+unix  3      [ ]         STREAM     CONNECTED     54627    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48817    
+unix  3      [ ]         STREAM     CONNECTED     47872    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     42875    @/tmp/dbus-MNkOobd0
+unix  3      [ ]         STREAM     CONNECTED     45919    
+unix  3      [ ]         STREAM     CONNECTED     43378    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     47899    
+unix  3      [ ]         STREAM     CONNECTED     39878    
+unix  3      [ ]         STREAM     CONNECTED     43053    
+unix  3      [ ]         STREAM     CONNECTED     44047    
+unix  3      [ ]         STREAM     CONNECTED     43149    
+unix  3      [ ]         STREAM     CONNECTED     41528    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     52314    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48091    
+unix  3      [ ]         STREAM     CONNECTED     42828    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     43019    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47934    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39791    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     39788    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     3431233  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43764    
+unix  3      [ ]         STREAM     CONNECTED     50959    
+unix  3      [ ]         STREAM     CONNECTED     41530    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     35525    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8575379  
+unix  2      [ ]         STREAM     CONNECTED     7865135  
+unix  3      [ ]         STREAM     CONNECTED     7142228  
+unix  3      [ ]         STREAM     CONNECTED     48726    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51466    
+unix  3      [ ]         STREAM     CONNECTED     35781    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49704    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     47862    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39836    
+unix  3      [ ]         STREAM     CONNECTED     44199    
+unix  3      [ ]         STREAM     CONNECTED     7853839  
+unix  3      [ ]         STREAM     CONNECTED     86705    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44226    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     43133    
+unix  3      [ ]         STREAM     CONNECTED     30391    
+unix  3      [ ]         STREAM     CONNECTED     7853958  
+unix  3      [ ]         STREAM     CONNECTED     3682920  @/dbus-vfs-daemon/socket-pE91pGHR
+unix  3      [ ]         STREAM     CONNECTED     47979    
+unix  3      [ ]         STREAM     CONNECTED     41492    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43052    
+unix  3      [ ]         STREAM     CONNECTED     40567    
+unix  3      [ ]         STREAM     CONNECTED     39598    
+unix  3      [ ]         STREAM     CONNECTED     35027    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     51022    
+unix  3      [ ]         STREAM     CONNECTED     39786    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7859308  @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     43379    
+unix  3      [ ]         STREAM     CONNECTED     44708    
+unix  3      [ ]         STREAM     CONNECTED     43376    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     46363    
+unix  3      [ ]         STREAM     CONNECTED     38763    
+unix  3      [ ]         STREAM     CONNECTED     35607    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45898    
+unix  3      [ ]         STREAM     CONNECTED     51565    
+unix  3      [ ]         STREAM     CONNECTED     39760    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     35545    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50996    
+unix  3      [ ]         STREAM     CONNECTED     39787    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     52291    
+unix  2      [ ]         DGRAM                    43327    
+unix  3      [ ]         STREAM     CONNECTED     45896    
+unix  3      [ ]         STREAM     CONNECTED     49496    
+unix  3      [ ]         STREAM     CONNECTED     41373    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    34833    
+unix  3      [ ]         STREAM     CONNECTED     8587966  
+unix  3      [ ]         STREAM     CONNECTED     51600    
+unix  3      [ ]         STREAM     CONNECTED     47980    
+unix  3      [ ]         STREAM     CONNECTED     50698    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         SEQPACKET  CONNECTED     8508909  
+unix  3      [ ]         STREAM     CONNECTED     52292    
+unix  3      [ ]         STREAM     CONNECTED     50660    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     41033    
+unix  3      [ ]         STREAM     CONNECTED     48757    
+unix  3      [ ]         STREAM     CONNECTED     48742    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51507    
+unix  3      [ ]         STREAM     CONNECTED     45283    @/tmp/dbus-KOVjPoPF
+unix  3      [ ]         DGRAM                    34851    
+unix  3      [ ]         STREAM     CONNECTED     48753    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     44587    
+unix  3      [ ]         STREAM     CONNECTED     46815    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39717    
+unix  3      [ ]         STREAM     CONNECTED     40481    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     49793    
+unix  3      [ ]         STREAM     CONNECTED     7853879  
+unix  3      [ ]         STREAM     CONNECTED     3434411  
+unix  2      [ ]         STREAM     CONNECTED     7865028  
+unix  3      [ ]         STREAM     CONNECTED     44626    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45875    
+unix  3      [ ]         STREAM     CONNECTED     47873    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     38781    
+unix  3      [ ]         STREAM     CONNECTED     51779    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     51599    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     44569    
+unix  3      [ ]         STREAM     CONNECTED     43092    
+unix  3      [ ]         DGRAM                    44072    
+unix  3      [ ]         STREAM     CONNECTED     44057    
+unix  3      [ ]         STREAM     CONNECTED     38766    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     49686    
+unix  3      [ ]         STREAM     CONNECTED     44179    
+unix  3      [ ]         STREAM     CONNECTED     7853880  
+unix  3      [ ]         STREAM     CONNECTED     50934    
+unix  3      [ ]         STREAM     CONNECTED     45758    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     47840    /run/systemd/journal/stdout
+unix  3      [ ]         SEQPACKET  CONNECTED     8575385  
+unix  3      [ ]         STREAM     CONNECTED     52635    
+unix  3      [ ]         STREAM     CONNECTED     44709    
+unix  3      [ ]         STREAM     CONNECTED     49485    
+unix  3      [ ]         STREAM     CONNECTED     38592    
+unix  3      [ ]         STREAM     CONNECTED     33271    
+unix  3      [ ]         STREAM     CONNECTED     45922    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     46394    @/tmp/.X11-unix/X1024
+unix  3      [ ]         STREAM     CONNECTED     45268    
+unix  3      [ ]         STREAM     CONNECTED     33777    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     7853883  
+unix  3      [ ]         STREAM     CONNECTED     50995    
+unix  3      [ ]         STREAM     CONNECTED     40693    @/tmp/.X11-unix/X1024
+unix  2      [ ]         DGRAM                    1348221  
+unix  3      [ ]         STREAM     CONNECTED     53291    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    52296    
+unix  3      [ ]         STREAM     CONNECTED     45786    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48517    
+unix  2      [ ]         DGRAM                    47993    
+unix  3      [ ]         STREAM     CONNECTED     49470    
+unix  3      [ ]         STREAM     CONNECTED     46426    
+unix  3      [ ]         STREAM     CONNECTED     38589    
+unix  3      [ ]         STREAM     CONNECTED     44657    
+unix  3      [ ]         STREAM     CONNECTED     43352    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     44552    
+unix  3      [ ]         STREAM     CONNECTED     43127    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     39816    
+unix  3      [ ]         STREAM     CONNECTED     35834    
+unix  3      [ ]         STREAM     CONNECTED     47986    /run/user/1000/bus
+unix  3      [ ]         SEQPACKET  CONNECTED     8508910  
+unix  3      [ ]         SEQPACKET  CONNECTED     7853832  
+unix  3      [ ]         STREAM     CONNECTED     50958    
+unix  3      [ ]         STREAM     CONNECTED     43144    
+unix  3      [ ]         STREAM     CONNECTED     7853957  
+unix  3      [ ]         STREAM     CONNECTED     48765    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48758    
+unix  3      [ ]         STREAM     CONNECTED     51467    
+unix  3      [ ]         STREAM     CONNECTED     38676    
+unix  3      [ ]         STREAM     CONNECTED     47910    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44490    
+unix  3      [ ]         STREAM     CONNECTED     45241    
+unix  3      [ ]         STREAM     CONNECTED     50742    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44210    
+unix  3      [ ]         STREAM     CONNECTED     52245    
+unix  3      [ ]         STREAM     CONNECTED     49489    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     43718    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50741    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45784    
+unix  3      [ ]         STREAM     CONNECTED     46409    
+unix  3      [ ]         STREAM     CONNECTED     35023    /var/run/dbus/system_bus_socket
+unix  3      [ ]         DGRAM                    34834    
+unix  3      [ ]         STREAM     CONNECTED     3431231  
+unix  3      [ ]         STREAM     CONNECTED     49712    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51388    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     43129    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     39817    
+unix  2      [ ]         DGRAM                    35825    
+unix  3      [ ]         DGRAM                    3057     
+unix  3      [ ]         STREAM     CONNECTED     7142236  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     50935    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35172    
+unix  3      [ ]         STREAM     CONNECTED     8508899  
+unix  3      [ ]         STREAM     CONNECTED     43407    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     43148    
+unix  3      [ ]         STREAM     CONNECTED     38451    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8575377  
+unix  2      [ ]         STREAM     CONNECTED     7502450  
+unix  3      [ ]         STREAM     CONNECTED     52329    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     48683    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35542    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     54028    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48678    
+unix  3      [ ]         STREAM     CONNECTED     44144    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35746    
+unix  3      [ ]         STREAM     CONNECTED     46400    @/tmp/dbus-KOVjPoPF
+unix  3      [ ]         STREAM     CONNECTED     35503    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     8587961  
+unix  3      [ ]         STREAM     CONNECTED     8575386  
+unix  3      [ ]         STREAM     CONNECTED     48764    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    46388    
+unix  3      [ ]         STREAM     CONNECTED     3678015  
+unix  3      [ ]         STREAM     CONNECTED     47983    @/tmp/.X11-unix/X0
+unix  2      [ ]         DGRAM                    44551    
+unix  3      [ ]         STREAM     CONNECTED     41405    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     39718    
+unix  3      [ ]         STREAM     CONNECTED     50997    
+unix  3      [ ]         STREAM     CONNECTED     44198    
+unix  3      [ ]         STREAM     CONNECTED     7853915  
+unix  3      [ ]         SEQPACKET  CONNECTED     7853833  
+unix  3      [ ]         STREAM     CONNECTED     49877    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48823    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     43328    
+unix  3      [ ]         STREAM     CONNECTED     47013    
+unix  3      [ ]         SEQPACKET  CONNECTED     8575384  
+unix  3      [ ]         STREAM     CONNECTED     47907    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43070    @/tmp/.ICE-unix/4073
+unix  3      [ ]         STREAM     CONNECTED     35780    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    34850    
+unix  3      [ ]         STREAM     CONNECTED     44470    
+unix  3      [ ]         STREAM     CONNECTED     41493    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41410    /run/user/120/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     7853916  
+unix  3      [ ]         STREAM     CONNECTED     7863545  @/tmp/.ICE-unix/5293
+unix  2      [ ]         DGRAM                    48523    
+unix  3      [ ]         STREAM     CONNECTED     8587964  
+unix  3      [ ]         STREAM     CONNECTED     44772    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49701    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     40230    /run/systemd/journal/stdout
+unix  2      [ ]         DGRAM                    34848    
+unix  3      [ ]         STREAM     CONNECTED     44807    
+unix  3      [ ]         STREAM     CONNECTED     44565    
+unix  3      [ ]         STREAM     CONNECTED     46368    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     40611    
+unix  3      [ ]         DGRAM                    3056     
+unix  3      [ ]         STREAM     CONNECTED     31405    
+unix  3      [ ]         STREAM     CONNECTED     8508904  
+unix  3      [ ]         STREAM     CONNECTED     7853812  
+unix  3      [ ]         STREAM     CONNECTED     97119    
+unix  3      [ ]         STREAM     CONNECTED     45964    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43142    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     44700    
+unix  2      [ ]         DGRAM                    38615    
+unix  3      [ ]         STREAM     CONNECTED     30519    
+unix  3      [ ]         DGRAM                    34852    
+unix  3      [ ]         STREAM     CONNECTED     47909    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47867    /run/user/1000/pulse/native
+unix  3      [ ]         STREAM     CONNECTED     50577    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     45247    
+unix  3      [ ]         DGRAM                    44071    
+unix  3      [ ]         STREAM     CONNECTED     39597    
+unix  2      [ ]         DGRAM                    187      
+unix  2      [ ]         STREAM     CONNECTED     7854066  
+unix  3      [ ]         STREAM     CONNECTED     49792    
+unix  3      [ ]         STREAM     CONNECTED     8508901  
+unix  3      [ ]         STREAM     CONNECTED     3431232  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     51701    @/dbus-vfs-daemon/socket-fCmpX6Z9
+unix  3      [ ]         STREAM     CONNECTED     43346    
+unix  3      [ ]         STREAM     CONNECTED     8587965  
+unix  3      [ ]         STREAM     CONNECTED     7502451  
+unix  3      [ ]         STREAM     CONNECTED     44771    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48106    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     44625    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49487    
+unix  3      [ ]         STREAM     CONNECTED     47958    
+unix  3      [ ]         STREAM     CONNECTED     51542    
+unix  3      [ ]         STREAM     CONNECTED     45075    @/tmp/dbus-KOVjPoPF
+unix  2      [ ]         DGRAM                    39596    
+unix  3      [ ]         STREAM     CONNECTED     36916    
+unix  3      [ ]         STREAM     CONNECTED     51610    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     49703    
+unix  3      [ ]         STREAM     CONNECTED     3683582  
+unix  3      [ ]         STREAM     CONNECTED     1352036  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     40741    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     8587962  
+unix  3      [ ]         STREAM     CONNECTED     8575389  
+unix  3      [ ]         STREAM     CONNECTED     52636    
+unix  3      [ ]         STREAM     CONNECTED     53286    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48725    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45779    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     8574570  
+unix  3      [ ]         STREAM     CONNECTED     47933    
+unix  3      [ ]         STREAM     CONNECTED     45921    
+unix  3      [ ]         STREAM     CONNECTED     51564    
+unix  3      [ ]         STREAM     CONNECTED     49359    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40591    
+unix  3      [ ]         STREAM     CONNECTED     44059    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     36166    
+unix  3      [ ]         STREAM     CONNECTED     50999    
+unix  3      [ ]         STREAM     CONNECTED     43372    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     7853817  
+unix  3      [ ]         STREAM     CONNECTED     3431911  
+unix  3      [ ]         STREAM     CONNECTED     50979    
+unix  3      [ ]         STREAM     CONNECTED     43329    
+unix  3      [ ]         STREAM     CONNECTED     48615    
+unix  3      [ ]         STREAM     CONNECTED     30313    
+unix  3      [ ]         STREAM     CONNECTED     8575387  
+unix  3      [ ]         STREAM     CONNECTED     49884    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     49801    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     50692    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     41374    @/tmp/dbus-gFO98dRw4k
+unix  3      [ ]         STREAM     CONNECTED     41208    
+unix  3      [ ]         STREAM     CONNECTED     35500    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     48684    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     39790    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     46205    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     36778    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     7148104  
+unix  3      [ ]         STREAM     CONNECTED     51609    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     49794    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     39789    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     43361    
+unix  3      [ ]         STREAM     CONNECTED     35019    /var/run/dbus/system_bus_socket
+unix  2      [ ]         DGRAM                    7859016  
+unix  3      [ ]         STREAM     CONNECTED     48785    
+unix  3      [ ]         STREAM     CONNECTED     40229    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47981    
+unix  3      [ ]         STREAM     CONNECTED     44457    
+unix  2      [ ]         DGRAM                    39796    
+unix  3      [ ]         STREAM     CONNECTED     39621    
+unix  3      [ ]         STREAM     CONNECTED     35712    
+unix  3      [ ]         STREAM     CONNECTED     51684    /run/user/1000/bus
+unix  3      [ ]         SEQPACKET  CONNECTED     7853836  
+unix  3      [ ]         STREAM     CONNECTED     43347    
+unix  3      [ ]         STREAM     CONNECTED     40739    
+unix  3      [ ]         STREAM     CONNECTED     7853959  
+unix  3      [ ]         STREAM     CONNECTED     50933    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     49691    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     33599    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     47982    
+unix  3      [ ]         STREAM     CONNECTED     49802    /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     48675    
+unix  3      [ ]         STREAM     CONNECTED     44143    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35833    
+unix  3      [ ]         STREAM     CONNECTED     49748    
+unix  3      [ ]         STREAM     CONNECTED     38338    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     40751    
+unix  3      [ ]         STREAM     CONNECTED     42735    /run/user/120/bus
+unix  2      [ ]         DGRAM                    30513    
+unix  3      [ ]         STREAM     CONNECTED     48747    
+unix  3      [ ]         STREAM     CONNECTED     51527    
+unix  3      [ ]         STREAM     CONNECTED     38818    
+unix  3      [ ]         STREAM     CONNECTED     47932    
+unix  3      [ ]         STREAM     CONNECTED     44491    
+unix  3      [ ]         STREAM     CONNECTED     39785    
+unix  3      [ ]         STREAM     CONNECTED     40462    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     35004    
+unix  3      [ ]         STREAM     CONNECTED     45952    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     8508903  
+unix  3      [ ]         STREAM     CONNECTED     45965    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51528    @/tmp/dbus-RmNJLf6Jvz
+unix  3      [ ]         STREAM     CONNECTED     8575376  
+unix  3      [ ]         STREAM     CONNECTED     47886    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45834    
+unix  3      [ ]         STREAM     CONNECTED     49497    
+unix  3      [ ]         STREAM     CONNECTED     45290    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     51566    
+unix  3      [ ]         STREAM     CONNECTED     40612    
+unix  3      [ ]         STREAM     CONNECTED     44158    /run/user/120/bus
+unix  3      [ ]         STREAM     CONNECTED     35813    
+unix  3      [ ]         STREAM     CONNECTED     50980    
+unix  3      [ ]         STREAM     CONNECTED     49791    
+unix  2      [ ]         DGRAM                    35171    
+unix  3      [ ]         DGRAM                    2961     
+unix  3      [ ]         STREAM     CONNECTED     7853881  
+unix  3      [ ]         STREAM     CONNECTED     7861354  /run/user/1000/bus
+unix  3      [ ]         STREAM     CONNECTED     49878    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     49850    
+unix  3      [ ]         STREAM     CONNECTED     49492    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     48582    
+unix  3      [ ]         SEQPACKET  CONNECTED     7853964  
+unix  3      [ ]         STREAM     CONNECTED     47906    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     45775    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     39496    
+unix  3      [ ]         STREAM     CONNECTED     30686    
+unix  3      [ ]         STREAM     CONNECTED     48847    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     51571    
+unix  3      [ ]         STREAM     CONNECTED     51568    @/tmp/.X11-unix/X0
+unix  3      [ ]         STREAM     CONNECTED     44546    /var/run/dbus/system_bus_socket
+unix  3      [ ]         STREAM     CONNECTED     45248    
+unix  3      [ ]         STREAM     CONNECTED     43093    
+unix  2      [ ]         STREAM     CONNECTED     35835    
+unix  2      [ ]         DGRAM                    40304    
+unix  2      [ ]         DGRAM                    35661    
+unix  3      [ ]         STREAM     CONNECTED     45967    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     50936    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     7853823  
+unix  3      [ ]         STREAM     CONNECTED     1352973  
+unix  3      [ ]         STREAM     CONNECTED     43362    
+unix  3      [ ]         STREAM     CONNECTED     30512    
+unix  3      [ ]         STREAM     CONNECTED     8575378  
+unix  3      [ ]         STREAM     CONNECTED     7140192  /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44701    
+unix  3      [ ]         STREAM     CONNECTED     49685    
+unix  3      [ ]         STREAM     CONNECTED     46393    
+unix  3      [ ]         STREAM     CONNECTED     38675    
+unix  3      [ ]         STREAM     CONNECTED     39256    
+unix  3      [ ]         STREAM     CONNECTED     7865627  
+unix  3      [ ]         STREAM     CONNECTED     63162    
+unix  3      [ ]         STREAM     CONNECTED     45920    
+unix  3      [ ]         STREAM     CONNECTED     49707    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     44058    
+unix  3      [ ]         STREAM     CONNECTED     45968    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35779    /run/systemd/journal/stdout
+unix  3      [ ]         STREAM     CONNECTED     35506    /run/systemd/journal/stdout
+unix  3      [ ]         DGRAM                    2960     
+unix  3      [ ]         STREAM     CONNECTED     43141    
