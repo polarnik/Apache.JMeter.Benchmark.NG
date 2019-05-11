@@ -99,10 +99,15 @@
 			<li><a href="https://jmeter.apache.org/">https://jmeter.apache.org</a>, 2003 - настоящее время, активен</li>
 			<li>HTTP(S), JMS, JDBC, Java/Groovy, FTP, SMTP, ... 50+</li>
 			<li>ClickHouse, InfluxDB, Graphite, Grafana, HTML</li>
-			<li>Распределённый запуск, контейнеры, CI</li>
+			<li>Распределённый запуск, CI</li>
 			<li>Maven, IntelliJ IDEA</li>
 			<li>Сообщество</li>
 		</ul>
+		<figure>
+			<img class="place bottom center"
+				style="height:35%; margin: 20px 0px 20px 0"
+				src="images/JMeterLogo.svg">
+		</figure>		
 	</div></section>
 
 	<section class="clear blue slide"><div>
@@ -190,13 +195,13 @@
 		<h2>HTTP Request. Серия экспериментов</h2>
 		<p>
 			<ul>HTTP Request Keep-Alive:
-				<li><mark class="green">✔️</mark> включить (по умолчанию)</li>
-				<li><mark class="red">❌</mark> отключить</li>
+				<li>☑️ включить (по умолчанию)</li>
+				<li>🔲 отключить</li>
 			</ul>
 		</p>
 		<p>
 			<ul>Количество последовательных запросов в сценарии:
-				<li><mark class="green">🔼</mark> 1, 10, 50, 100</li>
+				<li>🔼 1, 10, 50, 100</li>
 			</ul>
 		</p>
 	</div></section>
@@ -253,7 +258,7 @@
 	<section class="clear green slide"><div>
 		<h2 class="small shout">Как ускорить тест?<br/>
 			<span class="next">Открывать меньше соединений.</span><br/>
-			<span class="next">Keep-Alive полезен, не отключать его.</span>
+			<span class="next"><b>Keep-Alive</b> полезен, не отключать его.</span>
 		</h2>
 	</div></section>
 
@@ -407,10 +412,10 @@
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">Ускорение в 1,6 раза — c 4800/s до 7700/s<br/>
+		<h2 class="small shout">Ускорение в <b>1,6</b> раза — c 4800/s до 7700/s<br/>
 							   и избавление от ошибок java.net.NoRouteToHostException<br/>
 							   при расширения диапазона портов<br/>
-			net.ipv4.ip_local_port_range (1024 60999)<br/>
+			<b>net.ipv4.ip_local_port_range</b> (1024 60999)<br/>
 			</span>
 		</h2>
 	</div></section>	
@@ -466,7 +471,7 @@
 
 	<section class="clear blue slide"><div>
 		<h2 class="small shout">Увеличение размера очереди TIME_WAIT<br/>
-							   net.ipv4.tcp_max_tw_buckets (65536)<br/>
+							   <b>net.ipv4.tcp_max_tw_buckets</b> (65536)<br/>
 							   не дало положительного эффекта для скорости,<br/>
 							   но нет больше полки для netstat: tcp_time_wait<br/>
 			</span>
@@ -551,9 +556,9 @@
 	-->
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">Ускорение в 3,6 раза — c 4800/s до 17300/s<br/>
+		<h2 class="small shout">Ускорение в <b>3,6</b> раза — c 4800/s до 17300/s<br/>
 							   при разрешении переиспользовать TIME_WAIT<br/>
-			net.ipv4.tcp_tw_reuse (1)<br/>
+			<b>net.ipv4.tcp_tw_reuse</b> (1)<br/>
 			</span>
 		</h2>
 	</div></section>	
@@ -633,9 +638,9 @@
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">Ускорение в 4,1 раза — c 4800/s до 19900/s<br/>
+		<h2 class="small shout">Ускорение в <b>4,1</b> раза — c 4800/s до 19900/s<br/>
 							   при отключении настройки Apache.JMeter<br/>
-								httpclient.reset_state_on_thread_group_iteration
+								<b>httpclient.reset_state_on_thread_group_iteration</b>
 			</span>
 		</h2>
 	</div></section>	
@@ -846,8 +851,8 @@
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">☑️ Save response as MD5 Hash<br/>
-			экономит память до 0,<br>
+		<h2 class="small shout">☑️ <b>Save response as MD5 Hash</b><br/>
+			экономит память до <b>0</b>,<br>
 			экономит процессорное время,<br/>
 			не имеет ограничений на размер файла<span class="next">,<br>
 			но замедляет скачивание до 3-x раз</span>
@@ -858,7 +863,7 @@
 		<h2 class="small shout">Как скачивать быстро<br/>
 			с минимальными расходами памяти<br>
 			из Apache.JMeter?<br/>
-			<span class="next">Может быть curl/wget и bash помогут?</span>
+			<span class="next">Может быть <b>curl</b>/<b>wget</b> и <b>bash</b> помогут?</span>
 			</h2>
 	</div></section>
 
@@ -935,6 +940,24 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>JSR-223 PostProcessor встраивает wget</h2>
+		<h3>Сохраняется Response Body</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/wget.postProcessor.body.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JSR-223 PostProcessor встраивает wget</h2>
+		<h3>Сохраняется Response Headers</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/wget.postProcessor.head.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
 		<h2>Запустим тест с wget на 200 ГБайт</h2>
 		<pre>
 			<code>mvn jmeter:jmeter \</code>
@@ -996,189 +1019,170 @@
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">OS Process Sampler + JSR-223 PostProcessor<br/>
+		<h2 class="small shout"><b>OS Process Sampler</b> + <b>JSR-223 PostProcessor</b><br/>
 			позволяют вызывать консольные инструменты,<br>
 			которые хорошо работают с большими файлами.<br/>
-			Так wget даёт ускорение в 2 раза,<br/>
-			и в 7 раз по сравнению с MD5.<br/>
+			Так <b>wget</b> даёт ускорение в <b>2</b> раза,<br/>
+			и в <b>7</b> раз по сравнению с MD5.<br/>
 			</h2>
 	</div></section>
 
 
 
 
-
-
-
-
-	<section class="slide"><div>
-		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
-		<h3>Читает, пишет, собирает статистику</h3>
-		<figure>
-			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.7.SJK.2.png">	
-			<figcaption class="copyright right black">
-				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_15-24-38.small.sdt.flame.html">SJK Apache.JMeter flame graphs</a>
-			</figcaption>	
-		</figure>
-	</div></section>
-
-
-	<section class="slide"><div>
-		<h2>Группировка соединений средствами bash</h2>
-		<div>Исходящие от nginx соединения:</div>
-		<pre>
-			<code>netstat | grep -oP \</code>
-			<code>"^\w+\s+\d+\s+\d+\s+(\w+:\w+)\s+(localhost:5555)\s.*"</code>
-		</pre>
-		<div>Входящие соединения (:</div>		
-		<pre>
-			<code>netstat | grep -oP \</code>
-			<code>"^\w+\s+\d+\s+\d+\s+(localhost:5555)\s.*"</code>
-		</pre>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>HTTP keepAlive включен. Результаты</h2>
-		<p>
-			<ul>
-				<li><mark class="green">✔️</mark> Соединения переиспользуются, размер сценария ускоряет в 16-60 раз</li>
-				<li><mark class="green">✔️</mark> При 1-10 запросах ошибки</li>
-				<li><mark class="green">✔️</mark> Потоки не ускоряют JMeter, при 1-10 запросах</li>
-				<li><mark class="green">✔️</mark> Потоки ускоряют JMeter, при 50-100 запросах</li>
-				<li><mark class="green">✔️</mark> Предел стенда - 4600 запросов в сек</li>
-			</ul>
-		</p>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>HTTP Request. Результаты</h2>
-		<p>
-			<ul>HTTP Request: keepAlive
-				<li><mark class="green">✔️</mark> включить (по умолчанию)
-				</li>
-				<li><mark class="red">❌</mark> отключить
-					<ul>
-						<li>Соединения не переиспользуются как при 1 так и при 100 запросах</li>
-						<li>Соединения не переиспользуются как при 1 так и при 100 запросах</li>
-					</ul>
-				</li>
-			</ul>
-		</p>
-		<p>
-			<ul>Loop Controller: количество запросов в сценарии
-				<li><mark class="green">🔼</mark> 1, 10, 50, 100</li>
-			</ul>
-		</p>
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">HTTP Request<br/>
+			<span class="next">Отправка файлов</span></h2>
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">Что предпринять?<br/>
-			<span class="next">Открывать меньше соединений</span><br/>
-			<span class="next">Keep-Alive полезен, не отключать его</span>
+		<h2 class="small shout"><b>HTTP Request. Отправка файлов</b><br/>
+							Загрузка файлов быстрая ⏱️ и экономная<br/>
+			<span class="next">Пользуйтесь вкладкой <b>Files Upload</b>.</span>
 		</h2>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Keep-Alive полезен, не отключать его</h2>
-		<h3>Полезен, когда количество запросов больше 1</h3>
-		<p><mark class="green">x5</mark> отключить Keep-Alive для бенчмарков на 1 запрос</p>
-		<p><mark class="green">x35</mark> использовать 50+ запросов в сценарии</p>
-
+		<h2>Комбинации вариантов передачи параметров</h2>
 		<table>
 			<tr>
-				<th>Keep-Alive</th>
-				<th>1 Request</th>
-				<th>10 Requests</th>
-				<th>50 Requests</th>
-				<th>100 Requests</th>
+				<th>Вариант передачи</th>
+				<th>Один</th>
+				<th>С ☀️</th>
+				<th>С 🐘</th>
+				<th>С 🐴</th>
+				<th>С 🦄</th>
 			</tr>
 			<tr>
-				<td>On</td>
-				<td>450 req/s</td>
-				<td>4600 req/s</td>
-				<td>14000 req/s</td>
-				<td>16000 req/s</td>
+				<td>Parameters</td>
+				<td>☀️</td>
+				<td>☀️☀️</td>
+				<td>🚫</td>
+				<td><mark>☀️🐴</mark></td>
+				<td>☀️</td>
 			</tr>
 			<tr>
-				<td>Off</td>
-				<td>4600 req/s</td>
-				<td>4500 req/s</td>
-				<td>4500 req/s</td>
-				<td>4700 req/s</td>
+				<td>Body Data</td>
+				<td>🐘</td>
+				<td>🚫</td>
+				<td> </td>
+				<td>🚫</td>
+				<td>🚫</td>
 			</tr>
-		</table>
+			<tr>
+				<td>Files Upload (All)</td>
+				<td><mark>🐴</mark></td>
+				<td><mark>🐴☀️</mark></td>
+				<td>🚫</td>
+				<td><mark>🐴🐴</mark></td>
+				<td>🚫</td>
+			</tr>
+			<tr>
+				<td>Files Upload (File Path)</td>
+				<td><mark>🦄</mark></td>
+				<td>☀️</td>
+				<td>🐘</td>
+				<td>🚫</td>
+				<td>🚫</td>
+			</tr>
+		</table>		
 	</div></section>
 
-
-
-
-
 	<section class="slide"><div>
-		<h2>Мониторинг. CPU system (80% - 90%)</h2>
-		<h3></h3>
+		<h2>HTTP POST один параметр</h2>
+		<h3>🐴 multipart/form-data</h3>
 		<figure>
-			<img class="w cover place bottom center" src="images/cpu.system.80.png">
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/file.upload.file.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Мониторинг. netstat tcp_time_wait (28000)</h2>
-		<h3>Открывается слишком много соединений, лимит портов</h3>
+		<h2>HTTP POST один параметр</h2>
+		<h3>🐴 multipart/form-data</h3>
 		<figure>
-			<img class="w cover place bottom center" src="images/netstat.tcp_time_wait.28000.png">
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/file.upload.file.mark.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Linux: net.ipv4.ip_local_port_range (32768	60999)</h2>
-		<h3>Больше диапазон — больше доступных соединений</h3>
-		<div>Изначально <mark>28231</mark> портов, сделаем <mark class="green">59975</mark> портов:</div>
-		<pre>
-			<code>echo <mark>32768 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
-			<code>echo  <mark class="green">1024 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
-		</pre>
-		
-		<a href="https://blog.kireev.pro/2017/07/%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%D1%8E-time_wait/">Проблемы с очередью TIME_WAIT (@blog.kireev.pro)</a>
+		<h2>HTTP POST несколько параметров</h2>
+		<h3>🐴🐴 multipart/form-data</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/file.upload.files.png">
+		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>HTTP Request. Максимальная интенсивность</h2>
-		<p><mark class="green">x5</mark> HTTP Request: отключить keepAlive для бенчмарков на 1 запрос</p>
-		<p><mark class="green">x35</mark> HTTP Request: не отключать keepAlive для тестов из множества запросов</p>
-		<p class="next"><mark class="green">✔️</mark> Linux: /proc/sys/net/ipv4/tcp_tw_reuse</p>
-		<p class="next"><mark class="green">❌</mark> Apache.JMeter: httpclient.reset_state_on_thread_group_iteration</p>
+		<h2>HTTP POST (raw body)</h2>
+		<h3>🦄 Загрузка тела запроса из файла</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/file.upload.body.png">
+		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>NGinx c конфигурацией по умолчанию</h2>
-		<pre>
-			<code>worker_processes  1;</code>
-			<code>worker_connections  512;</code>
-			<code>sendfile off;</code>
-			<code>tcp_nodelay on; </code>
-			<code>tcp_nopush off; </code>
-			<code>keepalive_timeout  75s;</code>
-			<code>keepalive_requests 100;</code>
-			<code>keepalive_disable msie6;</code>
-			<code>gzip off;</code>
-		</pre>
+		<h2>HTTP POST (raw body)</h2>
+		<h3>🦄 Нужно заполнить только File Path</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/file.upload.body.mark.png">
+		</figure>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Всё просто прекрасно,<br/>
+								но загружаемые файлы должны быть готовы.<br/>
+								Если нужна параметризация содержимого, то<br/>
+								чем заменить вкладку <b>Body Data</b>?
+		</h2>
+	</div></section>
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout"><b>HTTP Request. Отправка файлов</b><br/>
+							Как готовить файлы на 10 ГБайт?<br/>
+								Во время теста! С минимальными затратами!
+		</h2>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Параметры теста</h2>
-		<pre>
-			<code>mvn jmeter:jmeter \</code>
-			<code>    -P Samplers.HTTP.Request.X \</code>
-			<code>    -D<mark>Threads=1</mark> -D<mark>LoopCount=100000</mark> -D<mark>RequestCount=1</mark></code>
-		</pre>
-
-		<pre>
-			<code>mvn jmeter:jmeter \</code>
-			<code>    -P Samplers.HTTP.Request.X,<mark>_.jvm.profiler.JFR</mark> \</code>
-			<code>    -DThreads=1 -DLoopCount=100000 -DRequestCount=1</code>
-		</pre>		
+		<h2>OS Process Sampler: tar, sed, ...</h2>
+		<h3>Подготовить архив, распаковать, заменить в нём строки</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/big.files.png">
+		</figure>
 	</div></section>
+
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout"><b>HTTP Request. Отправка файлов</b><br/>
+								Большие файлы лучше читать с диска.<br/>
+								Большие тела запросов лучше читать с диска.<br/>
+								Готовить большие файлы удобно с <b>ginzip</b>, <b>sed</b>, ...<br/>
+			<span class="next">Пользуйтесь вкладкой <b>Files Upload</b></span><span class="next">,
+				<br/>где также можно загружать и тело запроса.</span>
+		</h2>
+	</div></section>
+
+
+
+
+
+
+
+
+
+<!--
 
 	<section class="slide"><div>
 		<h2>JMeter удобно профилировать</h2>
@@ -1555,11 +1559,12 @@
 		Переиспользование соединения внутри потока сокращает socketConnect и ускоряет тест с 500 rps до 10000 rps на один поток.
 	</div></section>
 
-
+	-->
 	
 	<section class="clear slide" id="contacts"><div>
 		<h2>Вячеслав Смирнов</h2>
-		<p><a href="https://polarnik.github.io">polarnik.github.io</a>, @qa_load</p>
+		<p><a href="https://github.com/polarnik">github.com/polarnik</a></p>
+		<p>Telegram: @qa_load</p>
 		<div><span></span><h2>Спасибо!</h2></div>
 		<img class="cover w" src="images/raiff-cover.png">
 		<style>
