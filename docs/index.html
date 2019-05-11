@@ -126,10 +126,9 @@
 		<ul>
 			<li>HTTP Request. Максимальная интенсивность</li>
 			<li>HTTP Request. Скачивание и отправка</li>
-			<li>PostProcessor для HTML, XML, JSON</li>
-			<li>PreProcessor для XML и JSON</li>
-			<li>Статистика</li>
-			<li>Советы</li>
+			<li>PostProcessor</li>
+			<li>PreProcessor</li>
+			<li>Секретное оружие</li>
 		</ul>
 	</div></section>	
 
@@ -1174,14 +1173,114 @@
 		</h2>
 	</div></section>
 
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout"><b>PostProcessor-ы</b><br/>
+							Как отличается их скорость?
+		</h2>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>Тестовая страница: apache.jmeter.org</h2>
+		<h3>Найдём заголовок страницы</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:60%; padding: 20px 20px 20px 20px"
+				src="images/apache.jmeter.page.png">
+		</figure>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>За основу взят пустой JSR-223 Sampler</h2>
+		<h3>К нему добавлены PostProcessor-ы для переменной</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/boundary.jmeter.png">
+		</figure>
+	</div></section>
 
+	<section class="slide"><div>
+		<figure>
+			<img class="place bottom center"
+				style="height:90%; padding: 20px 20px 20px 20px"
+				src="images/HTML.Post.Processors.png">
+		</figure>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>Boundary самый быстрый</h2>
+		<h3>RegExp почти такой же быстрый</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:60%; padding: 20px 20px 20px 20px"
+				src="images/HTML.Post.Processors.png">
+		</figure>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>Общее влияние PostPorcessor-ов небольшое</h2>
+		<p>Так CSS Selector выполняется дольше CSV Logger лишь в 2 раза</p>
+		<figure>
+			<img class="place bottom center"
+				style="height:60%; padding: 20px 20px 20px 20px"
+				src="images/CSS.vs.CSV.png">
+		</figure>
+	</div></section>
 
+	<section class="clear green slide"><div>
+		<h2 class="small shout"><b>PostProcessor для HTML</b><br/>
+								Точно не использовать <b>XPath</b> для HTML.<br/>
+								Лидеры <b>RegExp</b> и <b>Boundary Extractor</b>.<br/>
+								Но и <b>CSS Selector</b> неплох - лишь x2 от логгера.<br/>
+		</h2>
+	</div></section>
 
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout"><b>PreProcessor-ы</b><br/>
+							Как быстро подготовить XML?
+		</h2>
+	</div></section>
 
+	<section class="slide"><div>
+		<h2>Как быстро подготовить XML?</h2>
+		<h3>groovy.xml.MarkupBuilder x5 от SimpleTemplateEngine</h3>
+		<pre>
+		<figure>
+			<img class="place bottom center"
+				style="height:60%; padding: 20px 20px 20px 20px"
+				src="images/XML.Pre.Processor.png">
+		</figure>
+	</div></section>
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout"><b>PreProcessor-ы</b><br/>
+								В Groovy <b>groovy.xml.MarkupBuilder</b> быстрее<br/>
+								<b>SimpleTemplateEngine</b>, быстрее сериализации.<br/>
+								И экономит много времени.
+		</h2>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Maven, jmeter-maven-plugin и IntelliJ IDEA</h2>
+		<h3>Ускорение работы в 10 раз, не меньше</h3>
+		<pre>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/maven.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Примеры кода и все результаты</h2>
+		<h3>https://github.com/polarnik/Apache.JMeter.Benchmark.NG</h3>
+		<pre>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/maven.png">
+		</figure>
+	</div></section>
 <!--
 
 	<section class="slide"><div>
