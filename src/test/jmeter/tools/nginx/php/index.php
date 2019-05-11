@@ -8,4 +8,4 @@
 </form>
 
 <h2>Все закачанные файлы</h2>
-<a href="downloadResults/">downloadResults</a>
+<a href="/data">data</a>

@@ -289,6 +289,73 @@
         </profile>
 
         <profile>
+            <id>Samplers.HTTP.Request.Upload</id>
+            <properties>
+                <performancetest.script>Samplers.HTTP.Request.Upload</performancetest.script>
+
+                <Threads>1</Threads>
+                <RampUp>0</RampUp>
+                <LoopCount>10</LoopCount>
+                <RequestCount>1</RequestCount>
+
+                <!--
+                    default
+                    keepalive_off
+                    sendfile
+                    sendfile_gzip
+                -->
+                <nginx.profile>upload</nginx.profile>
+
+                <!--
+                <RequestPath>/</RequestPath>
+                <RequestPath>/http/keepalive_off/</RequestPath>
+                <RequestPath>/http/sendfile/gzip/</RequestPath>
+                -->
+                <RequestPath>/upload.php</RequestPath>
+
+                <RequestHost>localhost</RequestHost>
+                <RequestPort>5555</RequestPort>
+
+                <UploadFile>/tmp/data/1g.img</UploadFile>
+
+            </properties>
+
+            <build>
+                <plugins>
+                    <plugin>
+                        <groupId>com.lazerycode.jmeter</groupId>
+                        <artifactId>jmeter-maven-plugin</artifactId>
+                        <configuration>
+                            <propertiesUser>
+                                <Threads>${Threads}</Threads>
+                                <RampUp>${RampUp}</RampUp>
+                                <LoopCount>${LoopCount}</LoopCount>
+                                <RequestCount>${RequestCount}</RequestCount>
+                                <RequestPath>${RequestPath}</RequestPath>
+                                <RequestHost>${RequestHost}</RequestHost>
+                                <RequestPort>${RequestPort}</RequestPort>
+                                <nginx.ConfigFile>${project.basedir}/src/test/jmeter/tools/nginx/conf/nginx.perftest.${nginx.profile}.conf</nginx.ConfigFile>
+                                <nginx.WorkingDirectory>${project.basedir}/src/test/jmeter/tools/nginx</nginx.WorkingDirectory>
+                                <nginx.LogDirectory>/tmp/nginx/logs/</nginx.LogDirectory>
+                                <nginx.profile>${nginx.profile}</nginx.profile>
+                                <test.tools.folder>${project.basedir}/src/test/jmeter/tools</test.tools.folder>
+                                <UploadFile>${UploadFile}</UploadFile>
+                            </propertiesUser>
+                            <propertiesReportGenerator>
+                                <jmeter.reportgenerator.overall_granularity>1000</jmeter.reportgenerator.overall_granularity>
+                                <jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>1000</jmeter.reportgenerator.graph.responseTimeDistribution.property.set_granularity>
+                            </propertiesReportGenerator>
+                            <overrideRootLogLevel>WARN</overrideRootLogLevel>
+                            <resultsFileFormat>csv</resultsFileFormat>
+                            <generateReports>true</generateReports>
+                            <reportDirectory>${project.build.directory}/jmeter/reports/${performancetest.script}-Thread-${Threads}-RequestCount-${RequestCount}-${nginx.profile}-${LoopCount}-${maven.build.timestamp}</reportDirectory>
+                        </configuration>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+
+        <profile>
             <id>Samplers.HTTP.Request.X</id>
             <properties>
                 <performancetest.script>Samplers.HTTP.Request.X</performancetest.script>
@@ -1013,6 +1080,8 @@
                         <backend_influxdb.connection_timeout>1000</backend_influxdb.connection_timeout>
                         <backend_influxdb.socket_timeout>3000</backend_influxdb.socket_timeout>
                         <backend_influxdb.connection_request_timeout>100</backend_influxdb.connection_request_timeout>
+
+                        <sampleresult.default.encoding>UTF-8</sampleresult.default.encoding>
                     </propertiesJMeter>
 
                     <propertiesReportGenerator>
