@@ -110,17 +110,6 @@
 		</figure>		
 	</div></section>
 
-	<section class="clear blue slide"><div>
-		<figure>
-			<img class="h cover" src="images/Flammarion.old.jpg">
-			<figcaption class="copyright right white">
-				© <a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D1%8E%D1%80%D0%B0_%D0%A4%D0%BB%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B8%D0%BE%D0%BD%D0%B0s">Гравюра Фламмариона</a>
-			</figcaption>
-		</figure>
-	</div></section>
-
-
-
 	<section class="slide"><div>
 		<h2>Рассмотрим</h2>
 		<ul>
@@ -131,6 +120,26 @@
 			<li>Секретное оружие</li>
 		</ul>
 	</div></section>	
+
+
+	<section class="clear blue slide"><div>
+		<figure>
+			<img class="h cover" src="images/Flammarion.old.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://ru.wikipedia.org/wiki/%D0%93%D1%80%D0%B0%D0%B2%D1%8E%D1%80%D0%B0_%D0%A4%D0%BB%D0%B0%D0%BC%D0%BC%D0%B0%D1%80%D0%B8%D0%BE%D0%BD%D0%B0s">Гравюра Фламмариона</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+
+	<section class="clear green slide"><div>
+		<h2 class="small shout"><b>Цели</b><br/>
+			<span class="next">Разрабатывать такие тесты,</span><br/>
+			<span class="next">чтобы система тормозила, а не Apache.JMeter.</span><br/>
+			<span class="next">Экономить на ресурсах нагрузочных агентов.</span><br/>
+			<span class="next">Разрабатывать тесты быстро и просто.</span><br/>
+		</h2>
+	</div></section>
 
 
 	<section class="clear yellow slide"><div>
@@ -152,6 +161,22 @@
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.png">
 		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>NGinx c конфигурацией по умолчанию <mark>x 2</mark></h2>
+		<h2>добавим потоков, чтобы не упираться в CPU</h2>
+		<pre>
+			<code><mark>worker_processes  2</mark>; # default 1</code>
+			<code>worker_connections  512;</code>
+			<code>sendfile off;</code>
+			<code>tcp_nodelay on; </code>
+			<code>tcp_nopush off; </code>
+			<code>keepalive_timeout  75s;</code>
+			<code>keepalive_requests 100;</code>
+			<code>keepalive_disable msie6;</code>
+			<code>gzip off;</code>
+		</pre>
 	</div></section>
 
 	<section class="slide"><div>
@@ -181,14 +206,7 @@
 		</figure>
 	</div></section>
 
-	<section class="slide"><div>
-		<h2>Параметры легко переопределяются</h2>
-		<p>через опции <b>maven</b> и профили <b>maven</b></p>
-		<figure>
-			<img class="w cover place bottom center" 
-			src="images/Samplers.HTTP.Request.X.maven.png">
-		</figure>
-	</div></section>
+
 
 	<section class="slide"><div>
 		<h2>HTTP Request. Серия экспериментов</h2>
@@ -255,9 +273,8 @@
 	</div></section>
 
 	<section class="clear green slide"><div>
-		<h2 class="small shout">Как ускорить тест?<br/>
-			<span class="next">Открывать меньше соединений.</span><br/>
-			<span class="next"><b>Keep-Alive</b> полезен, не отключать его.</span>
+		<h2 class="small shout">Очевидно, что<br>
+			<b>Keep-Alive</b> полезен, не нужно отключать его.
 		</h2>
 	</div></section>
 
@@ -280,7 +297,7 @@
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout">Ускорим тест c 10 запросами в сценарии<br/>
 							   на 3 потока/пользователя в катушке<br/>
-			<span class="next">c 4000 req/s до 16 000 req/s</span><br/>
+			<span class="next">c 4k req/s до 16k req/s</span><br/>
 			<span class="next">и больше.</span>
 		</h2>
 	</div></section>
@@ -312,7 +329,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>И было 5.24% ошибок</h2>
+		<h2>Есть ошибки 5.24%</h2>
 		<p>Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Невозможно назначить запрошенный адрес (Address not available)</p>
 		<figure>
 			<img class="w cover place bottom center" 
@@ -321,8 +338,182 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Подключения к NGinx также идут волнами</h2>
-		<h3>от 0/s до 1200/s</h3>
+		<h2>SJK: socketConnect (<mark>64,33%</mark>)</h2>
+		<h3>Apache.JMeter ждёт соединения</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.3.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-14_04-06-13.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/Vasnetsov.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%82%D1%8F%D0%B7%D1%8C_%D0%BD%D0%B0_%D1%80%D0%B0%D1%81%D0%BF%D1%83%D1%82%D1%8C%D0%B5">Витязь на распутье</a>
+			</figcaption>
+		</figure>
+	</div></section>	
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.png">
+		</figure>
+	</div></section>	
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.script.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скрипт JMeter: увеличить количество запросов (RequestCount) до 50</h2>
+		<h3>Интенсивность 16500/s (<mark class="green">x 3,3</mark>) и без ошибок</h3>
+		<p>Нужно удлиннять сценарий — запрещённый вариант</p>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скрипт JMeter: добавить HTTP Cache Manager</h2>
+		<h3>Может ускорит?</h3>
+		<figure>
+			<img class="place bottom center"
+				style="width:95%; padding: 20px 20px 20px 20px"
+				src="images/cache.jmx.png">		
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скрипт JMeter: добавить HTTP Cache Manager</h2>
+		<h3>Интенсивность 4800/s и 4.9% ошибок (не повлиял)</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/cache.png">		
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SJK: socketConnect (<mark>62,73%</mark>)</h2>
+		<h3>Apache.JMeter ждёт соединения</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk5.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.cache.jmx.2019-05-14_07-40-09.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear blue slide"><div>
+		<h2 class="small shout">Модификацией интенсивность не поднять.<br/>
+			<span class="next">Решили оставить <b>10</b> запросов в итерации.</span><br/>
+			<span class="next">А <b>HTTP Cache Manager</b> не ускоряет.</span>
+		</h2>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w h cover" src="images/lorane.jpg">
+			<figcaption class="copyright right black">
+				© <a href="https://www.imdb.com/title/tt0096874/mediaviewer/rm547371520">Назад в будущее 2 (imdb.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.settings.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Настройки JMeter: jmeter.httpsampler=<mark>Java</mark></h2>
+		<h3>Интенсивность 16300/s (<mark class="green">x 3,3</mark>) и без ошибок</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/java.sampler.16k.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SJK: socketRead (<mark>34,34%</mark>)</h2>
+		<h3>Apache.JMeter читает заголовок ответа</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.4.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-14_05-24-43.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/Doc.jpg">
+			<figcaption class="copyright right black">
+				© <a href="http://www.imdb.com/media/rm1904589312/tt0096874">Назад в будущее 2 (imdb.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>	
+
+	<section class="slide"><div>
+		<h2>Настройки JMeter: не сбрасывать состояние</h2>
+		<h3>httpclient.reset_state_on_thread_group_iteration (<mark class="green">false</mark>)</h3>
+		<pre>
+			<code>#---------------------------------------------------------------------------</code>
+			<code># SSL configuration</code>
+			<code>#---------------------------------------------------------------------------</code>	
+			<code>httpclient.reset_state_on_thread_group_iteration=<mark class="green">false</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Настройки JMeter: не сбрасывать состояние</h2>
+		<h3>Интенсивность 19240/s (<mark class="green">x 3,9</mark>) и без ошибок</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/no_reset_state.png">	
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Настройки JMeter</h2>
+		<p>Если интенсивность скачет (500/s - 16000/s), есть ошибки (Address not available) и JMeter занят socketConnect (> 50%)</p>
+		<h3>Можно перейти с HTTPClient4 на Java-клиент	(<mark class="green">x 3,3</mark>)</h3>
+		<pre>
+			<code>jmeter.httpsampler=<mark>Java</mark></code>
+		</pre>	
+		<h3>Или кешировать соединение между итерациями 	(<mark class="green">x 3,9</mark>)</h3>
+		<pre>
+			<code>httpclient.reset_state_on_thread_group_iteration=<mark>false</mark></code>
+		</pre>		
+	</div></section>
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w h cover" src="images/lorane.jpg">
+			<figcaption class="copyright right black">
+				© <a href="https://www.imdb.com/title/tt0096874/mediaviewer/rm547371520">Назад в будущее 2 (imdb.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.os.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Подключения к NGinx идут волнами</h2>
+		<h3>от 0/s до 1200/s (x 0.1 от интенсивности)</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.1.nginx.accept.png">	
@@ -358,14 +549,7 @@
 			<code>tcp  0  0 localhost:*****  localhost:5555  <mark class="green">ESTABLISHED</mark></code>
 			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
 			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
-			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
+			<code>...</code>
 		</pre>
 	</div></section>
 
@@ -380,11 +564,11 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Linux: net.ipv4.ip_local_port_range (1024 60999)</h2>
+		<h2>Linux: net.ipv4.ip_local_port_range (1025 60999)</h2>
 		<h3>Больше диапазон — больше соединений</h3>
-		<p>Расширим c <mark>28231</mark> до <mark class="green">59975</mark> (x 2,1):</p>		
+		<p>Расширим c <mark>28231</mark> до <mark class="green">59974</mark> (x 2,1):</p>		
 		<pre>
-			<code>echo <mark class="green">1024 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
+			<code>echo <mark class="green">1025 60999</mark> > /proc/sys/net/ipv4/ip_local_port_range</code>
 		</pre>
 		<a href="https://blog.kireev.pro/2017/07/%D0%BF%D1%80%D0%BE%D0%B1%D0%BB%D0%B5%D0%BC%D1%8B-%D1%81-%D0%BE%D1%87%D0%B5%D1%80%D0%B5%D0%B4%D1%8C%D1%8E-time_wait/">Проблемы с очередью TIME_WAIT (@blog.kireev.pro)</a>
 	</div></section>
@@ -407,6 +591,18 @@
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.2.jmeter.2.png">	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SJK: socketConnect (<mark>53,28%</mark>)</h2>
+		<h3>Apache.JMeter ждёт соединения</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.6.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-14_08-00-41.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
 		</figure>
 	</div></section>
 
@@ -512,20 +708,23 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>CPU: больше не упираемся в систему</h2>
-		<h3>%User в 2 раза выше, чем %System</h3>
+		<h2>SJK: socketRead (<mark>38,31%</mark>)</h2>
+		<h3>Apache.JMeter читает заголовок ответа</h3>
 		<figure>
 			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.4.CPU.png">	
+				src="images/sjk.7.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-14_08-12-31.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>ProcStat: NGinx использует 100% CPU — предел</h2>
-		<h3>Apache.JMeter использует только 220% из 300% (3 потока)</h3>
+		<h2>CPU: больше не упирается в систему</h2>
+		<h3>%User в 2 раза выше, чем %System</h3>
 		<figure>
 			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.4.procstat.png">	
+				src="images/Monitoring.Sampler.HTTP.X.4.CPU.png">	
 		</figure>
 	</div></section>
 
@@ -554,92 +753,83 @@
 	</div></section>
 	-->
 
+	<section class="slide"><div>
+		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<h3>Gatling documentation / 3.1 / General / Operations</h3>
+		<ul>
+			<li>Java Version</li>
+			<li>IPv4 vs IPv6</li>
+			<li>OS Tuning
+					<ul>
+						<li>Open Files Limit</li>
+						<li>Kernel and Network Tuning</li>
+					</ul>
+			</li>
+		</ul>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<pre>
+<code>-Djava.net.preferIPv4Stack=true</code>
+<code>-Djava.net.preferIPv6Addresses=false</code>
+<code>ulimit -n 65536</code>
+<code><mark class="green">sudo sysctl -w net.ipv4.ip_local_port_range="1025 65535"</mark></code>
+<code><mark class="red">echo 300000 | sudo tee /proc/sys/fs/nr_open</mark></code>
+<code><mark class="red">echo 300000 | sudo tee /proc/sys/fs/file-max</mark></code>
+<code>net.ipv4.tcp_max_syn_backlog = 40000</code>
+<code>net.core.somaxconn = 40000</code>
+<code>net.core.wmem_default = 8388608</code>
+<code>net.core.rmem_default = 8388608</code>
+<code>net.ipv4.tcp_sack = 1</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<pre>
+<code>net.ipv4.tcp_window_scaling = 1</code>
+<code>net.ipv4.tcp_fin_timeout = 15</code>
+<code>net.ipv4.tcp_keepalive_intvl = 30</code>
+<code><mark class="green">net.ipv4.tcp_tw_reuse = 1</mark></code>
+<code>net.ipv4.tcp_moderate_rcvbuf = 1</code>
+<code>net.core.rmem_max = 134217728</code>
+<code>net.core.wmem_max = 134217728</code>
+<code>net.ipv4.tcp_mem  = 134217728 134217728 134217728</code>
+<code>net.ipv4.tcp_rmem = 4096 277750 134217728</code>
+<code>net.ipv4.tcp_wmem = 4096 277750 134217728</code>
+<code>net.core.netdev_max_backlog = 300000</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Yandex.Tank: <a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a></h2>
+		<pre>
+<code>ulimit -n 30000</code>
+
+<code><mark class="green">net.ipv4.tcp_max_tw_buckets = 65536</mark></code>
+<code><mark class="red">net.ipv4.tcp_tw_recycle = 1</mark></code>
+<code><mark class="red">net.ipv4.tcp_tw_reuse = 0</mark></code>
+<code>net.ipv4.tcp_max_syn_backlog = 131072</code>
+<code>net.ipv4.tcp_syn_retries = 3</code>
+<code>net.ipv4.tcp_synack_retries = 3</code>
+<code>net.ipv4.tcp_retries1 = 3</code>
+<code>net.ipv4.tcp_retries2 = 8</code>
+<code>net.ipv4.tcp_rmem = 16384 174760 349520</code>
+<code>net.ipv4.tcp_wmem = 16384 131072 262144</code>
+<code>net.ipv4.tcp_mem = 262144 524288 1048576</code>
+<code>net.ipv4.tcp_max_orphans = 65536</code>
+<code>net.ipv4.tcp_fin_timeout = 10</code>
+<code>net.ipv4.tcp_low_latency = 1</code>
+<code>net.ipv4.tcp_syncookies = 0</code>
+<code>net.netfilter.nf_conntrack_max = 1048576	</code>		
+		</pre>
+	</div></section>
+
 	<section class="clear green slide"><div>
 		<h2 class="small shout">Ускорение в <b>3,6</b> раза — c 4800/s до 17300/s<br/>
 							   при разрешении переиспользовать TIME_WAIT<br/>
 			<b>net.ipv4.tcp_tw_reuse</b> (1)<br/>
-			</span>
-		</h2>
-	</div></section>	
-
-	<section class="slide"><div>
-		<h2>NGinx c конфигурацией по умолчанию <mark>x 2</mark></h2>
-		<h2>добавим потоков, чтобы не упираться в CPU</h2>
-		<pre>
-			<code><mark>worker_processes  2</mark>; # default 1</code>
-			<code>worker_connections  512;</code>
-			<code>sendfile off;</code>
-			<code>tcp_nodelay on; </code>
-			<code>tcp_nopush off; </code>
-			<code>keepalive_timeout  75s;</code>
-			<code>keepalive_requests 100;</code>
-			<code>keepalive_disable msie6;</code>
-			<code>gzip off;</code>
-		</pre>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Средняя интенсивность 18600/s (<mark class="green">x 3,9</mark>)</h2>
-		<h3>более стабильная: 17800/s ... 19200/s</h3>
-		<figure>
-			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.5.jmeter.png">	
-			<figcaption class="copyright right black">
-				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default.x2-200000-2019-05-10_10-42-48/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
-			</figcaption>	
-		</figure>
-	</div></section>
-
-	<section class="clear yellow slide"><div>
-		<h2 class="small shout">Можно ли сделать так,<br/>
-							   чтобы 3 потока Apache.JMeter использовали<br/>
-								постоянные соединения,<br/>
-								а не создавали новые по 2000/s?<br/>
-			</span>
-		</h2>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Apache.JMeter: jmeter.properties</h2>
-		<h3>httpclient.reset_state_on_thread_group_iteration</h3>
-		<pre><code># Reset HTTP State when starting a new Thread Group iteration which means:</code>
-<code>#   true means next iteration is associated to a new user</code>
-<code>#   false means next iteration is associated to same user</code>
-<code># true involves: </code>
-<code>#   - <mark>Closing opened connection</mark></code>
-<code>#   - resetting SSL State </code>
-<code>#httpclient.reset_state_on_thread_group_iteration=<mark>true</mark></code>		</pre>
-	</div></section>
-
-
-	<section class="slide"><div>
-		<h2>Apache.JMeter: jmeter.properties</h2>
-		<h3>httpclient.reset_state_on_thread_group_iteration (<mark class="green">false</mark>)</h3>
-		<pre>
-			<code>#---------------------------------------------------------------------------</code>
-			<code># SSL configuration</code>
-			<code>#---------------------------------------------------------------------------</code>	
-			<code>httpclient.reset_state_on_thread_group_iteration=<mark class="green">false</mark></code>
-		</pre>
-	</div></section>
-
-
-	<section class="slide"><div>
-		<h2>Средняя интенсивность 19900/s (<mark class="green">x 4,1</mark>)</h2>
-		<h3>лучше, чем было при 100 запросах</h3>
-		<figure>
-			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.6.jmeter.png">	
-			<figcaption class="copyright right black">
-				© <a href="report/jmeter/Samplers.HTTP.Request.X-Thread-3-RequestCount-10-default.x2-200000-2019-05-10_11-27-45/Samplers.HTTP.Request.X/index.html">Apache.JMeter report</a>
-			</figcaption>	
-		</figure>
-	</div></section>
-
-	<section class="clear green slide"><div>
-		<h2 class="small shout">Ускорение в <b>4,1</b> раза — c 4800/s до 19900/s<br/>
-							   при отключении настройки Apache.JMeter<br/>
-								<b>httpclient.reset_state_on_thread_group_iteration</b>
 			</span>
 		</h2>
 	</div></section>	
@@ -655,8 +845,13 @@
 			<tr>
 				<td>httpclient.reset_state_on_thread_group_iteration</td>
 				<td>false</td>
-				<td><mark class="green">x4.1</mark></td>
+				<td><mark class="green">x3.9</mark></td>
 			</tr>
+			<tr>
+				<td>jmeter.httpsampler</td>
+				<td>Java</td>
+				<td><mark class="green">x3.3</mark></td>
+			</tr>				
 			<tr>
 				<td>Linux: net.ipv4.tcp_tw_reuse</td>
 				<td>1</td>
@@ -678,30 +873,17 @@
 				<td></td>
 			</tr>
 			<tr>
-				<td>NGinx: keepalive_requests</td>
-				<td>1000 (+900)</td>
+				<td><a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a>, <a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a></td>
 				<td></td>
-			</tr>						
+				<td></td>
+			</tr>							
 		</table>
 	</div></section>
 
 
 	<section class="slide"><div>
-		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
-		<h3>Читает, пишет, собирает статистику</h3>
-		<figure>
-			<img class="w cover place bottom center" 
-				src="images/Monitoring.Sampler.HTTP.X.7.SJK.png">	
-			<figcaption class="copyright right black">
-				© <a href="report/sjk/Samplers.HTTP.Request.X.jmx.2019-05-10_15-24-38.small.sdt.flame.html">SJK Apache.JMeter flame graphs</a>
-			</figcaption>	
-		</figure>
-	</div></section>
-
-
-	<section class="slide"><div>
-		<h2>Чем теперь занят быстрый Apache.JMeter?</h2>
-		<h3>Читает, пишет, собирает статистику</h3>
+		<h2>Если попробовать смешать?</h2>
+		<h3>Apache.JMeter читает, пишет, собирает статистику</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.7.SJK.2.png">	
@@ -711,30 +893,77 @@
 		</figure>
 	</div></section>
 
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/cocktail-857393_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/cocktail-bar-night-857393/">Josetxu (pixabay.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+<!--
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/lime-2353741_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/lime-drink-mineral-water-ice-mint-2353741/">RitaE / (pixabay.com)</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/drink-2355224_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/drink-fruity-fruit-yogurt-shake-2355224/">Einladung_zum_Essen / (pixabay.com)</a>
+			</figcaption>			
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/cocktail-1058237_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/cocktail-fruit-drink-mint-1058237/">FaceGuard / (pixabay.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
+
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/gin-2381859_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/gin-tonic-strawberry-herbs-thyme-2381859/">Einladung_zum_Essen / (pixabay.com)</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/drink-2355224_1920.jpg">
+		</figure>
+	</div></section>
+	
+	-->
+
+
+
+
+
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout">HTTP Request<br/><span class="next">Скачивание файлов</span></h2>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Скачаем 1 ГБайт</h2>
-		<h3>сначала с настройкамо по умолчанию</h3>
-		<pre>
-			<code>mvn jmeter:jmeter -P Samplers.HTTP.Request.File \</code>
-			<code>    -DThreads=1 -DLoopCount=1 -DRequestCount=10 \ </code>
-			<code>    -DRequestPath=/tmp/data/1GByte.tmp</code>
-		</pre>
-	</div></section>
-
-	<section class="slide"><div>
 		<h2>Скачаем 1 ГБайт имея 4 ГБайт ОЗУ</h2>
-		<h3>сначала с настройками по умолчанию</h3>
+		<h3>Создадим файл на 1 ГБайт и скачаем его 200 раз</h3>
 		<pre>
 			<code>dd  if=/dev/urandom of=/tmp/data/1g.img \</code>
 			<code>    bs=1 count=0 seek=1G</code>
-			<code>mvn jmeter:jmeter \</code>
-			<code>    -P Samplers.HTTP.Request.File \ </code>
-			<code>    -DThreads=1 -DLoopCount=<mark>200</mark> -DRequestCount=1 \ </code>
-			<code>    -DRequestPath=<mark>/tmp/data/1g.img</mark></code>
 		</pre>
 	</div></section>
 
@@ -780,6 +1009,18 @@
 	</div></section>
 
 	<section class="slide"><div>
+		<h2>SJK: socketRead (<mark>94,72%</mark>)</h2>
+		<h3>Apache.JMeter читает тело ответа</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.9.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.File.jmx.2019-05-14_10-02-14.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
 		<h2>Больше 1 ГБайт не скачать для Heap 4 ГБайт</h2>
 		<h3>Ошибка <mark class="red">OutOfMemoryError</mark> уже для файла в 1100 МБайт</h3>
 		<figure>
@@ -789,7 +1030,7 @@
 	</div></section>
 
 	<section class="clear blue slide"><div>
-		<h2 class="small shout">HTTP Sampler с настройками по умолчанию,<br/>
+		<h2 class="small shout"><b>HTTP Request</b> с настройками по умолчанию,<br/>
 							   расходует очень много памяти<br/>
 							   4-х кратный буфер от размера файла<br/>
 								генерируя объекты по 1,8 ГБайт/с,<br/>
@@ -797,6 +1038,30 @@
 			</span>
 		</h2>
 	</div></section>
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/Vasnetsov.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://ru.wikipedia.org/wiki/%D0%92%D0%B8%D1%82%D1%8F%D0%B7%D1%8C_%D0%BD%D0%B0_%D1%80%D0%B0%D1%81%D0%BF%D1%83%D1%82%D1%8C%D0%B5">Витязь на распутье</a>
+			</figcaption>
+		</figure>
+	</div></section>	
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.png">
+		</figure>
+	</div></section>	
+
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.script.png">
+		</figure>
+	</div></section>
+
 
 	<section class="slide"><div>
 		<h2>☑️ Save response as MD5 Hash</h2>
@@ -849,6 +1114,18 @@
 		</figure>
 	</div></section>
 
+	<section class="slide"><div>
+		<h2>SJK: MessageDigest (<mark>66.90%</mark>)</h2>
+		<h3>JMeter считает MD5 в два раза дольше, чем читает</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.8.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.File.jmx.2019-05-14_09-12-17.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
 	<section class="clear green slide"><div>
 		<h2 class="small shout">☑️ <b>Save response as MD5 Hash</b><br/>
 			экономит память до <b>0</b>,<br>
@@ -856,6 +1133,15 @@
 			не имеет ограничений на размер файла<span class="next">,<br>
 			но замедляет скачивание до 3-x раз</span>
 			</h2>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w h cover" src="images/lorane.jpg">
+			<figcaption class="copyright right black">
+				© <a href="https://www.imdb.com/title/tt0096874/mediaviewer/rm547371520">Назад в будущее 2 (imdb.com)</a>
+			</figcaption>
+		</figure>
 	</div></section>
 
 	<section class="clear yellow slide"><div>
@@ -902,7 +1188,15 @@
 		</pre>
 	</div></section>
 
-
+	<section class="slide"><div>
+		<h2>Что превосходит аналог (cps)</h2>
+		<h3>по удобству использования</h3>
+		<pre>
+			<code># Define characters per second > 0 to emulate slow connections</code>
+			<code>httpclient.socket.http.cps=0</code>
+			<code>httpclient.socket.https.cps=0</code>
+		</pre>
+	</div></section>
 
 	<section class="slide"><div>
 		<h2>Прикинуться браузером с поддержкой gzip</h2>
@@ -954,16 +1248,6 @@
 			<img class="w cover place bottom center" 
 				src="images/wget.postProcessor.head.png">
 		</figure>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Запустим тест с wget на 200 ГБайт</h2>
-		<pre>
-			<code>mvn jmeter:jmeter \</code>
-			<code>    -P Samplers.OS.Process.wget.new \</code>
-			<code>    -D<mark>LoopCount=200</mark> </code>
-			<code>    -DRequestPath=/tmp/data/1g.img</code>
-		</pre>	
 	</div></section>
 
 	<section class="slide"><div>
@@ -1026,8 +1310,110 @@
 			</h2>
 	</div></section>
 
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w h cover" src="images/lorane.jpg">
+			<figcaption class="copyright right black">
+				© <a href="https://www.imdb.com/title/tt0096874/mediaviewer/rm547371520">Назад в будущее 2 (imdb.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
 
 
+	<section class="clear slide"><div>
+		<figure>
+			<img class="h cover" src="images/3.way.settings.png">
+		</figure>
+	</div></section>
+
+
+	<section class="slide"><div>
+		<h2>Попробуем ограничить читаемый размер до 100 байт</h2>
+		<h3>httpsampler.max_bytes_to_store_per_request=100</h3>
+		<pre>
+			<code># Max size of bytes stored in memory per SampleResult</code>
+			<code># Ensure you don't exceed max capacity of a Java Array and remember</code>
+			<code># that the higher it is, the higher JMeter will consume heap</code>
+			<code># Defaults to 0, which means no truncation</code>
+			<code>#httpsampler.max_bytes_to_store_per_request=0</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Быстрее с max_bytes_to_store_per_request=100</h2>
+		<table>
+			<tr>
+				<th>Параметр</th>
+				<th>Значение</th>
+			</tr>
+			<tr>
+				<td>Среднее время</td>
+				<td>475 ms</td>
+			</tr>
+			<tr>
+				<td>Длительность</td>
+				<td><mark>1 минута 36 сек</mark></td>
+			</tr>					
+			<tr>
+				<td>Необходимая память</td>
+				<td>180 МБайт (немного)</td>
+			</tr>	
+		</table>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/jmeter.http.store.100.png">	
+							<figcaption class="copyright right black">
+				© <a href="report/jmeter/Samplers.HTTP.Request.File-Thread-1-RequestCount-1-file-200-2019-05-14_07-34-27/Samplers.HTTP.Request.File/index.html">Apache JMeter Dashboard</a>
+			</figcaption>
+		</figure>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>SJK: socketRead (<mark>99.35%</mark>)</h2>
+		<h3>JMeter читает, ни на что не отвлекается</h3>
+		<figure>
+			<img class="w cover place bottom center" 
+				src="images/sjk.10.png">	
+			<figcaption class="copyright right black">
+				© <a href="report/sjk/Samplers.HTTP.Request.File.jmx.2019-05-14_10-40-50.small.sdt.flame.html">SJK flame diagram</a>
+			</figcaption>	
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Скачать 200 ГБайт</h2>
+		<table>
+			<tr>
+				<th>Способ</th>
+				<th>Длительность</th>
+			</tr>
+			<tr>
+				<td>HTTP Request</td>
+				<td>5 минут</td>
+			</tr>
+			<tr>
+				<td>☑️ Save response as MD5 Hash</td>
+				<td><mark>18 минут 17 сек</mark></td>
+			</tr>	
+			<tr>
+				<td>OS Process Sampler и wget</td>
+				<td><mark class="green">2 минуты 27 сек</mark></td>
+			</tr>					
+			<tr>
+				<td>max_bytes_to_store_per_request=100</td>
+				<td><mark class="green">1 минута 36 сек</mark></td>
+			</tr>				
+		</table>	
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/cocktails-3252160_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/cocktails-drinks-beverages-juices-3252160/">Katzenfee50 / (pixabay.com)</a>
+			</figcaption>
+		</figure>
+	</div></section>
 
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout">HTTP Request<br/>
@@ -1047,49 +1433,74 @@
 			<tr>
 				<th>Вариант передачи</th>
 				<th>Один</th>
-				<th>С ☀️</th>
-				<th>С 🐘</th>
-				<th>С 🐴</th>
-				<th>С 🦄</th>
+				<th>С <img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></th>
+				<th>С <img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></th>
+				<th>С <img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></th>
+				<th>С <img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></th>
 			</tr>
 			<tr>
 				<td>Parameters</td>
-				<td>☀️</td>
-				<td>☀️☀️</td>
-				<td>🚫</td>
-				<td><mark>☀️🐴</mark></td>
-				<td>☀️</td>
+				<td><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><mark><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></mark></td>
+				<td><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
 			</tr>
 			<tr>
 				<td>Body Data</td>
-				<td>🐘</td>
-				<td>🚫</td>
+				<td><img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
 				<td> </td>
-				<td>🚫</td>
-				<td>🚫</td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
 			</tr>
 			<tr>
 				<td>Files Upload (All)</td>
-				<td><mark>🐴</mark></td>
-				<td><mark>🐴☀️</mark></td>
-				<td>🚫</td>
-				<td><mark>🐴🐴</mark></td>
-				<td>🚫</td>
+				<td><mark><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></mark></td>
+				<td><mark><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></mark></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><mark><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></mark></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
 			</tr>
 			<tr>
 				<td>Files Upload (File Path)</td>
-				<td><mark>🦄</mark></td>
-				<td>☀️</td>
-				<td>🐘</td>
-				<td>🚫</td>
-				<td>🚫</td>
+				<td><mark><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></mark></td>
+				<td><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
+				<td><img src="images/no.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /></td>
 			</tr>
-		</table>		
+		</table>
+		<figure>
+			<img class="place bottom center"
+				style="height:25%; padding: 20px 20px 20px 20px"
+				src="images/HTTP.Request.Basic-Page-2.png">
+		</figure>		
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Комбинации вариантов передачи параметров</h2>
+		<h3><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Parameters и <img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Files Upload (parameters) дружат</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/HTTP.Request.Basic.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Комбинации вариантов передачи параметров</h2>
+		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Files Upload (body data) и <img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Body Data сами по себе</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/HTTP.Request.Basic.png">
+		</figure>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>HTTP POST один параметр</h2>
-		<h3>🐴 multipart/form-data</h3>
+		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1099,7 +1510,7 @@
 
 	<section class="slide"><div>
 		<h2>HTTP POST один параметр</h2>
-		<h3>🐴 multipart/form-data</h3>
+		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1109,7 +1520,7 @@
 
 	<section class="slide"><div>
 		<h2>HTTP POST несколько параметров</h2>
-		<h3>🐴🐴 multipart/form-data</h3>
+		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1119,7 +1530,7 @@
 
 	<section class="slide"><div>
 		<h2>HTTP POST (raw body)</h2>
-		<h3>🦄 Загрузка тела запроса из файла</h3>
+		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Загрузка тела запроса из файла</h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1129,7 +1540,7 @@
 
 	<section class="slide"><div>
 		<h2>HTTP POST (raw body)</h2>
-		<h3>🦄 Нужно заполнить только File Path</h3>
+		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Нужно заполнить только File Path</h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1260,10 +1671,20 @@
 		</h2>
 	</div></section>
 
+
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout"><b>Секретное оружие</b><br/>
+							Как быстро разрабатывать скрипты на JMeter?<br/>
+							<span class="next">Как быстро скачивать расширения и библиотеки?</span><br/>
+							<span class="next">Как запустить профилирование теста?</span><br/>
+							<span class="next">Как не терять изменения в скрипте?</span>
+		</h2>
+	</div></section>
+
 	<section class="slide"><div>
 		<h2>Maven, jmeter-maven-plugin и IntelliJ IDEA</h2>
 		<h3>Ускорение работы в 10 раз, не меньше</h3>
-		<pre>
+
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
@@ -1272,8 +1693,116 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Примеры кода и все результаты</h2>
-		<h3>https://github.com/polarnik/Apache.JMeter.Benchmark.NG</h3>
+		<h2>IntelliJ IDEA</h2>
+		<h3>Подстветка синтаксиса, горячие клавиши, git</h3>
+
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/idea.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>jmeter-maven-plugin</h2>
+		<h3>Плагины хранятся в git (не бинарники)</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/maven.3.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>jmeter-maven-plugin</h2>
+		<h3>Библиотеки хранятся в git (не бинарники)</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/maven.2.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>jmeter-maven-plugin</h2>
+		<h3>Зависимости скачиваются сами</h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/maven.1.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Любые параметры модифицируются</h2>
+		<h3>Создадим файл на 1 ГБайт и скачаем его 200 раз</h3>
+		<pre>
+			<code>dd  if=/dev/urandom of=/tmp/data/1g.img \</code>
+			<code>    bs=1 count=0 seek=1G</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File \ </code>
+			<code>    -DThreads=1 -DLoopCount=<mark>200</mark> -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=<mark>/tmp/data/1g.img</mark></code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Профили комбинируются между собой</h2>
+		<h3>Выполним тестирование с большим размером Heap</h3>
+		<pre>
+			<code>dd  if=/dev/urandom of=/tmp/data/1g.img \</code>
+			<code>    bs=1 count=0 seek=1G</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File,<mark>_.jvm.heap.big</mark> \ </code>
+			<code>    -DThreads=1 -DLoopCount=200 -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=/tmp/data/1g.img</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Профилирование SJK в одну строку</h2>
+		<h3>И через 10 минут готов отчёт</h3>
+		<pre>
+			<code># Запуск sjk-профайлера</code>
+			<code><mark>mvn exec:exec@sjk</mark></code>
+			</pre>
+			<pre>
+			<code># Запуск профилируемого теста</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File, \ </code>
+			<code>    -DThreads=1 -DLoopCount=200 -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=/tmp/data/1g.img</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Профилирование Java Fligth Recorder в одну строку</h2>
+		<h3>И через 10 минут готов отчёт</h3>
+		<pre>
+			<code># Запуск профилируемого теста</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File,<mark>_.jvm.profiler.JFR</mark> \ </code>
+			<code>    -DThreads=1 -DLoopCount=200 -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=/tmp/data/1g.img</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Профилирование JVisual VM в одну строку</h2>
+		<h3>И через 10 минут готов отчёт</h3>
+		<pre>
+			<code># Запуск профилируемого теста</code>
+			<code>mvn jmeter:jmeter \</code>
+			<code>    -P Samplers.HTTP.Request.File,<mark>_.jvm.profiler.jvisualvm</mark> \ </code>
+			<code>    -DThreads=1 -DLoopCount=200 -DRequestCount=1 \ </code>
+			<code>    -DRequestPath=/tmp/data/1g.img</code>
+		</pre>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Проект: <a href="https://bit.ly/jmeter-bench">bit.ly/jmeter-bench</a></h2>
+		<h3><a href="https://github.com/polarnik/Apache.JMeter.Benchmark.NG">github.com/polarnik/Apache.JMeter.Benchmark.NG</a></h3>
+		
 		<pre>
 		<figure>
 			<img class="place bottom center"
