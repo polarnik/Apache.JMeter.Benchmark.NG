@@ -96,7 +96,7 @@
 	<section class="slide"><div>
 		<h2>Apache.JMeter</h2>
 		<ul>
-			<li><a href="https://jmeter.apache.org/">https://jmeter.apache.org</a>, 2003 - настоящее время, активен</li>
+			<li><a href="https://jmeter.apache.org/">https://jmeter.apache.org</a>, c 2003 по настоящее время, активен</li>
 			<li>HTTP(S), JMS, JDBC, Java/Groovy, FTP, SMTP, ... 50+</li>
 			<li>ClickHouse, InfluxDB, Graphite, Grafana, HTML</li>
 			<li>Распределённый запуск, CI</li>
@@ -150,15 +150,14 @@
 
 	<section class="slide"><div>
 		<h2><b>Samplers.HTTP.Request.X</b>. Простой тест<f/h2>
-		<p>Несколько GET-запросов на локальный HTTP-сервер</p>
+		<p>Несколько GET-запросов на локальный сервер</p>
 		<figure>
 			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Запуск и остановка <b>NGinx</b> в тесте</h2>
-		<p>Используя <b>OS Process Sampler</b> в <b>setUp</b> и <b>tearDown Thread Group</b></p>
+		<h2>Запуск и остановка <b>NGinx</b> в тесте, используя <b>OS Process Sampler</b></h3>
 		<figure>
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.png">
@@ -183,7 +182,7 @@
 
 	<section class="slide"><div>
 		<h2>Настраиваются параметры HTTP-запроса</h2>
-		<p>Параметризованы хост, порт, путь. Все настройки -- по умолчанию.</p>
+		<p>Параметризованы хост, порт, путь. Все настройки — по умолчанию.</p>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Samplers.HTTP.Request.X.mark.2.png">
@@ -201,7 +200,7 @@
 
 	<section class="slide"><div>
 		<h2>Количество потоков и итераций настраивается</h2>
-		<p>Профиль -- стабильная высокая нагрузка от <mark>${Threads}</mark> потоков</p>
+		<p>Профиль — стабильная высокая нагрузка от <mark>${Threads}</mark> потоков</p>
 		<figure>
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.4.png">
@@ -226,7 +225,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Результаты серии экспериментов</h2>
+		<h2>Результаты: ось X — потоки, ось Y — длина сценария</h2>
 		<figure>
 			<img 
 				class="place bottom center"
@@ -320,7 +319,7 @@
 
 	<section class="slide"><div>
 		<h2>Средняя интенсивность 4855/s,</h2>
-		<h3>должна быть стабильная нагрузка,<br/>а не всплески от 500/s до 16000/s</h3>
+		<h3>должна быть стабильная нагрузка,<br/>а видим всплески от 500/s до 16000/s</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.1.jmeter.png">	
@@ -411,9 +410,9 @@
 	</div></section>
 
 	<section class="clear blue slide"><div>
-		<h2 class="small shout">Модификацией интенсивность не поднять.<br/>
+		<h2 class="small shout">Модификацией скрипта интенсивность не поднять.<br/>
 			<span class="next">Решили оставить <b>10</b> запросов в итерации.</span><br/>
-			<span class="next">А <b>HTTP Cache Manager</b> не ускоряет.</span>
+			<span class="next">А <b>HTTP Cache Manager</b> не ускорил<br>получение маленького ответа.</span>
 		</h2>
 	</div></section>
 
@@ -610,7 +609,7 @@
 
 	<section class="clear green slide"><div>
 		<h2 class="small shout">Ускорение в <b>1,6</b> раза — c 4800/s до 7700/s<br/>
-							   и избавление от ошибок java.net.NoRouteToHostException<br/>
+							   и избавление от ошибок <mark>Address not available</mark><br/>
 							   при расширения диапазона портов<br/>
 			<b>net.ipv4.ip_local_port_range</b> (1024 60999)<br/>
 			</span>
@@ -1623,26 +1622,6 @@
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
-				src="images/jsr-223.jmeter.png">
-		</figure>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Аналогичный работе Boundary Extractor</h2>
-		<h3>JSR-223 PostProcessor для <mark>htmlContent</mark></h3>
-		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
-				src="images/jsr-223.idea.png">
-		</figure>
-	</div></section>
-
-	<section class="slide"><div>
-		<h2>Аналогичный работе Boundary Extractor</h2>
-		<h3>BeanShell PostProcessor</h3>
-		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
 				src="images/beanshell.jmeter.png">
 		</figure>
 	</div></section>
@@ -1710,7 +1689,7 @@
 		<h2 class="small shout"><b>PostProcessor для HTML</b><br/>
 								Точно не использовать <b>XPath</b> для HTML.<br/>
 								Лидеры <b>RegExp</b> и <b>Boundary Extractor</b>.<br/>
-								Но и <b>CSS Selector</b> неплох - лишь x2 от логгера.<br/>
+								Но и <b>CSS Selector</b> неплох — лишь x2 от логгера.<br/>
 		</h2>
 	</div></section>
 
