@@ -110,15 +110,16 @@
 		</figure>		
 	</div></section>
 
-	<section class="slide"><div>
-		<h2>Рассмотрим</h2>
-		<ul>
+	<section class="clear yellow slide"><div>
+		<h2 class="small shout">
+		<ol>Рассмотрим
 			<li>HTTP Request. Максимальная интенсивность</li>
 			<li>HTTP Request. Скачивание и отправка</li>
 			<li>PostProcessor</li>
 			<li>PreProcessor</li>
 			<li>Секретное оружие</li>
-		</ul>
+		</ol>
+	</h2>
 	</div></section>	
 
 
@@ -135,7 +136,7 @@
 	<section class="clear green slide"><div>
 		<h2 class="small shout"><b>Цели</b><br/>
 			<span class="next">Разрабатывать такие тесты,</span><br/>
-			<span class="next">чтобы система тормозила, а не Apache.JMeter.</span><br/>
+			<span class="next">чтобы система тормозила, а не <b>Apache.JMeter</b>.</span><br/>
 			<span class="next">Экономить на ресурсах нагрузочных агентов.</span><br/>
 			<span class="next">Разрабатывать тесты быстро и просто.</span><br/>
 		</h2>
@@ -143,11 +144,12 @@
 
 
 	<section class="clear yellow slide"><div>
-		<h2 class="small shout">HTTP Request<br/><span class="next">Максимальная интенсивность</span></h2>
+		<h2 class="small shout"><b>HTTP Request</b><br/>
+			<span class="next">Максимальная интенсивность</span></h2>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Samplers.HTTP.Request.X. Простой тест</h2>
+		<h2><b>Samplers.HTTP.Request.X</b>. Простой тест<f/h2>
 		<p>Несколько GET-запросов на локальный HTTP-сервер</p>
 		<figure>
 			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.png">
@@ -155,8 +157,8 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Запуск и основка NGinx в тесте</h2>
-		<p>Параметры запуска настраиваются</p>
+		<h2>Запуск и остановка <b>NGinx</b> в тесте</h2>
+		<p>Используя <b>OS Process Sampler</b> в <b>setUp</b> и <b>tearDown Thread Group</b></p>
 		<figure>
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.png">
@@ -164,8 +166,8 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>NGinx c конфигурацией по умолчанию <mark>x 2</mark></h2>
-		<h2>добавим потоков, чтобы не упираться в CPU</h2>
+		<h2><b>NGinx</b> c конфигурацией по умолчанию</h2>
+		<h2>Но добавим потоков (<mark>x 2</mark>), для скорости</h2>
 		<pre>
 			<code><mark>worker_processes  2</mark>; # default 1</code>
 			<code>worker_connections  512;</code>
@@ -181,7 +183,7 @@
 
 	<section class="slide"><div>
 		<h2>Настраиваются параметры HTTP-запроса</h2>
-		<p>хост, порт, путь</p>
+		<p>Параметризованы хост, порт, путь. Все настройки -- по умолчанию.</p>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Samplers.HTTP.Request.X.mark.2.png">
@@ -189,8 +191,8 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Количество последовательных запросов</h2>
-		<p>с помощью Loop Controller (RequestCount)</p>
+		<h2>Используется цикл для цепочки запросов</h2>
+		<p><mark>${RequestCount}</mark> последовательных запросов в каждой итерации</p>
 		<figure>
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.3.png">
@@ -198,8 +200,8 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Количество потоков и итераций</h2>
-		<p>также настраивается</p>
+		<h2>Количество потоков и итераций настраивается</h2>
+		<p>Профиль -- стабильная высокая нагрузка от <mark>${Threads}</mark> потоков</p>
 		<figure>
 			<img class="w cover place bottom center" 
 			src="images/Samplers.HTTP.Request.X.mark.4.png">
@@ -318,7 +320,7 @@
 
 	<section class="slide"><div>
 		<h2>Средняя интенсивность 4855/s,</h2>
-		<h3>но нестабильная: 500/s ... 16000/s</h3>
+		<h3>должна быть стабильная нагрузка,<br/>а не всплески от 500/s до 16000/s</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.1.jmeter.png">	
@@ -330,7 +332,7 @@
 
 	<section class="slide"><div>
 		<h2>Есть ошибки 5.24%</h2>
-		<p>Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Невозможно назначить запрошенный адрес (Address not available)</p>
+		<p>Non HTTP response code: java.net.NoRouteToHostException/Non HTTP response message: Невозможно назначить запрошенный адрес (<mark>Address not available</mark>)</p>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.1.jmeter.2.png">	
@@ -454,9 +456,9 @@
 
 	<section class="clear slide"><div>
 		<figure>
-			<img class="w cover" src="images/Doc.jpg">
+			<img class="w h cover" src="images/lorane.jpg">
 			<figcaption class="copyright right black">
-				© <a href="http://www.imdb.com/media/rm1904589312/tt0096874">Назад в будущее 2 (imdb.com)</a>
+				© <a href="https://www.imdb.com/title/tt0096874/mediaviewer/rm547371520">Назад в будущее 2 (imdb.com)</a>
 			</figcaption>
 		</figure>
 	</div></section>	
@@ -626,20 +628,21 @@
 
 	<section class="slide"><div>
 		<h2>Linux: net.ipv4.tcp_max_tw_buckets (32768)</h2>
-		<h3>Расширим размер очереди TIME_WAIT (временно)</h3>
-		<p>Со значения <mark>32768</mark>:</p>
+		<h3>Расширим размер очереди TIME_WAIT</h3>
+		<p>Значение в Linux можно посмотреть с помощью команды <b>cat</b> так:</p>
 		<pre>
 			<code>cat /proc/sys/net/ipv4/tcp_max_tw_buckets</code>
-			<code><mark>32768</mark></code>
+			<code class="next"><mark>32768</mark></code>
 		</pre>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Linux: net.ipv4.tcp_max_tw_buckets (65536)</h2>
 		<h3>Расширим размер очереди TIME_WAIT (временно)</h3>
-		<p>Со значения <mark>32768</mark> до значения <mark class="green">65536</mark> (x 2):</p>
+		<p>Увеличим в два раза до значения <mark class="green">65536</mark>. Временную настройку можно выполнить так:</p>
 		<pre>
 			<code>echo <mark class="green">65536</mark> > /proc/sys/net/ipv4/tcp_max_tw_buckets</code>
+			<code></code>	
 		</pre>
 	</div></section>
 
@@ -754,7 +757,7 @@
 	-->
 
 	<section class="slide"><div>
-		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<h2>Рекомендации для <b>Gatling</b> (<a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a>)</h2>
 		<h3>Gatling documentation / 3.1 / General / Operations</h3>
 		<ul>
 			<li>Java Version</li>
@@ -769,14 +772,14 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<h2>Рекомендации для <b>Gatling</b></h2>
 		<pre>
 <code>-Djava.net.preferIPv4Stack=true</code>
 <code>-Djava.net.preferIPv6Addresses=false</code>
 <code>ulimit -n 65536</code>
 <code><mark class="green">sudo sysctl -w net.ipv4.ip_local_port_range="1025 65535"</mark></code>
-<code><mark class="red">echo 300000 | sudo tee /proc/sys/fs/nr_open</mark></code>
-<code><mark class="red">echo 300000 | sudo tee /proc/sys/fs/file-max</mark></code>
+<code><mark>echo 300000 | sudo tee /proc/sys/fs/nr_open</mark></code>
+<code><mark>echo 300000 | sudo tee /proc/sys/fs/file-max</mark></code>
 <code>net.ipv4.tcp_max_syn_backlog = 40000</code>
 <code>net.core.somaxconn = 40000</code>
 <code>net.core.wmem_default = 8388608</code>
@@ -786,7 +789,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Gatling: <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a></h2>
+		<h2>Рекомендации для <b>Gatling</b></h2>
 		<pre>
 <code>net.ipv4.tcp_window_scaling = 1</code>
 <code>net.ipv4.tcp_fin_timeout = 15</code>
@@ -803,13 +806,13 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Yandex.Tank: <a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a></h2>
+		<h2>И для <b>Yandex.Tank</b> (<a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a>)</h2>
 		<pre>
 <code>ulimit -n 30000</code>
 
 <code><mark class="green">net.ipv4.tcp_max_tw_buckets = 65536</mark></code>
-<code><mark class="red">net.ipv4.tcp_tw_recycle = 1</mark></code>
-<code><mark class="red">net.ipv4.tcp_tw_reuse = 0</mark></code>
+<code><mark>net.ipv4.tcp_tw_recycle = 1</mark></code>
+<code><mark>net.ipv4.tcp_tw_reuse = 0</mark></code>
 <code>net.ipv4.tcp_max_syn_backlog = 131072</code>
 <code>net.ipv4.tcp_syn_retries = 3</code>
 <code>net.ipv4.tcp_synack_retries = 3</code>
@@ -835,7 +838,7 @@
 	</div></section>	
 
 	<section class="slide"><div>
-		<h2>Ускорители Apache.JMeter</h2>
+		<h2>Ускорители <b>Apache.JMeter</b></h2>
 		<table>
 			<tr>
 				<th>Опция</th>
@@ -853,37 +856,36 @@
 				<td><mark class="green">x3.3</mark></td>
 			</tr>				
 			<tr>
-				<td>Linux: net.ipv4.tcp_tw_reuse</td>
+				<td><b>Linux</b>: net.ipv4.tcp_tw_reuse</td>
 				<td>1</td>
 				<td><mark class="green">x3.6</mark></td>
 			</tr>	
 			<tr>
-				<td>Linux: net.ipv4.tcp_max_tw_buckets</td>
+				<td><b>Linux</b>: net.ipv4.tcp_max_tw_buckets</td>
 				<td>65536</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td>Linux: net.ipv4.ip_local_port_range</td>
-				<td>1024 60999</td>
+				<td><b>Linux</b>: net.ipv4.ip_local_port_range</td>
+				<td>1025 60999</td>
 				<td><mark>x1.6</mark></td>
 			</tr>
 			<tr>
-				<td>NGinx: worker_processes</td>
+				<td><b>NGinx</b>: worker_processes</td>
 				<td>2 (+1)</td>
 				<td></td>
 			</tr>
 			<tr>
-				<td><a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a>, <a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a></td>
-				<td></td>
-				<td></td>
-			</tr>							
+				<td colspan="3">Настройки <b>Gatling</b> <a href="https://bit.ly/gatling-tuning">bit.ly/gatling-tuning</a> и 
+					 <b>Yandex.Tank</b> <a href="https://bit.ly/tank-tuning">bit.ly/tank-tuning</a></td>
+			</tr>			
 		</table>
 	</div></section>
 
 
 	<section class="slide"><div>
 		<h2>Если попробовать смешать?</h2>
-		<h3>Apache.JMeter читает, пишет, собирает статистику</h3>
+		<h3><b>Apache.JMeter</b> читает, пишет, собирает статистику</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/Monitoring.Sampler.HTTP.X.7.SJK.2.png">	
@@ -904,14 +906,7 @@
 
 <!--
 
-	<section class="clear slide"><div>
-		<figure>
-			<img class="w cover" src="images/lime-2353741_1920.jpg">
-			<figcaption class="copyright right white">
-				© <a href="https://pixabay.com/photos/lime-drink-mineral-water-ice-mint-2353741/">RitaE / (pixabay.com)</a>
-			</figcaption>	
-		</figure>
-	</div></section>
+
 
 	<section class="clear slide"><div>
 		<figure>
@@ -922,14 +917,7 @@
 		</figure>
 	</div></section>
 
-	<section class="clear slide"><div>
-		<figure>
-			<img class="w cover" src="images/cocktail-1058237_1920.jpg">
-			<figcaption class="copyright right white">
-				© <a href="https://pixabay.com/photos/cocktail-fruit-drink-mint-1058237/">FaceGuard / (pixabay.com)</a>
-			</figcaption>
-		</figure>
-	</div></section>
+
 
 
 
@@ -959,10 +947,10 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Скачаем 1 ГБайт имея 4 ГБайт ОЗУ</h2>
+		<h2>Последовательное скачивание файла, используя Thread Group на один поток и 200 итераций, имея 4 ГБайт Heap Size</h2>
 		<h3>Создадим файл на 1 ГБайт и скачаем его 200 раз</h3>
 		<pre>
-			<code>dd  if=/dev/urandom of=/tmp/data/1g.img \</code>
+			<code>dd  if=/dev/urandom of=/tmp/data/1g.img  \</code>
 			<code>    bs=1 count=0 seek=1G</code>
 		</pre>
 	</div></section>
@@ -1022,7 +1010,7 @@
 
 	<section class="slide"><div>
 		<h2>Больше 1 ГБайт не скачать для Heap 4 ГБайт</h2>
-		<h3>Ошибка <mark class="red">OutOfMemoryError</mark> уже для файла в 1100 МБайт</h3>
+		<h3>Ошибка <mark>OutOfMemoryError</mark> уже для файла в 1100 МБайт</h3>
 		<figure>
 			<img class="w cover place bottom center" 
 				src="images/read.file.out.of.memory.png">	
@@ -1564,7 +1552,7 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>OS Process Sampler: tar, sed, ...</h2>
+		<h2>OS Process Sampler: tar, gzip, sed, ...</h2>
 		<h3>Подготовить архив, распаковать, заменить в нём строки</h3>
 		<figure>
 			<img class="place bottom center"
@@ -1578,10 +1566,19 @@
 		<h2 class="small shout"><b>HTTP Request. Отправка файлов</b><br/>
 								Большие файлы лучше читать с диска.<br/>
 								Большие тела запросов лучше читать с диска.<br/>
-								Готовить большие файлы удобно с <b>ginzip</b>, <b>sed</b>, ...<br/>
+								Готовить большие файлы удобно с <b>gzip</b>, <b>sed</b>, ...<br/>
 			<span class="next">Пользуйтесь вкладкой <b>Files Upload</b></span><span class="next">,
 				<br/>где также можно загружать и тело запроса.</span>
 		</h2>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/lime-2353741_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/lime-drink-mineral-water-ice-mint-2353741/">RitaE / (pixabay.com)</a>
+			</figcaption>	
+		</figure>
 	</div></section>
 
 	<section class="clear yellow slide"><div>
@@ -1602,11 +1599,61 @@
 
 	<section class="slide"><div>
 		<h2>За основу взят пустой JSR-223 Sampler</h2>
-		<h3>К нему добавлены PostProcessor-ы для переменной</h3>
+		<h3>К нему добавлены Boundary Extractor для <mark>htmlContent</mark></h3>
 		<figure>
 			<img class="place bottom center"
 				style="height:55%; padding: 20px 20px 20px 20px"
 				src="images/boundary.jmeter.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>За основу взят пустой JSR-223 Sampler</h2>
+		<h3>Regular Expresion Extractor для <mark>htmlContent</mark></h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/regexp.jmeter.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Аналогичный работе Boundary Extractor</h2>
+		<h3>JSR-223 PostProcessor для <mark>htmlContent</mark></h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/jsr-223.jmeter.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Аналогичный работе Boundary Extractor</h2>
+		<h3>JSR-223 PostProcessor для <mark>htmlContent</mark></h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/jsr-223.idea.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Аналогичный работе Boundary Extractor</h2>
+		<h3>BeanShell PostProcessor для <mark>htmlContent</mark></h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/beanshell.jmeter.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>Аналогичный работе Boundary Extractor</h2>
+		<h3>BeanShell PostProcessor для <mark>htmlContent</mark></h3>
+		<figure>
+			<img class="place bottom center"
+				style="height:55%; padding: 20px 20px 20px 20px"
+				src="images/beanshell.idea.png">
 		</figure>
 	</div></section>
 
@@ -1644,6 +1691,15 @@
 								Лидеры <b>RegExp</b> и <b>Boundary Extractor</b>.<br/>
 								Но и <b>CSS Selector</b> неплох - лишь x2 от логгера.<br/>
 		</h2>
+	</div></section>
+
+	<section class="clear slide"><div>
+		<figure>
+			<img class="w cover" src="images/cocktail-1058237_1920.jpg">
+			<figcaption class="copyright right white">
+				© <a href="https://pixabay.com/photos/cocktail-fruit-drink-mint-1058237/">FaceGuard / (pixabay.com)</a>
+			</figcaption>
+		</figure>
 	</div></section>
 
 	<section class="clear yellow slide"><div>

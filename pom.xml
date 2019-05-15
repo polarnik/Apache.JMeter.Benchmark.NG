@@ -1092,7 +1092,7 @@
                     </testPlanLibraries>
 
                     <downloadExtensionDependencies>false</downloadExtensionDependencies>
-                    <downloadLibraryDependencies>true</downloadLibraryDependencies>
+                    <downloadLibraryDependencies>false</downloadLibraryDependencies>
                     <downloadOptionalDependencies>false</downloadOptionalDependencies>
                     <downloadJMeterDependencies>false</downloadJMeterDependencies>
 
