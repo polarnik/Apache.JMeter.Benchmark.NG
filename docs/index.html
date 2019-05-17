@@ -25,9 +25,9 @@
 	</header>
 
 	<section class="clear slide" id="title"><div>
-		<h2>Ускоряем Apache.JMeter<br> в 5 раз</h2>
+		<h2>Ускоряем<br><b>Apache.JMeter</b></h2>
 		<p>Вячеслав Смирнов</p>
-		<p>Специалист по тестированию<br>производительности, Райффайзенбанк</p>
+		<p>Эксперт по тестированию<br>производительности, Райффайзенбанк</p>
 		<img class="w cover" src="images/hb-bg.png">
 		<img class="w h cover" src="images/hb-bg.2.png">
 		<style>
@@ -105,7 +105,7 @@
 		</ul>
 		<figure>
 			<img class="place bottom center"
-				style="height:35%; margin: 20px 0px 20px 0"
+				style="height:35%; margin: 20px 0px 50px 0"
 				src="images/JMeterLogo.svg">
 		</figure>		
 	</div></section>
@@ -137,7 +137,8 @@
 		<h2 class="small shout"><b>Цели</b><br/>
 			<span class="next">Разрабатывать такие тесты,</span><br/>
 			<span class="next">чтобы система тормозила, а не <b>Apache.JMeter</b>.</span><br/>
-			<span class="next">Экономить на ресурсах нагрузочных агентов.</span><br/>
+			<span class="next">Экономить на ресурсах нагрузочных агентов.</span><br/
+			>
 			<span class="next">Разрабатывать тесты быстро и просто.</span><br/>
 		</h2>
 	</div></section>
@@ -146,29 +147,30 @@
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout"><b>HTTP Request</b><br/>
 			<span class="next">Максимальная интенсивность</span></h2>
-	</div></section>
+	</div></section>style="height:70%; margin: 20px 0px 20px 0"
 
 	<section class="slide"><div>
 		<h2><b>Samplers.HTTP.Request.X</b>. Простой тест<f/h2>
 		<p>Несколько GET-запросов на локальный сервер</p>
 		<figure>
-			<img class="w cover place bottom center" src="images/Samplers.HTTP.Request.X.png">
+			<img class="place bottom center test"
+			src="images/Samplers.HTTP.Request.X.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Запуск и остановка <b>NGinx</b> в тесте, используя <b>OS Process Sampler</b></h3>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test"
 			src="images/Samplers.HTTP.Request.X.mark.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2><b>NGinx</b> c конфигурацией по умолчанию</h2>
-		<h2>Но добавим потоков (<mark>x 2</mark>), для скорости</h2>
+		<h2>Для скорости — два процесса вместо одного</h2>
 		<pre>
-			<code><mark>worker_processes  2</mark>; # default 1</code>
+			<code>worker_processes  2; # default 1</code>
 			<code>worker_connections  512;</code>
 			<code>sendfile off;</code>
 			<code>tcp_nodelay on; </code>
@@ -184,7 +186,7 @@
 		<h2>Настраиваются параметры HTTP-запроса</h2>
 		<p>Параметризованы хост, порт, путь. Все настройки — по умолчанию.</p>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 				src="images/Samplers.HTTP.Request.X.mark.2.png">
 		</figure>
 	</div></section>
@@ -193,7 +195,7 @@
 		<h2>Используется цикл для цепочки запросов</h2>
 		<p><mark>${RequestCount}</mark> последовательных запросов в каждой итерации</p>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 			src="images/Samplers.HTTP.Request.X.mark.3.png">
 		</figure>
 	</div></section>
@@ -202,7 +204,7 @@
 		<h2>Количество потоков и итераций настраивается</h2>
 		<p>Профиль — стабильная высокая нагрузка от <mark>${Threads}</mark> потоков</p>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 			src="images/Samplers.HTTP.Request.X.mark.4.png">
 		</figure>
 	</div></section>
@@ -218,19 +220,23 @@
 			</ul>
 		</p>
 		<p>
-			<ul>Количество последовательных запросов в сценарии:
+			<ul>Количество последовательных запросов <b>${RequestCount}</b>:
 				<li>🔼 1, 10, 50, 100</li>
 			</ul>
 		</p>
+		<p>
+			<ul>Количество потоков <b>${ThreadCount}</b>:
+				<li>🔼 1, 2, 3</li>
+			</ul>
+		</p>		
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Результаты: ось X — потоки, ось Y — длина сценария</h2>
+		<h2>Средняя интенсивность для одного потока</h2>
 		<figure>
 			<img 
-				class="place bottom center"
-				style="height:70%; margin: 20px 0px 20px 0"
-				src="images/http.request.X.result.png">
+				class="place bottom center test70"
+				src="images/Sampler.X.1.png">
 			<figcaption class="copyright right black">
 				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
 			</figcaption>				
@@ -238,50 +244,88 @@
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Тест со 100 последовательными запросами</h2>
-		<h2>в 35 раз интенсивнее теста с 1 запросом</h2>
+		<h2>Средняя интенсивность для двух потоков</h2>
 		<figure>
-			<img class="w cover place bottom center" 
-			src="images/http.request.X.result.zoom.png">
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.2.png">
 			<figcaption class="copyright right black">
 				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
-			</figcaption>	
+			</figcaption>				
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Лучший результат с Keep-Alive, 50+ запросами и несколькими потоками</h2>
+		<h2>Средняя интенсивность для трёх потоков</h2>
 		<figure>
-			<img class="w cover place bottom center" src="images/http.request.X.result.3.threads.png">
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.3.png">
 			<figcaption class="copyright right black">
 				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
-			</figcaption>	
+			</figcaption>				
 		</figure>
 	</div></section>
-
-
 
 	<section class="slide"><div>
-		<h2>Результаты серии экспериментов</h2>
+		<h2>На коротком сценарии лучше без Keep-Alive</h2>
 		<figure>
-			<img class="place bottom center" 
-			style="height:70%; margin: 20px 0px 20px 0"
-			src="images/http.request.X.result.diagram.png">
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.Compare.1.png">
 			<figcaption class="copyright right black">
 				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
-			</figcaption>	
+			</figcaption>				
 		</figure>
 	</div></section>
+
+	<section class="slide"><div>
+		<h2>На среднем сценарии — влияние Keep-Alive небольшое</h2>
+		<figure>
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.Compare.10.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>				
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>На больших сценариях — Keep-Alive ускоряет работу</h2>
+		<figure>
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.Compare.50.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>				
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>На больших сценариях — Keep-Alive ускоряет работу</h2>
+		<figure>
+			<img 
+				class="place bottom center test70"
+				src="images/Sampler.X.Compare.100.png">
+			<figcaption class="copyright right black">
+				© <a href="https://infogram.com/jmeter-1h1749dj7pjl6zj">JMeter.Samplers.HTTP.Request.X</a>
+			</figcaption>				
+		</figure>
+	</div></section>
+
 
 	<section class="clear green slide"><div>
 		<h2 class="small shout">Очевидно, что<br>
-			<b>Keep-Alive</b> полезен, не нужно отключать его.
+			<b>Keep-Alive</b> полезен, не нужно отключать его.<br>
+			Лучший результат — <br> с большим сценарием (<b>50+</b>) и <b>Keep-Alive</b>.
 		</h2>
 	</div></section>
 
 	<section class="clear blue slide"><div>
-		<h2 class="small shout">Не делать benchmark на Apache.JMeter<br/>
-			из одного HTTP Request в сценарии<br/>
+		<h2 class="small shout">Не делать benchmark на <b>Apache.JMeter</b><br/>
+			из одного <b>HTTP Request</b> в сценарии<br/>
 			при настройках по умолчанию.
 		</h2>
 	</div></section>
@@ -546,7 +590,7 @@
 			<code>netstat | grep -oP \</code>
 			<code>"^\w+\s+\d+\s+\d+\s+(\w+:\w+)\s+(localhost:5555)\s.*"</code>
 		</pre>
-		<pre>
+		<pre class="next">
 			<code>tcp  0  0 localhost:*****  localhost:5555  <mark class="green">ESTABLISHED</mark></code>
 			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
 			<code>tcp6 0  0 localhost:*****  localhost:5555  <mark>TIME_WAIT</mark></code>
@@ -560,7 +604,7 @@
 		<p>Изначально диапазон на <mark>28231</mark> портов:</p>
 		<pre>
 			<code>cat /proc/sys/net/ipv4/ip_local_port_range</code>
-			<code><mark>32768 60999</mark></code>
+			<code class="next"><mark>32768 60999</mark></code>
 		</pre>
 	</div></section>
 
@@ -611,7 +655,7 @@
 		<h2 class="small shout">Ускорение в <b>1,6</b> раза — c 4800/s до 7700/s<br/>
 							   и избавление от ошибок <mark>Address not available</mark><br/>
 							   при расширения диапазона портов<br/>
-			<b>net.ipv4.ip_local_port_range</b> (1024 60999)<br/>
+			<b>net.ipv4.ip_local_port_range</b> (1025 60999)<br/>
 			</span>
 		</h2>
 	</div></section>	
@@ -1214,7 +1258,7 @@
 		<h2>JSR-223 PostProcessor встраивает wget</h2>
 		<h3>Программное заполнение параметров <mark>SampleResult</mark></h3>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 				src="images/wget.postProcessor.png">
 		</figure>
 	</div></section>
@@ -1223,7 +1267,7 @@
 		<h2>JSR-223 PostProcessor встраивает wget</h2>
 		<h3>Сохраняется Response Body</h3>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 				src="images/wget.postProcessor.body.png">
 		</figure>
 	</div></section>
@@ -1232,7 +1276,7 @@
 		<h2>JSR-223 PostProcessor встраивает wget</h2>
 		<h3>Сохраняется Response Headers</h3>
 		<figure>
-			<img class="w cover place bottom center" 
+			<img class="place bottom center test" 
 				src="images/wget.postProcessor.head.png">
 		</figure>
 	</div></section>
@@ -1469,8 +1513,8 @@
 		<h2>Комбинации вариантов передачи параметров</h2>
 		<h3><img src="images/sun.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Parameters и <img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Files Upload (parameters) дружат</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/HTTP.Request.Basic.png">
 		</figure>
 	</div></section>
@@ -1479,8 +1523,7 @@
 		<h2>Комбинации вариантов передачи параметров</h2>
 		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Files Upload (body data) и <img src="images/slon.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Body Data сами по себе</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
 				src="images/HTTP.Request.Basic.png">
 		</figure>
 	</div></section>
@@ -1489,8 +1532,8 @@
 		<h2>HTTP POST один параметр</h2>
 		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+
 				src="images/file.upload.file.png">
 		</figure>
 	</div></section>
@@ -1499,8 +1542,8 @@
 		<h2>HTTP POST один параметр</h2>
 		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+		
 				src="images/file.upload.file.mark.png">
 		</figure>
 	</div></section>
@@ -1509,8 +1552,8 @@
 		<h2>HTTP POST несколько параметров</h2>
 		<h3><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /><img src="images/horse.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> multipart/form-data</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+			
 				src="images/file.upload.files.png">
 		</figure>
 	</div></section>
@@ -1519,8 +1562,8 @@
 		<h2>HTTP POST (raw body)</h2>
 		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Загрузка тела запроса из файла</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/file.upload.body.png">
 		</figure>
 	</div></section>
@@ -1529,8 +1572,8 @@
 		<h2>HTTP POST (raw body)</h2>
 		<h3><img src="images/secret.png" style="width: calc(var(--slide-height) / 18); margin-bottom: calc(-1 * var(--slide-height) / 100);" /> Нужно заполнить только File Path</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/file.upload.body.mark.png">
 		</figure>
 	</div></section>
@@ -1554,8 +1597,8 @@
 		<h2>OS Process Sampler: tar, gzip, sed, ...</h2>
 		<h3>Подготовить архив, распаковать, заменить в нём строки</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/big.files.png">
 		</figure>
 	</div></section>
@@ -1590,68 +1633,86 @@
 		<h2>Тестовая страница: apache.jmeter.org</h2>
 		<h3>Найдём заголовок страницы</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:60%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/apache.jmeter.page.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>За основу взят пустой JSR-223 Sampler</h2>
-		<h3>К нему добавлены Boundary Extractor для <mark>htmlContent</mark></h3>
+		<h2>Boundary Extractor</h2>
+		<h3>для <mark>htmlContent</mark></h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/boundary.jmeter.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>За основу взят пустой JSR-223 Sampler</h2>
-		<h3>Regular Expresion Extractor для <mark>htmlContent</mark></h3>
+		<h2>Regular Expresion Extractor</h2>
+		<h3>для <mark>htmlContent</mark></h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/regexp.jmeter.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Аналогичный работе Boundary Extractor</h2>
-		<h3>JSR-223 PostProcessor</h3>
+		<h2>JSR-223 PostProcessor</h2>
+		<h3></h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
+				src="images/jsr-223.jmeter.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>JSR-223 PostProcessor</h2>
+		<h3>aналогичный работе Boundary Extractor</h3>
+		<figure>
+			<img class="place bottom center test"
+				
+				src="images/jsr-223.idea.png">
+		</figure>
+	</div></section>
+
+	<section class="slide"><div>
+		<h2>BeanShell PostProcessor</h2>
+		<h3></h3>
+		<figure>
+			<img class="place bottom center test"
+				
 				src="images/beanshell.jmeter.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Аналогичный работе Boundary Extractor</h2>
-		<h3>BeanShell PostProcessor для <mark>htmlContent</mark></h3>
+		<h2>BeanShell PostProcessor</h2>
+		<h3>Аналогичный работе Boundary Extractor</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/beanshell.idea.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Для CSS использован</h2>
-		<h3>CSS Selector Extractor для <mark>htmlContent</mark></h3>
+		<h2>CSS Selector Extractor</h2>
+		<h3> для <mark>htmlContent</mark></h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
 				src="images/css.jmeter.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Для XPath (HTML) использован</h2>
-		<h3>XPath Extractor для <mark>htmlContent</mark></h3>
+		<h2>XPath Extractor</h2>
+		<h3>XPath (HTML) для <mark>htmlContent</mark></h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
 				src="images/xpath.jmeter.png">
 		</figure>
 	</div></section>
@@ -1659,28 +1720,27 @@
 
 	<section class="slide"><div>
 		<figure>
-			<img class="place bottom center"
-				style="height:90%; padding: 20px 20px 20px 20px"
+			<img class="h cover place bottom center"
 				src="images/HTML.Post.Processors.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
-		<h2>Boundary самый быстрый</h2>
-		<h3>RegExp почти такой же быстрый</h3>
+		<h2>Boundary (58k) самый быстрый</h2>
+		<h3>RegExp (50k) почти такой же быстрый</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:60%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+			
 				src="images/HTML.Post.Processors.png">
 		</figure>
 	</div></section>
 
 	<section class="slide"><div>
 		<h2>Общее влияние PostPorcessor-ов небольшое</h2>
-		<p>Так CSS Selector выполняется дольше CSV Logger лишь в 2 раза</p>
+		<p>Так <b>CSS Selector</b> выполняется дольше <b>CSV Logger</b> лишь в 2 раза</p>
 		<figure>
-			<img class="place bottom center"
-				style="height:60%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+	
 				src="images/CSS.vs.CSV.png">
 		</figure>
 	</div></section>
@@ -1713,8 +1773,8 @@
 		<h3>groovy.xml.MarkupBuilder x5 от SimpleTemplateEngine</h3>
 		<pre>
 		<figure>
-			<img class="place bottom center"
-				style="height:60%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+		
 				src="images/XML.Pre.Processor.png">
 		</figure>
 	</div></section>
@@ -1742,8 +1802,8 @@
 		<h3>Ускорение работы в 10 раз, не меньше</h3>
 
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+			
 				src="images/maven.png">
 		</figure>
 	</div></section>
@@ -1753,8 +1813,8 @@
 		<h3>Подстветка синтаксиса, горячие клавиши, git</h3>
 
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/idea.2.png">
 		</figure>
 	</div></section>
@@ -1763,8 +1823,8 @@
 		<h2>jmeter-maven-plugin</h2>
 		<h3>Плагины хранятся в git (не бинарники)</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/maven.3.png">
 		</figure>
 	</div></section>
@@ -1773,8 +1833,8 @@
 		<h2>jmeter-maven-plugin</h2>
 		<h3>Библиотеки хранятся в git (не бинарники)</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+			
 				src="images/maven.2.png">
 		</figure>
 	</div></section>
@@ -1783,8 +1843,8 @@
 		<h2>jmeter-maven-plugin</h2>
 		<h3>Зависимости скачиваются сами</h3>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+			
 				src="images/maven.1.png">
 		</figure>
 	</div></section>
@@ -1861,8 +1921,8 @@
 		
 		<pre>
 		<figure>
-			<img class="place bottom center"
-				style="height:55%; padding: 20px 20px 20px 20px"
+			<img class="place bottom center test"
+				
 				src="images/maven.png">
 		</figure>
 	</div></section>
@@ -2246,12 +2306,20 @@
 	-->
 	
 	<section class="clear slide" id="contacts"><div>
-		<h2>Вячеслав Смирнов</h2>
+		<h3>Вячеслав Смирнов</h3>
 		<p><a href="https://github.com/polarnik">github.com/polarnik</a></p>
 		<p>Telegram: @qa_load</p>
 		<div><span></span><h2>Спасибо!</h2></div>
 		<img class="cover w" src="images/raiff-cover.png">
 		<style>
+			#contacts h3 {
+				position: relative;
+				top: calc(var(--slide-height) / 2.7);
+				left: calc(var(--slide-width) / 12);
+				font-size: calc(var(--slide-height) / 15);
+				padding: 0px 0 0 0;
+				margin: 40px 0 0 0;
+			}			
 			#contacts h2 {
 				position: relative;
 				top: calc(var(--slide-height) / 2.7);

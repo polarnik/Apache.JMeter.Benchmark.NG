@@ -14,6 +14,9 @@
 	/*src: url(../fonts/suisseintl-cond-bold.ttf) format("truetype");*/
 }
 
+.slide {
+	padding: 9px 112px 0 96px;
+}
 .slide h2 {
 	/*font-family: 'Suisse', sans-serif;*/
 	font-weight: normal;
@@ -120,4 +123,22 @@ div.progress  {
 
 .slide pre code {
 	line-height: 1.5;
+}
+
+img.test {
+	max-height:65%; 
+	max-width: 95%;
+	margin: 20px 0px 50px 0;
+}
+
+img.test2 {
+	max-height:80%; 
+	max-width: 95%;
+	margin: 20px 0px 50px 0;
+}
+
+img.test70 {
+	max-height:70%; 
+	max-width: 95%;
+	margin: 20px 0px 50px 0;
 }
