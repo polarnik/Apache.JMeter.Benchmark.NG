@@ -27,7 +27,7 @@
 	<section class="clear slide" id="title"><div>
 		<h2>Ускоряем<br><b>Apache.JMeter</b></h2>
 		<p>Вячеслав Смирнов</p>
-		<p>Эксперт по тестированию<br>производительности, Райффайзенбанк</p>
+		<p>Эксперт по тестированию,<br>Райффайзенбанк</p>
 		<img class="w cover" src="images/hb-bg.png">
 		<img class="w h cover" src="images/hb-bg.2.png">
 		<style>
@@ -147,7 +147,7 @@
 	<section class="clear yellow slide"><div>
 		<h2 class="small shout"><b>HTTP Request</b><br/>
 			<span class="next">Максимальная интенсивность</span></h2>
-	</div></section>style="height:70%; margin: 20px 0px 20px 0"
+	</div></section>
 
 	<section class="slide"><div>
 		<h2><b>Samplers.HTTP.Request.X</b>. Простой тест<f/h2>
@@ -214,21 +214,21 @@
 	<section class="slide"><div>
 		<h2>HTTP Request. Серия экспериментов</h2>
 		<p>
-			<ul>HTTP Request Keep-Alive:
-				<li>☑️ включить (по умолчанию)</li>
-				<li>🔲 отключить</li>
+			<ul>Количество потоков <b>${Threads}</b>:
+				<li>🔼 1, 2, 3</li>
 			</ul>
-		</p>
+		</p>		
 		<p>
 			<ul>Количество последовательных запросов <b>${RequestCount}</b>:
 				<li>🔼 1, 10, 50, 100</li>
 			</ul>
 		</p>
 		<p>
-			<ul>Количество потоков <b>${ThreadCount}</b>:
-				<li>🔼 1, 2, 3</li>
+			<ul>HTTP Request <b>Keep-Alive</b>:
+				<li>☑️ включить (по умолчанию)</li>
+				<li>🔲 отключить</li>
 			</ul>
-		</p>		
+		</p>
 	</div></section>
 
 	<section class="slide"><div>
@@ -2304,6 +2304,15 @@
 	</div></section>
 
 	-->
+
+	<section class="slide"><div>
+		<h2>Как ускорить Apache.JMeter</h2>
+		<h3>Скрипт.</h3>
+		<h3>Настройки Apache.JMeter.</h3>
+		<h3>Настройки операционной системы.</h3>
+		<h3>Maven, jmeter-maven-plugin, IntelliJ IDEA.</h3>
+	</div></section>
+
 	
 	<section class="clear slide" id="contacts"><div>
 		<h3>Вячеслав Смирнов</h3>
