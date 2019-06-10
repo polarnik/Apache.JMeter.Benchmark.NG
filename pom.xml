@@ -1186,6 +1186,26 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>1.6.0</version>
                 <executions>
+
+                    <execution>
+                        <id>hh</id>
+                        <phase>pre-integration-test</phase>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+                        <configuration>
+                            <workingDirectory>${project.basedir}/src/test/tools/</workingDirectory>
+                            <executable>${project.basedir}/src/test/tools/sjk.hh.sh</executable>
+
+                            <arguments>
+                                <argument>${project.basedir}/target/jmeter/testFiles/</argument>
+                                <argument>${project.build.directory}/jmeter/lib/</argument>
+                                <argument>${project.build.directory}/sjk/</argument>
+                            </arguments>
+
+                        </configuration>
+                    </execution>
+
                     <execution>
                         <id>sjk</id>
                         <phase>pre-integration-test</phase>
@@ -1201,7 +1221,6 @@
                                 <argument>${project.build.directory}/jmeter/lib/</argument>
                                 <argument>${project.build.directory}/sjk/</argument>
                             </arguments>
-
 
                         </configuration>
                     </execution>
